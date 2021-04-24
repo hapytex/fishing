@@ -4,6 +4,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
 
 ## List of functions
 
+ - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory.
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
