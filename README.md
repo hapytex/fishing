@@ -15,6 +15,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`rmemptydir`**: remove empty directories;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
+ - **`stackd`**: build the documentation of the Haskell stack project;
  - **`stackt`**: test the Haskell stack project; and
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`.
 
