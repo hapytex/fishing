@@ -6,7 +6,9 @@ A set of functions for the Friendly Interactive SHell (FISH).
 
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`frmclip`**: copy from the clipboard to the stdout;
+ - **`gitc`**: make a git commit (short for `git commit -am`);
  - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
+ - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
