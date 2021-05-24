@@ -9,6 +9,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`gitc`**: make a git commit (short for `git commit -am`);
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
  - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
+ - **`gits`**: prints the status of the current Git repository (short for `git status`);
  - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
