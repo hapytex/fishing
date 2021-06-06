@@ -8,9 +8,9 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`gitc`**: make a git commit (short for `git commit -am`);
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
+ - **`gitmastertag`**: checkout the mater branch, pull from remote, tag the commit and push the tag to the repository;
  - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
  - **`gits`**: prints the status of the current Git repository (short for `git status`);
- - **`gettmaster`**: checkout the mater branch, pull from remote, tag the commit and push the tag to the repository;
  - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
