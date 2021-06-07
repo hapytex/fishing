@@ -22,7 +22,8 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackd`**: build the documentation of the Haskell stack project;
  - **`stackg`**: run a ghci session for the given Haskell stack project;
- - **`stackt`**: test the Haskell stack project; and
+ - **`stackt`**: test the Haskell stack project;
+ - **`stacktcov`**: test the Haskell project, and keep track of the coverage; and
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`.
 
 ## Installation
