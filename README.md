@@ -7,6 +7,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`gitc`**: make a git commit (short for `git commit -am`);
+ - **`gitd`**: calculate the git difference and work with a pager to read the full response;
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
  - **`gitmastertag`**: checkout the mater branch, pull from remote, tag the commit and push the tag to the repository;
  - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
