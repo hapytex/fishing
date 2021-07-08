@@ -21,6 +21,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`rmemptydir`**: remove empty directories;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
+ - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
  - **`stackd`**: build the documentation of the Haskell stack project;
  - **`stackg`**: run a ghci session for the given Haskell stack project;
  - **`stackt`**: test the Haskell stack project;
