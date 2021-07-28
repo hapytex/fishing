@@ -26,8 +26,9 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`stackg`**: run a ghci session for the given Haskell stack project;
  - **`stackr`**: run the program, this is an alias of `stack run`;
  - **`stackt`**: test the Haskell stack project;
- - **`stacktcov`**: test the Haskell project, and keep track of the coverage; and
- - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`.
+ - **`stacktcov`**: test the Haskell project, and keep track of the coverage;
+ - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`; and
+ - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`.
 
 ## Installation
 
