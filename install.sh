@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo apt-get install apt-file fish powerline rename
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt-get install apt-file curl djinn fish git lambdabot nodejs npm powerline rename ulimit yarn
+git config --global push.default current
 
 pip3 install --upgrade numpy pandas scipy sympy
 
