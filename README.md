@@ -6,6 +6,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
 
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`frmclip`**: copy from the clipboard to the stdout;
+ - **`fundo`**: desugar a `do` expression of Haskell;
  - **`gitc`**: make a git commit (short for `git commit -am`);
  - **`gitd`**: calculate the git difference and work with a pager to read the full response;
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
@@ -18,6 +19,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
+ - **`pointfree`**: determine the pointfree version of a Haskell expression;
  - **`rmemptydir`**: remove empty directories;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
