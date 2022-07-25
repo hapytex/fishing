@@ -3,7 +3,8 @@
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
-sudo apt-get install apt-file curl djinn fish git hoogle lambdabot nodejs npm pdfsam powerline rename ulimit yarn
+sudo apt-get install apt-file cloc curl djinn fish git hlint hoogle lambdabot nodejs npm pdfsam powerline rename ulimit yarn
+
 git config --global push.default current
 
 pip3 install --upgrade numpy pandas scipy sympy
@@ -18,6 +19,8 @@ set fish_function_path \$fish_function_path "/usr/share/powerline/bindings/fish"
 source /usr/share/powerline/bindings/fish/powerline-setup.fish
 powerline-setup
 EOF
+
+hoogle generate
 
 # Install Haskell support for vim
 tmp=$(tempfile)
