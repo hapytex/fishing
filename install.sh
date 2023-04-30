@@ -4,7 +4,7 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo apt-get update
-sudo apt-get install -y apt-file agrep cloc curl djinn fish git haskell-stack hlint hoogle jq lambdabot nodejs npm pandoc pdfsam powerline pylint python3-pytest rename tox yarn
+sudo apt-get install -y apt-file agrep cloc curl djinn fish git haskell-stack hlint hoogle ipython3 jq lambdabot nodejs npm pandoc pdfsam powerline pylint python3-pytest rename tox yarn zbar-tools
 
 git config --global push.default current
 
