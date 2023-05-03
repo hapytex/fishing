@@ -5,6 +5,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 sudo apt-get update
 sudo apt-get install -y apt-file agrep cloc curl djinn fish git haskell-stack hlint hoogle ipython3 jq lambdabot nodejs npm pandoc pdfsam powerline pylint python3-pytest rename tox yarn zbar-tools
+sudo snap install upscayl
 
 git config --global push.default current
 
