@@ -11,7 +11,7 @@ git config --global push.default current
 
 
 stack update &
-pip3 install --upgrade black Click isort nltk numpy pandas scipy sympy youtube-dl &
+pip3 install --upgrade black Click isort keras nltk numpy pandas prefect scipy sklearn sympy tensorflow youtube-dl &
 
 # load the apt cache to find out what package exposes a certain command
 sudo apt-file update
