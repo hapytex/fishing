@@ -10,9 +10,8 @@ prefix="/C=$country/ST=$state/L=$city/O=$company/OU=$department/CN="
 
 mkdir -p 'certificates'
 
-sites=('hoogle' 'jupyter')
-
-for site in "${sites[@]}"; do
+for file in *.conf; do
+  site=$(basename "$file" '.conf')
   openssl req -x509 -newkey rsa:4096 -keyout "certificates/$site.local.key" -out "certificates/$site.local.crt" -sha256 -days 3653 -nodes -subj "$prefix$site.local"
 done
 
