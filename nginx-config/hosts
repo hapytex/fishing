@@ -1,0 +1,3 @@
+127.0.0.1 hoogle hoogle.local
+127.0.0.1 jupyter jupyter.local
+127.0.0.1 prefect prefect.local
