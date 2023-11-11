@@ -4,14 +4,14 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 sudo apt-get update
-sudo apt-get install -y apt-file agrep cloc curl djinn fish git haskell-stack hlint hoogle ipython3 jq lambdabot nodejs npm pandoc pdfsam powerline pylint python3-pytest rename tox yarn zbar-tools
+sudo apt-get install -y apt-file agrep certbot cloc curl djinn fish git haskell-stack hlint hoogle ipython3 jq lambdabot nodejs npm pandoc pdfsam powerline pylint python3-pytest rename supervisor tox yarn zbar-tools
 sudo snap install upscayl
 
 git config --global push.default current
 
 
 stack update &
-pip3 install --upgrade black Click isort keras nltk numpy pandas prefect scipy sklearn sympy tensorflow youtube-dl &
+pip3 install --upgrade black Click isort jupyter keras nltk numpy pandas prefect scipy sklearn sympy tensorflow youtube-dl &
 
 # load the apt cache to find out what package exposes a certain command
 sudo apt-file update
@@ -37,5 +37,7 @@ git clone https://github.com/ap/vim-css-color.git ~/.vim/pack/css-color/start/cs
 
 hoogle generate &
 stack install ascii-art-to-unicode  # install ASCII-art to Unicode converter
+
+sudo useradd prefect
 
 wait

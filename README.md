@@ -32,6 +32,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`stackr`**: run the program, this is an alias of `stack run`;
  - **`stackt`**: test the Haskell stack project;
  - **`stacktcov`**: test the Haskell project, and keep track of the coverage;
+ - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`; and
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`.
 
