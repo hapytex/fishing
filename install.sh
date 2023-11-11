@@ -32,6 +32,9 @@ curl -L https://git.io/haskell-vim-now > "$tmp"
 bash "$tmp"
 rm -f "$tmp"
 
+# Install color plugin for vim
+git clone https://github.com/ap/vim-css-color.git ~/.vim/pack/css-color/start/css-color
+
 hoogle generate &
 stack install ascii-art-to-unicode  # install ASCII-art to Unicode converter
 
