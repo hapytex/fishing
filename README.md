@@ -22,6 +22,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
+ - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`redo`**: redo a command until the exit code is 0;
  - **`rmemptydir`**: remove empty directories;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
