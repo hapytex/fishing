@@ -40,4 +40,11 @@ stack install ascii-art-to-unicode  # install ASCII-art to Unicode converter
 
 sudo useradd prefect
 
+cd /tmp
+git clone https://github.com/powerline/fonts.git
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+
 wait
