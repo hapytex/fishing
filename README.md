@@ -16,6 +16,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
  - **`gits`**: prints the status of the current Git repository (short for `git status`);
  - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
+ - **`here_is_the_news`**: beeps a few times to mark a certain event;
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
