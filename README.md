@@ -4,6 +4,7 @@ A set of functions for the Friendly Interactive SHell (FISH).
 
 ## List of functions
 
+ - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`fundo`**: desugar a `do` expression of Haskell;
