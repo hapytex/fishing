@@ -38,7 +38,8 @@ A set of functions for the Friendly Interactive SHell (FISH).
  - **`stacktcov`**: test the Haskell project, and keep track of the coverage;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
- - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`; and
+ - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
+ - **`waitfor`**: takes an argument and waits that amount of time with a countdown; and
  - **`whatday`**: write the date in a color of the week.
 
 ## Installation
