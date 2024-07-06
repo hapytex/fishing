@@ -6,7 +6,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
- - **`from`**: initializes the python shell with "from …", so `from datetime import date` for example can be written in the shell as first Python command;
+ - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`fundo`**: desugar a `do` expression of Haskell;
  - **`fundjinn`**: generate a function implementation from a signature with *Djinn*;
@@ -21,7 +21,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`here_is_the_news`**: beeps a few times to mark a certain event;
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
- - **`import`**: initializes the python shell with "import …", so `import datetime` for example can be written in the shell as first Python command;
+ - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
