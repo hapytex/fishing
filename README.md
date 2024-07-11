@@ -7,6 +7,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
+ - **`fromtemplate`**: copies the file from the `templates/` subdirectory into the pwd, add it to git (if applicable), and starts editing;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`fundo`**: desugar a `do` expression of Haskell;
  - **`fundjinn`**: generate a function implementation from a signature with *Djinn*;
