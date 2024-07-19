@@ -4,6 +4,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ## List of functions
 
+ - **`backup`**: make readonly timestamped copies of the list of parameters;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
