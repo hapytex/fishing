@@ -5,5 +5,7 @@ function backup --description 'make a read-only timestamped copy of a file'
     cp "$item" "$dt$item"
     set -a targets "$dt$item"
   end
-  chmod -w $targets
+  if set -q arv[1]
+    chmod -w $targets
+  end
 end
