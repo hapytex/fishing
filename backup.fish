@@ -7,5 +7,6 @@ function backup --description 'make a read-only timestamped copy of a file'
   end
   if set -q arv[1]
     chmod -w $targets
+    chattr +c $targets
   end
 end
