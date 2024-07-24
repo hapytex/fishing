@@ -41,6 +41,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`stackt`**: test the Haskell stack project;
  - **`stacktcov`**: test the Haskell project, and keep track of the coverage;
  - **`task`**: wrapper for /usr/bin/task, except that it reports tasks after the modification;
+ - **`taskd`**: set the task with the given id as done;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
