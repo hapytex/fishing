@@ -35,6 +35,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`redo`**: redo a command until the exit code is 0;
  - **`rmemptydir`**: remove empty directories;
+ - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
@@ -53,7 +54,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ## Variables
 
- - **`GIT_PREFIX`**: the prefix of (most) git repositories, for example `github:/hapytex`.
+ - **`GIT_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`; and
+ - **`GIT_BRANCH`**: the default branch, used to automatically map the remote to the local default branch in `gitremote`.
 
 ## Installation
 

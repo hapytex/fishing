@@ -1,4 +1,4 @@
 function gitremote --description 'add a remote as origin with the given prefix'
-  set -q GIT_PREFIX || read -Ux GIT_PREFIX -P 'default git prefix> '
-  git remote add origin "$GIT_PREFIX/"(basename (pwd))".git"
+  git remote add origin (setvar GIT_PREFIX)"/"(basename (pwd))".git"
+  git branch --set-upstream-to=origin/(setvar GIT_BRANCH) (setvar GIT_BRANCH)
 end
