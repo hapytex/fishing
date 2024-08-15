@@ -20,6 +20,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
  - **`gitmastertag`**: checkout the mater branch, pull from remote, tag the commit and push the tag to the repository;
  - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
+ - **`gitremote`**: add the remote as origin with the given `GIT_PREFIX` and the name of the directory as git project;
  - **`gits`**: prints the status of the current Git repository (short for `git status`);
  - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
  - **`here_is_the_news`**: beeps a few times to mark a certain event;
@@ -49,6 +50,10 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown; and
  - **`whatday`**: write the date in a color of the week.
+
+## Variables
+
+ - **`GIT_PREFIX`**: the prefix of (most) git repositories, for example `github:/hapytex`.
 
 ## Installation
 
