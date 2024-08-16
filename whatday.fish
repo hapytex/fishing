@@ -1,4 +1,3 @@
-# Defined in - @ line 1
 function whatday --description 'specifies the day with some counters'
   set dt (date +%s -d '0:00 UTC')
   set hr (date +%H%M)

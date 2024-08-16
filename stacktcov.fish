@@ -1,4 +1,3 @@
-# Defined in - @ line 1
 function stacktcov --wraps='stack test --coverage' --description 'alias stacktcov stack test'
   set mem (ulimit -Sv)
   ulimit -Sv 6000000

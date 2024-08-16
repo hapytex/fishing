@@ -1,4 +1,3 @@
-# Defined in - @ line 1
 function stackr --wraps='stack run' --description 'alias stackr stack run'
   set mem (ulimit -Sv)
   ulimit -Sv 6000000
