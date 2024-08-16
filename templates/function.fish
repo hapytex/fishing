@@ -1,3 +1,3 @@
-function ??? --description '???'
+function {{ basename }} --description '???'
     
 end
