@@ -1,4 +1,4 @@
-# Fishing
+# 🐟 Fishing
 
 A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This is mainly made for a programmer in Haskell and Python, so it has some programs to make the Haskell stack and Python shell more convenient.
 
@@ -60,5 +60,10 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 ## Installation
 
 One can install this by downloading (or cloning) and put the files in the `~/.config/fish/functions/`
-directory. You can of course also clone this repository at that location and thus
-*pull* new changes directly to the configuration directory.
+directory.
+
+You can of course also clone this repository at that location and thus *pull* new changes directly to the configuration directory:
+
+```bash
+git clone github.com/hapytex/fishing.git ~/.config/fish/functions/
+```
