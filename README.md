@@ -54,8 +54,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ## Variables
 
- - **`GIT_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`; and
- - **`GIT_BRANCH`**: the default branch, used to automatically map the remote to the local default branch in `gitremote`.
+ - **`GIT_BRANCH`**: the default branch, used to automatically map the remote to the local default branch in `gitremote`; and
+ - **`GIT_REPO_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`.
 
 ## Installation
 
