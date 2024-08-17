@@ -19,6 +19,7 @@ formatp () {
 
 
 format '*.hs' ormolu
+formatp '>' '*.json' jsonlint -f
 format '*.py' python3 -m isort --
 format '*.py' python3 -m black -- -S -q
 formatp -o '*.sql' sqlformat --reindent -s --keywords upper --identifiers lower
