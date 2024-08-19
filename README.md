@@ -1,11 +1,13 @@
-# Fishing
+# 🐟 Fishing
 
 A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This is mainly made for a programmer in Haskell and Python, so it has some programs to make the Haskell stack and Python shell more convenient.
 
 ## List of functions
 
+ - **`author`**: prefix the given file names with the name of the author;
  - **`backup`**: make readonly timestamped copies of the list of parameters;
  - **`biblespeak`**: speak the next verse of the *Bible*;
+ - **`dated`**: add the timestamp as a prefix of the given files;
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
  - **`fromtemplate`**: copies the file from the `templates/` subdirectory into the pwd, add it to git (if applicable), and starts editing;
@@ -18,6 +20,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
  - **`gitmastertag`**: checkout the mater branch, pull from remote, tag the commit and push the tag to the repository;
  - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
+ - **`gitremote`**: add the remote as origin with the given `GIT_PREFIX` and the name of the directory as git project;
  - **`gits`**: prints the status of the current Git repository (short for `git status`);
  - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
  - **`here_is_the_news`**: beeps a few times to mark a certain event;
@@ -32,6 +35,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`redo`**: redo a command until the exit code is 0;
  - **`rmemptydir`**: remove empty directories;
+ - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
@@ -40,7 +44,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`stackr`**: run the program, this is an alias of `stack run`;
  - **`stackt`**: test the Haskell stack project;
  - **`stacktcov`**: test the Haskell project, and keep track of the coverage;
- - **`task`**: wrapper for /usr/bin/task, except that it reports tasks after the modification;
+ - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
  - **`taskd`**: set the task with the given id as done;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
@@ -48,8 +52,18 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown; and
  - **`whatday`**: write the date in a color of the week.
 
+## Variables
+
+ - **`GIT_BRANCH`**: the default branch, used to automatically map the remote to the local default branch in `gitremote`; and
+ - **`GIT_REPO_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`.
+
 ## Installation
 
 One can install this by downloading (or cloning) and put the files in the `~/.config/fish/functions/`
-directory. You can of course also clone this repository at that location and thus
-*pull* new changes directly to the configuration directory.
+directory.
+
+You can of course also clone this repository at that location and thus *pull* new changes directly to the configuration directory:
+
+```bash
+git clone github.com/hapytex/fishing.git ~/.config/fish/functions/
+```

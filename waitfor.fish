@@ -1,4 +1,3 @@
-# Defined in - @ line 1
 function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time
   for i in (seq "$time" -1 0)
     set mn (math "$i % 60")

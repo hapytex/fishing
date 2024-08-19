@@ -14,7 +14,7 @@ git config --global push.default current
 
 
 stack update &
-pip3 install --upgrade black Click isort jupyter keras nltk numpy pandas pip prefect pygments scipy scikit-learn sympy tabulate tensorflow youtube-dl &
+pip3 install --upgrade black Click isort jinja2-cli jupyter keras nltk numpy pandas pip prefect pygments scipy scikit-learn sympy tabulate tensorflow thefuck youtube-dl &
 
 # load the apt cache to find out what package exposes a certain command
 sudo apt-file update

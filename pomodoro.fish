@@ -1,4 +1,3 @@
-# Defined in - @ line 1
 function pomodoro --description 'the pomodoro technique to stay focussed'
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   while true
