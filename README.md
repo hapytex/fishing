@@ -54,8 +54,11 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ## Variables
 
- - **`GIT_BRANCH`**: the default branch, used to automatically map the remote to the local default branch in `gitremote`; and
- - **`GIT_REPO_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`.
+ - **`COFFEE_MAX`**: end time of the day when coffee is no longer allowed, for example `1900`;
+ - **`COFFEE_MIN`**: start time of the day when coffee is allowed in decimal notation, for example `0800`;
+ - **`GIT_BRANCH`**: the default branch, used to automatically map the remote to the local default branch in `gitremote`;
+ - **`GIT_REPO_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`; and
+ - **`USER_SLUG`**: the slug used to prepend to file names when adding an author to it, for example `Elon_Musk`.
 
 ## Installation
 
