@@ -9,9 +9,10 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
+ - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
+ - **`frmclip`**: copy from the clipboard to the stdout;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
  - **`fromtemplate`**: copies the file from the `templates/` subdirectory into the pwd, add it to git (if applicable), and starts editing;
- - **`frmclip`**: copy from the clipboard to the stdout;
  - **`fundo`**: desugar a `do` expression of Haskell;
  - **`fundjinn`**: generate a function implementation from a signature with *Djinn*;
  - **`funtype`**: determine the type of a Haskell expression;

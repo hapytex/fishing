@@ -1,4 +1,4 @@
-function backup --description 'make a read-only timestamped copy of a file'
+function backup --description 'make readonly timestamped copies of the list of parameters'
   set dt (date '+%Y%m%d%H%M%S_')
   set -l targets
   for item in $argv;

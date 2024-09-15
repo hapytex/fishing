@@ -1,3 +1,3 @@
-function frmclip --wraps='xclip -selection o' --wraps='xclip -o -selection c' --description 'alias frmclip xclip -o -selection c'
+function frmclip --description 'copy from the clipboard to the stdout'
   xclip -o -selection c $argv;
 end
