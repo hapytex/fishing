@@ -51,8 +51,9 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
- - **`waitfor`**: takes an argument and waits that amount of time with a countdown; and
- - **`whatday`**: write the date in a color of the week.
+ - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
+ - **`whatday`**: write the date in a color of the week; and
+ - **`...`**: move to the root directory of the git repository, if that exists;
 
 ## Variables
 
