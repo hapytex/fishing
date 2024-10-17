@@ -50,4 +50,9 @@ cd fonts
 cd ..
 rm -rf fonts
 
+
+# TODO:!!!
+abbr -a --regex '[.][.][.]([/].*)?' --position anywhere --function ... -- git_root
+abbr -a --regex '.*[{]-?[0-9]+[:]-?[0-9]+([:]-?[0-9]+)?[}].*' --position anywhere --function expand -- expand
+
 wait

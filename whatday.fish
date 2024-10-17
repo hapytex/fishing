@@ -12,5 +12,5 @@ function whatday --description 'specifies the day with some counters'
   set ds (math --scale 0 "$dt/86400")
   set dow (math "(($ds + 3) % 7) + 1")
   set dp (math "($ds % 2) + 1")
-  echo -e "\e[48;2;$colors[$dow];$tcol[$dow]m$planets[$dow] $polars[$dp]  "(date)" $caf  "(sdate)"\e[0m"
+  echo -e "\e[48;2;$colors[$dow];$tcol[$dow]m$polars[$dp]  $planets[$dow] "(date '+%d %b %Y %H:%M %Z')" $caf  "(sdate)"\e[0m"
 end
