@@ -9,9 +9,10 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
+ - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
+ - **`frmclip`**: copy from the clipboard to the stdout;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
  - **`fromtemplate`**: copies the file from the `templates/` subdirectory into the pwd, add it to git (if applicable), and starts editing;
- - **`frmclip`**: copy from the clipboard to the stdout;
  - **`fundo`**: desugar a `do` expression of Haskell;
  - **`fundjinn`**: generate a function implementation from a signature with *Djinn*;
  - **`funtype`**: determine the type of a Haskell expression;
@@ -34,6 +35,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`redo`**: redo a command until the exit code is 0;
+ - **`rmake`**: walk up the filetree until it finds a Makefile;
  - **`rmemptydir`**: remove empty directories;
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
@@ -50,8 +52,9 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
- - **`waitfor`**: takes an argument and waits that amount of time with a countdown; and
- - **`whatday`**: write the date in a color of the week.
+ - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
+ - **`whatday`**: write the date in a color of the week; and
+ - **`...`**: move to the root directory of the git repository, if that exists;
 
 ## Variables
 
