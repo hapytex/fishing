@@ -37,6 +37,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`redo`**: redo a command until the exit code is 0;
  - **`rmake`**: walk up the filetree until it finds a Makefile;
  - **`rmemptydir`**: remove empty directories;
+ - **`sensors`**: print the status of the sensors every second;
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
