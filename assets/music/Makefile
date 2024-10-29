@@ -4,4 +4,4 @@ RESULT := $(SRC:.txt=)
 all: ${RESULT}
 
 %: %.txt
-	
+
