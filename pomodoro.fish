@@ -12,11 +12,11 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       here_is_the_news
       if [ "$i" -gt  3 ]
         set pause 900
-        set pausetype '\e[10D\e[33m[long pause]\e[0m' 'pause '
+        set pausetype '\e[10D\e[33m[long pause]\e[0m'
       end
       gsettings set org.gnome.desktop.notifications show-banners "$banners"
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' 'take a break'
-      waitfor "$pause" "$pausetype"
+      waitfor "$pause" "$pausetype" 'pause'
       here_is_the_news
     end
   end
