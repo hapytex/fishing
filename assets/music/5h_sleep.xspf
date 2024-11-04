@@ -39,9 +39,23 @@
     </track>
     <track>
       <location>sleep_cycle_X.mp3</location>
-      <duration>3605663</duration>
+      <duration>1200014</duration>
       <extension application="http://www.videolan.org/vlc/playlist/0">
         <vlc:id>5</vlc:id>
+      </extension>
+    </track>
+    <track>
+      <location>sleep_cycle_X.mp3</location>
+      <duration>1200014</duration>
+      <extension application="http://www.videolan.org/vlc/playlist/0">
+        <vlc:id>6</vlc:id>
+      </extension>
+    </track>
+    <track>
+      <location>sleep_cycle_X.mp3</location>
+      <duration>1200014</duration>
+      <extension application="http://www.videolan.org/vlc/playlist/0">
+        <vlc:id>7</vlc:id>
       </extension>
     </track>
   </trackList>
@@ -52,5 +66,7 @@
     <vlc:item tid="3"/>
     <vlc:item tid="4"/>
     <vlc:item tid="5"/>
+    <vlc:item tid="6"/>
+    <vlc:item tid="7"/>
   </extension>
 </playlist>
