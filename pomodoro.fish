@@ -16,7 +16,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       end
       gsettings set org.gnome.desktop.notifications show-banners "$banners"
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' 'take a break'
-      waitfor "$pause" "$pausetype" 'pause'
+      waitfor "$pause" "$pausetype" 'pause '
       here_is_the_news
     end
   end
