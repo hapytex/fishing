@@ -33,6 +33,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
+ - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`redo`**: redo a command until the exit code is 0;
  - **`rmake`**: walk up the filetree until it finds a Makefile;
