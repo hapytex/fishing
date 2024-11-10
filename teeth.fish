@@ -12,7 +12,7 @@ function teeth --description 'help cleaning teeth'
   set teeth 7-8 5-6 3-4 1-2
   set teeth "right "$teeth "left "$teeth[-1..1]
   set moves outside inside up
-  # waitfor 1200 'wait after eating' 'after eating '
+  waitfor 1200 'wait after eating' 'after eating '
   echo -en '                 \e[100D'
   set cc 1
   for cheek in $cheeks
