@@ -4,11 +4,13 @@ function teeth --description 'help cleaning teeth'
   set teeth 7-8 5-6 3-4 1-2
   set teeth "right "$teeth "left "$teeth[-1..1]
   set moves outside inside up
+  waitfor 1200 'wait after eating' 'after eating '
+  echo -en '                 \e[100D'
   for cheek in $cheeks
     for move in $moves
       for tooth in $teeth
-        waitfor 5 "$cheek  - $move - $tooth" "clean teeth $cheek - $move - $tooth "
-        echo -en '\e[100D'
+        waitfor 3 "$cheek  - $move - $tooth" "clean teeth $cheek - $move - $tooth "
+        echo -en '                 \e[100D'
       end
     end
   end
