@@ -28,4 +28,10 @@ function teeth --description 'help cleaning teeth'
     end
     set cc 2
   end
+  for f in (seq 12)
+    echo '                                           '
+  end
+  echo -en '                 \e[100D\e[12A'
+  waitfor 5 'brush tongue' 'brush tongue '
+  echo 'do NOT rinse with water        '
 end
