@@ -1,6 +1,6 @@
 function teeth --description 'help cleaning teeth'
   function draw_teeth -a cc -a tt -a kin
-    set teeth_map '   o5▁ o4▁ o4▁ o3▁ o3▁ o2▁    \n   u5█ u4█ u4█ u3█ u3█ u2█    \n   i5▔ i4▔ i4▔ i3▔ i3▔ i2▔    \no5▕u5█i5▏           i2▕u2█o2▏    \no6▕u6█i6▏           i1▕u1█o1▏\no6▕u6█i6▏           i1▕u1█o1▏\no7▕u7█i7▏           i0▕u0█o0▏\no7▕u7█i7▏           i0▕u0█o0▏' 'o7▕u7█i7▏           i0▕u0█o0▏\no7▕u7█i7▏           i0▕u0█o0▏\no6▕u6█i6▏           i1▕u1█o1▏\no6▕u6█i6▏           i1▕u1█o1▏\no5▕u5█i5▏           i2▕u2█o2▏\n   i5▁ i4▁ i4▁ i3▁ i3▁ i2▁     \n   u5█ u4█ u4█ u3█ u3█ u2█\n   o5▔ o4▔ o4▔ o3▔ o3▔ o2▔    '
+    set teeth_map '   o5▁ o4▁ o4▁ o3▁ o3▁ o2▁    \n   u5█ u4█ u4█ u3█ u3█ u2█    \n   i5▔ i4▔ i4▔ i3▔ i3▔ i2▔    \no5▕u5█i5▏           i2▕u2█o2▏    \no6▕u6█i6▏           i1▕u1█o1▏\no6▕u6█i6▏           i1▕u1█o1▏\no7▕u7█i7▏           i0▕u0█o0▏\no7▕u7█i7▏           i0▕u0█o0▏' 'o7▕u7█i7▏           i0▕u0█o0▏\no7▕u7█i7▏           i0▕u0█o0▏\no6▕u6█i6▏           i1▕u1█o1▏\no6▕u6█i6▏           i1▕u1█o1▏\no5▕u5█i5▏           i2▕u2█o2▏\n   i5▁ i4▁ i4▁ i3▁ i3▁ i2▁     \n   u5█ u4█ u4█ u3█ u3█ u2█    \n   o5▔ o4▔ o4▔ o3▔ o3▔ o2▔    '
     set tooth_map $teeth_map[$cc]
     set col (echo -e '\e[97m')
     set ecol (echo -e '\e[90m')
@@ -14,7 +14,7 @@ function teeth --description 'help cleaning teeth'
   set moves outside inside up
   # waitfor 1200 'wait after eating' 'after eating '
   echo -en '                 \e[100D'
-  set cc 1
+  set cc 2
   for cheek in $cheeks
     for move in $moves
       set tt 0
@@ -26,7 +26,7 @@ function teeth --description 'help cleaning teeth'
         set tt (math $tt+1)
       end
     end
-    set cc 2
+    set cc 1
   end
   for f in (seq 8)
     echo '                                           '
