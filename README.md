@@ -41,6 +41,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`sensors`**: print the status of the sensors every second;
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
+ - **`sleep_for`**: sleep a given number of hours;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
  - **`stackd`**: build the documentation of the Haskell stack project;
@@ -51,6 +52,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`swapfiles`**: swap two or more files by renaming the second to the first, the third to the second, and the first to the last;
  - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
  - **`taskd`**: set the task with the given id as done;
+ - **`teeth`**: help cleaning teeth;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;

@@ -1,4 +1,4 @@
-function sleep_for --description 'Sleep a given number of hours by using' -a n
+function sleep_for --description 'Sleep a given number of hours' -a n
   if [ -z "$n" ]
     set n 7
   end
