@@ -53,6 +53,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
  - **`taskd`**: set the task with the given id as done;
  - **`teeth`**: help cleaning teeth;
+ - **`unpart`**: look for parts with a corresponding file;
  - **`videos`**: see random videos;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
