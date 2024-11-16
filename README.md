@@ -8,7 +8,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`backup`**: make readonly timestamped copies of the list of parameters;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
- - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
+ - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
@@ -33,12 +33,15 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
+ - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`redo`**: redo a command until the exit code is 0;
  - **`rmake`**: walk up the filetree until it finds a Makefile;
  - **`rmemptydir`**: remove empty directories;
+ - **`sensors`**: print the status of the sensors every second;
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
+ - **`sleep_for`**: sleep a given number of hours;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
  - **`stackd`**: build the documentation of the Haskell stack project;
@@ -49,12 +52,13 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`swapfiles`**: swap two or more files by renaming the second to the first, the third to the second, and the first to the last;
  - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
  - **`taskd`**: set the task with the given id as done;
+ - **`teeth`**: help cleaning teeth;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
  - **`whatday`**: write the date in a color of the week; and
- - **`...`**: move to the root directory of the git repository, if that exists;
+ - **`...`**: move to the root directory of the git repository, if that exists.
 
 ## Variables
 
