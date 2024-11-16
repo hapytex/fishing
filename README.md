@@ -8,7 +8,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`backup`**: make readonly timestamped copies of the list of parameters;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
- - **`edithaskell`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
+ - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
@@ -58,7 +58,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
  - **`whatday`**: write the date in a color of the week; and
- - **`...`**: move to the root directory of the git repository, if that exists;
+ - **`...`**: move to the root directory of the git repository, if that exists.
 
 ## Variables
 
