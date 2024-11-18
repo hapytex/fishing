@@ -1,0 +1,7 @@
+powernap_06_alertness:https://youtu.be/C7hZe1IaAag
+powernap_10_alertness:https://youtu.be/z44OpXYg584
+powernap_15_memory:https://youtu.be/8vYmUqgQqSk
+powernap_20_memory:https://youtu.be/0ALabyT9wEk
+powernap_25_more_energy:https://youtu.be/mNkiwAsGMeA
+powernap_30_energy_plus:https://youtu.be/ZpyhZffZv58
+powernap_35_full_recharge:https://youtu.be/RoEW0wZd0pc
