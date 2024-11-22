@@ -1,4 +1,4 @@
-# 🐟 Fishing
+# 🎣 Fishing
 
 A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This is mainly made for a programmer in Haskell and Python, so it has some programs to make the Haskell stack and Python shell more convenient.
 
