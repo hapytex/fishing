@@ -10,6 +10,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
+ - **`fill`**: fill the entire screen with a certain color;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
  - **`fromtemplate`**: copies the file from the `templates/` subdirectory into the pwd, add it to git (if applicable), and starts editing;
@@ -53,6 +54,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
  - **`taskd`**: set the task with the given id as done;
  - **`teeth`**: help cleaning teeth;
+ - **`unpart`**: look for parts with a corresponding file;
+ - **`videos`**: see random videos;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
