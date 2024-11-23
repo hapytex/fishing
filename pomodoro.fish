@@ -1,4 +1,5 @@
 function pomodoro --description 'the pomodoro technique to stay focussed'
+  fill 0 184 252
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   while true
     set pause 300
