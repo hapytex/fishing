@@ -8,7 +8,10 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       xdotool key XF86AudioPlay
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
       gsettings set org.gnome.desktop.notifications show-banners false
+      play -n synth brownnoise &
+      set noise "$last_pid"
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️ working '
+      kill "$noise"
       xdotool key XF86AudioPlay
       here_is_the_news
       if [ "$i" -gt  3 ]
