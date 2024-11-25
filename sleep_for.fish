@@ -7,6 +7,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   nohup nice -n 19 vlc --no-random --no-loop --qt-start-minimized --play-and-exit $n'h_sleep.xspf' >/dev/null 2>/dev/null &
   disown "$last_pid"
   cd "$pth"
-  nohup fish -c "sleep $s; fill 255 219 100 | tee /dev/pts/?" >/dev/null 2>/dev/null &
+  nohup fish -c "sleep $s; fill 255 219 100 | tee "(tty) >/dev/null 2>/dev/null &
   disown "$last_pid"
 end
