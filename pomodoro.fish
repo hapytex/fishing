@@ -1,7 +1,18 @@
 function pomodoro --description 'the pomodoro technique to stay focussed'
   fill 0 184 252
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
-  set gammalr 325 285
+  function noising -a i
+    switch (math "$i % 3")
+      case 0
+        timeout 1800 play -q -n synth brownnoise >/dev/null 2>/dev/null &
+      case 1
+        timeout 1800 play -q -n synth sine 285 sine 325 >/dev/null 2>/dev/null &
+      case 2
+        timeout 1800 play -q -n synth sine 325 sine 285 >/dev/null 2>/dev/null &
+    end
+    return "$last_pid"
+  end
+  set i 2
   while true
     set pause 300
     set pausetype '\e[10D\e[32m[short pause]\e[0m'
@@ -9,13 +20,9 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       xdotool key XF86AudioPlay
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
       gsettings set org.gnome.desktop.notifications show-banners false
-      play -q -n synth brownnoise >/dev/null 2>/dev/null &
-      set noise "$last_pid"
-      play -q -n synth sine $gammalr[1] sine $gammalr[2] >/dev/null 2>/dev/null &
-      set gamma "$last_pid"
-      set gammalr[-1..1] $gammalr
+      set gamma (noising "$i")
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working '
-      kill "$noise" "$gamma"
+      kill "$gamma"
       xdotool key XF86AudioPlay
       here_is_the_news
       if [ "$i" -gt  3 ]
