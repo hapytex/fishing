@@ -1,6 +1,7 @@
 function pomodoro --description 'the pomodoro technique to stay focussed'
   fill 0 184 252
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
+  set gammalr 325 285
   while true
     set pause 300
     set pausetype '\e[10D\e[32m[short pause]\e[0m'
@@ -10,9 +11,10 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       gsettings set org.gnome.desktop.notifications show-banners false
       play -q -n synth brownnoise >/dev/null 2>/dev/null &
       set noise "$last_pid"
-      play -q -n synth sine 325 sine 285 >/dev/null 2>/dev/null &
+      play -q -n synth sine $gammalr[1] sine $gammalr[2] >/dev/null 2>/dev/null &
       set gamma "$last_pid"
-      waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️ working '
+      set gammalr[-1..1] $gammalr
+      waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working '
       kill "$noise" "$gamma"
       xdotool key XF86AudioPlay
       here_is_the_news
