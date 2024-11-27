@@ -20,9 +20,11 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
       gsettings set org.gnome.desktop.notifications show-banners false
       set gamma (noising)
+      keycolor 0 184 252
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working '
       kill "$gamma"
       xdotool key XF86AudioPlay
+      keycolor 255 219 100
       here_is_the_news
       if [ "$i" -gt  3 ]
         set pause 900

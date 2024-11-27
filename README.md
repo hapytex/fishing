@@ -29,6 +29,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
  - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
+ - **`keycolor`**: set the keyboard color to a specific color and intensity;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
