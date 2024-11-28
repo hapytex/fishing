@@ -13,7 +13,8 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     timeout (math "3600*$n") play -q -n synth pinknoise >/dev/null 2>/dev/null &
     disown "$last_pid"
   end
+  xset dpms force off
   set s (math "3600*$n")
-  nohup fish -c "sleep $s; keycolor 255 219 100 255; fill 255 219 100 | tee "(tty) >/dev/null 2>/dev/null &
+  nohup fish -c "sleep $s; xset dpms force on; keycolor 255 219 100 255; fill 255 219 100 | tee "(tty) >/dev/null 2>/dev/null &
   disown "$last_pid"
 end
