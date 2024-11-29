@@ -1,7 +1,7 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
   test -n "$n" || set n 7
   fill 0 126 61
-  keycolor 0 0 0 0
+  keycolor 100 75 0 25
   if [ "$n" -gt 0 ]
     set pth (/usr/bin/pwd)
     cd "$fish_function_path[1]/assets/music/"

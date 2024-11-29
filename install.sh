@@ -55,4 +55,9 @@ rm -rf fonts
 abbr -a --regex '[.][.][.]([/].*)?' --position anywhere --function ... -- git_root
 abbr -a --regex '.*[{]-?[0-9]+[:]-?[0-9]+([:]-?[0-9]+)?[}].*' --position anywhere --function expand -- expand
 
+sudo groupadd light
+usermod -aG light "$USER"
+sudo chgrp light /sys/class/leds/rgb:kbd_backlight/
+sudo chmod g+w -R /sys/class/leds/rgb:kbd_backlight/
+
 wait
