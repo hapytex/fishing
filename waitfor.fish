@@ -5,6 +5,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
   else
     set label ''
   end
+  set oldval 256
   for i in (seq "$time" -1 0)
     set mn (math "$i % 60")
     set hr (math --scale 0 "($i - $mn) / 60")
@@ -13,7 +14,11 @@ function waitfor --description 'wait a certain amount of time, or until the user
     echo -en "$txt\e["$n"D"
     echo -en "\033]0;$desc$txt\007"
     if [ -n "$keydown" ]
-      math "round(255*$i/$time)" > /sys/class/leds/rgb:kbd_backlight/brightness
+      set newval (math "round(255*$i/$time)")
+      if [ "$oldval" -ne "$newval" ]
+         echo "$newval" > /sys/class/leds/rgb:kbd_backlight/brightness &
+         set oldval $newval
+      end
     end
     sleep 1
   end
