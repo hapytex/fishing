@@ -25,7 +25,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working '
       kill "$gamma"
       xdotool key XF86AudioPlay
-      keycolor 255 219 100
+      keycolor 255 219 100 255
       here_is_the_news
       if [ "$i" -gt  3 ]
         set pause 900
