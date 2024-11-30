@@ -17,21 +17,23 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
     set pausetype '\e[10D\e[32m[short pause]\e[0m'
     set pausetitle '⏸️ pause '
     for i in (seq 4)
-      xdotool key XF86AudioPlay
+      xdotool key XF86AudioPlay &
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
       gsettings set org.gnome.desktop.notifications show-banners false
       set gamma (noising)
       keycolor 0 184 252 255
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working '
       kill "$gamma"
-      xdotool key XF86AudioPlay
-      keycolor 255 219 100 255
-      here_is_the_news
       if [ "$i" -gt  3 ]
+        keycolor 255 3 32 255
         set pause 900
         set pausetype '\e[10D\e[33m[long pause]\e[0m'
         set pausetitle '⏹️ pause '
+      else
+        keycolor 255 219 100 255
       end
+      xdotool key XF86AudioPlay &
+      here_is_the_news
       gsettings set org.gnome.desktop.notifications show-banners "$banners"
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
       waitfor "$pause" "$pausetype" "$pausetitle"
