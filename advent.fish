@@ -8,6 +8,7 @@ function advent --description 'shows the number of candles to lit for advent' -a
   set cand (math "4 - ceil(($last - $cur) / 604800)")
   if [ "$cand" -le 4 -a "$cand" -gt 0 ]
     echo $candles[$cand]
+    return "$cand"
   else
     echo ''
   end
