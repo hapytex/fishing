@@ -1,4 +1,4 @@
-function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc
+function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown
   if [ ! -z "$label" ]
     set label "$label "
     echo -en "$label"
@@ -12,6 +12,9 @@ function waitfor --description 'wait a certain amount of time, or until the user
     set n (string length "$txt")
     echo -en "$txt\e["$n"D"
     echo -en "\033]0;$desc$txt\007"
+    if [ -n "$keydown" ]
+      math "round(255*$i/$time)" > /sys/class/leds/rgb:kbd_backlight/brightness
+    end
     sleep 1
   end
 end

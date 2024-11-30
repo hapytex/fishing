@@ -22,7 +22,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       gsettings set org.gnome.desktop.notifications show-banners false
       set gamma (noising)
       keycolor 0 184 252 255
-      waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working '
+      waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working ' 1
       kill "$gamma"
       if [ "$i" -gt  3 ]
         keycolor 255 3 32 255
@@ -36,7 +36,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       here_is_the_news
       gsettings set org.gnome.desktop.notifications show-banners "$banners"
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
-      waitfor "$pause" "$pausetype" "$pausetitle"
+      waitfor "$pause" "$pausetype" "$pausetitle" 1
       here_is_the_news
     end
   end
