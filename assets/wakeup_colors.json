@@ -1,4 +1,7 @@
 {
-  "bright": {"hex": "#FFE4CE", "rgb": [255,228, 206]},
-  "yellow": {"hex": "#FFDB64", "rgb": [255,219,100]}
+  "spacecadet": {"hex": "#1F214D", "rgb": [31, 33, 77]},
+  "imperial": {"hex": "#50366F", "rgb": [80, 54, 111]},
+  "fushiapurple": {"hex": "#BF3475", "rgb": [191, 52, 117]},
+  "chineseorange": {"hex": "#EE6C45", "rgb": [238, 108, 69]},
+  "crayolaorangeyellow": {"hex": "#FFCE61", "rgb": [255, 206, 97]}
 }
