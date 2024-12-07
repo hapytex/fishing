@@ -1,10 +1,9 @@
-function wakeup --description 'Make some noise to wake someone up'
-  while true
-    xset dpms force off
-    keycolor 255 219 100 255
-    sleep 0.25
-    xset dpms force on
-    keycolor 255 219 100 0
-    sleep 0.25
+function wakeup --description 'Make some noise to wake someone up' -a tty
+  xset dpms force on
+  for i in (seq 0 4)
+    set cols (getcolor $i wakeup_colors)
+    keycolor $cols 255
+    fill $cols > "$tty"
+    sleep 300
   end
 end
