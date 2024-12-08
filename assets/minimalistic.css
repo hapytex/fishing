@@ -1,0 +1,33 @@
+body, body .yd8gve {
+  background: #000 !important;
+  color: #fff !important;
+  color-scheme: dark;
+}
+body .cover.cover.cover {
+  background: unset !important;
+}
+a:visited:not([href="#"]) {
+  color: #666 !important;
+}
+a:visited:hover {
+  color: #fff !important;
+}
+::selection {
+  color: #333 !important;
+  background: #ccc !important;
+}
+img {
+  filter: brightness(0.33);
+}
+img:hover {
+  filter: brightness(0.67);
+  transition: filter 0.2s;
+}
+g-img, g-img * {
+  background: white !important;
+  filter: none !important;
+}
+textarea, textarea:focus, input, input:focus, .sg-input-essay.sg-input-essay {
+   color: #ccc !important;
+   background: #000 !important;
+}
