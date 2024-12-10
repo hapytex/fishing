@@ -5,6 +5,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 ## List of functions
 
  - **`advent`**: shows the number of candles to lit for advent;
+ - **`airplane`**: turn on airplane mode;
  - **`assets`**: get the directory where the fish assets are stored;
  - **`author`**: prefix the given file names with the name of the author;
  - **`backup`**: make readonly timestamped copies of the list of parameters;
