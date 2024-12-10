@@ -1,4 +1,5 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
+  airplane &
   test -n "$n" || set n 7
   fill 0 126 61
   keycolor (getcolor random sleep_colors) 64
