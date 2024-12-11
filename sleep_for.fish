@@ -1,5 +1,7 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
   airplane &
+  set banners (gsettings get org.gnome.desktop.notifications show-banners)
+  gsettings set org.gnome.desktop.notifications show-banners false
   test -n "$n" || set n 7
   fill 0 126 61
   keycolor (getcolor random sleep_colors) 64
@@ -21,5 +23,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     xset dpms force off
   done
   sleep 300
+  gsettings set org.gnome.desktop.notifications show-banners "$banners"
   wakeup "(tty)' '(tput lines)' '(tput cols)
 end
