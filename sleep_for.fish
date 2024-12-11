@@ -15,7 +15,11 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   end
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off
-  set s (math "3600*$n - 1500")
-  sleep "$s"
+  set eps (math "6*$n-3")
+  for f in (seq "$eps"); do
+    sleep 600
+    xset dpms force off
+  done
+  sleep 300
   wakeup "(tty)' '(tput lines)' '(tput cols)
 end
