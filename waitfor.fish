@@ -15,7 +15,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
     echo -en "\033]0;$desc$txt\007"
     if [ -n "$keydown" ]
       set newval (math "round(255*$i/$time)")
-      if [ "$newval" -gt 10 -a "$oldval" -ne "$newval" ]
+      if [ "$newval" -gt 20 -a "$oldval" -ne "$newval" ]
          echo "$newval" > /sys/class/leds/rgb:kbd_backlight/brightness &
          set oldval $newval
       end

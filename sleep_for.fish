@@ -13,16 +13,17 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     cd "$pth"
   else
     set n (math "-$n")
-    timeout (math "3600*$n") play -q -n synth pinknoise
+    timeout (math "3600*$n") play -q -n synth pinknoise &
   end
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off
   set eps (math "6*$n-3")
-  for f in (seq "$eps"); do
+  for f in (seq "$eps")
     sleep 600
+    keycolor (getcolor random sleep_colors) 32
     xset dpms force off
-  done
+  end
   sleep 300
   gsettings set org.gnome.desktop.notifications show-banners "$banners"
-  wakeup "(tty)' '(tput lines)' '(tput cols)
+  wakeup (tty) (tput lines) (tput cols)
 end
