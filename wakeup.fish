@@ -1,6 +1,6 @@
 function wakeup --description 'Make some noise to wake someone up' -a tty -a l -a c
   xset dpms force on
-  play -q -n synth 120 sine 100 sine 101/140 &
+  play -q -n synth 1500 sine 100 sine 101/140 &
   for i in (seq 0 4)
     xrandr --output eDP-1 --brightness (math "($i+1)/5")
     set cols (getcolor $i wakeup_colors)
