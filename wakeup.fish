@@ -3,9 +3,9 @@ function wakeup --description 'Make some noise to wake someone up' -a tty -a l -
   xset dpms force on
   switch (random 0 1)
     case 0
-      play -q -n synth 1500 sine 100 sine 101/140 &
+      play -q -n synth 1500 sine 220 sine 221/260 &
     case 1
-      play -q -n synth 1500 sine 101/140 sine 100 &
+      play -q -n synth 1500 sine 221/260 sine 220 &
   end
   for i in (seq 0 4)
     xrandr --output eDP-1 --brightness (math "($i+1)/5")
