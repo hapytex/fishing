@@ -12,7 +12,8 @@ function waitfor --description 'wait a certain amount of time, or until the user
     set txt (printf "%02d:%02d" $hr $mn)
     set n (string length "$txt")
     echo -en "$txt\e["$n"D"
-    echo -en "\033]0;$desc$txt\007"
+    set pct (math "round(100*($time-$i)/$time)")
+    echo -en "\033]0;$desc$txt\007\033]9;4;1;$pct;\007"
     if [ -n "$keydown" ]
       set newval (math "round(255*$i/$time)")
       if [ "$newval" -gt 20 -a "$oldval" -ne "$newval" ]
@@ -22,4 +23,6 @@ function waitfor --description 'wait a certain amount of time, or until the user
     end
     sleep 1
   end
+  # clear progress
+  echo -en "\033]9;4;0\007"
 end
