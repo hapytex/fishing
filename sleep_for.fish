@@ -14,7 +14,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     cd "$pth"
   else
     set n (math "-$n")
-    timeout (math "3600*$n") play -q -n synth pinknoise &
+    timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0125 &
   end
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off

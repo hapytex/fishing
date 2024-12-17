@@ -4,11 +4,11 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
   function noising
     switch (random 0 2)
       case 0
-        timeout 1800 play -q -n synth brownnoise >/dev/null 2>/dev/null &
+        timeout 1800 play -q -n synth brownnoise vol 0.2 >/dev/null 2>/dev/null &
       case 1
-        timeout 1800 play -q -n synth sine 285 sine 325 >/dev/null 2>/dev/null &
+        timeout 1800 play -q -n synth sine 285 sine 325 vol 0.2 >/dev/null 2>/dev/null &
       case 2
-        timeout 1800 play -q -n synth sine 325 sine 285 >/dev/null 2>/dev/null &
+        timeout 1800 play -q -n synth sine 325 sine 285 vol 0.2 >/dev/null 2>/dev/null &
     end
     echo "$last_pid"
   end
