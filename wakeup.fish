@@ -1,4 +1,5 @@
 function wakeup --description 'Make some noise to wake someone up' -a tty -a l -a c
+  test -n "$tty" | set tty (tty)
   xset dpms force on
   switch (random 0 1)
     case 0
