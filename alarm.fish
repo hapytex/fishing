@@ -1,8 +1,12 @@
 function alarm --description 'show distress'
   while true
-    keycolor 237 17 6 255
-    sleep 0.5
-    keycolor 0 0 0 0
-    sleep 0.5
+    for i in (seq 55 50 255)
+      keycolor 237 17 6 "$i" &
+      sleep 0.1
+    end
+    for i in (seq 200 -50 5)
+      keycolor 237 17 6 "$i" &
+      sleep 0.1
+    end
   end
 end
