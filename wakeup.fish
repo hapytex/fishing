@@ -14,4 +14,5 @@ function wakeup --description 'Make some noise to wake someone up' -a tty -a l -
     fill $cols $l $c > "$tty"
     sleep 300
   end
+  alarm
 end
