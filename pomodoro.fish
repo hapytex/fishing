@@ -3,6 +3,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   function endpom -a gamma
     test -n "$gamma" && kill "$gamma"
+    exit 0
   end
   function noising
     switch (random 0 2)
