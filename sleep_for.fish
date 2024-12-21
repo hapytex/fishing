@@ -17,7 +17,9 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0125 &
   end
   set nn (math "$n+1")
-  date '+%Y-%m-%d %H:%M:%S' -d "+$nn hours" > "$HOME/block_sleep"
+  set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+$nn hours")
+  gh_status 'Sleeping' 'sleeping' "$end" true
+  echo "$end" > "$HOME/block_sleep"
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off
   set eps (math "6*$n-3")

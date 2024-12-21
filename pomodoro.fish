@@ -22,7 +22,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       gsettings set org.gnome.desktop.notifications show-banners false
       set gamma (noising)
       keycolor (getcolor random focus_colors) 255
-      gh_status 'Focusing' 'dart' (date '+%Y-%m-%dT%H:%M:%S%:z' -d '25 minutes') true
+      gh_status 'Focusing' 'dart' (date '+%Y-%m-%dT%H:%M:%S%z' -d '25 minutes') true
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working ' 1
       kill "$gamma"
       if [ "$i" -gt  3 ]
@@ -30,10 +30,10 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
         set pause 900
         set pausetype '\e[10D\e[33m[long pause]\e[0m'
         set pausetitle '⏹️ pause '
-        gh_status 'Long pause' 'couch_and_lamp' (date '+%Y-%m-%dT%H:%M:%S%:z' -d '15 minutes') false
+        gh_status 'Long pause' 'couch_and_lamp' (date '+%Y-%m-%dT%H:%M:%S%z' -d '15 minutes') false
       else
         keycolor 255 219 100 255
-        gh_status 'Short pause' 'teapot' (date '+%Y-%m-%dT%H:%M:%S%:z' -d '5 minutes') false
+        gh_status 'Short pause' 'teapot' (date '+%Y-%m-%dT%H:%M:%S%z' -d '5 minutes') false
       end
       xdotool key XF86AudioPlay &
       here_is_the_news &
