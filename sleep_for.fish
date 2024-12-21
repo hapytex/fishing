@@ -1,4 +1,8 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
+  function cleanup -a gamma
+    test -n "$gamma" && kill "$gamma"
+    xrandr --output eDP-1 --brightness '1'
+  end
   airplane &
   killall element-deskop thunderbird >/dev/null 2>/dev/null &
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
@@ -15,7 +19,9 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   else
     set n (math "-$n")
     timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0125 &
+    set -f gamma $last_pid
   end
+  trap "cleanup $gamma" EXIT SIGINT
   set nn (math "$n+1")
   set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+$nn hours")
   gh_status 'Sleeping' 'sleeping' "$end" true

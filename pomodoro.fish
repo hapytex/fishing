@@ -1,6 +1,9 @@
 function pomodoro --description 'the pomodoro technique to stay focussed'
   fill 0 184 252
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
+  function endpom -a gamma
+    test -n "$gamma" && kill "$gamma"
+  end
   function noising
     switch (random 0 2)
       case 0
@@ -21,6 +24,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
       gsettings set org.gnome.desktop.notifications show-banners false
       set gamma (noising)
+      trap "endpom $gamma" EXIT SIGINT
       keycolor (getcolor random focus_colors) 255
       gh_status 'Focusing' 'dart' (date '+%Y-%m-%dT%H:%M:%S%z' -d '25 minutes') true
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working ' 1
