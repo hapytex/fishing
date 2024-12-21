@@ -36,11 +36,11 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
         gh_status 'Short pause' 'teapot' (date '+%Y-%m-%dT%H:%M:%S%:z' -d '5 minutes') false
       end
       xdotool key XF86AudioPlay &
-      here_is_the_news
+      here_is_the_news &
       gsettings set org.gnome.desktop.notifications show-banners "$banners"
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
       waitfor "$pause" "$pausetype" "$pausetitle" 1
-      here_is_the_news
+      here_is_the_news &
     end
   end
 end
