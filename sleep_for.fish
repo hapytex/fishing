@@ -2,7 +2,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
-    exit 0
   end
   airplane &
   killall element-deskop thunderbird >/dev/null 2>/dev/null &
