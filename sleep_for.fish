@@ -22,7 +22,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0125 &
     set gamma $last_pid
   end
-  trap "cleanup $gamma" EXIT SIGINT
+  trap "cleanup $gamma" EXIT
   set nn (math "$n+1")
   set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+$nn hours")
   gh_status 'Sleeping' 'sleeping' "$end" true

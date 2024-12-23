@@ -1,5 +1,6 @@
 function wakeup --description 'Make some noise to wake someone up' -a tty -a l -a c
   test -n "$tty" | set tty (tty)
+  xrandr --output eDP-1 --brightness 0.2
   xset dpms force on
   switch (random 0 1)
     case 0
