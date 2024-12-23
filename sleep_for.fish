@@ -9,7 +9,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   gsettings set org.gnome.desktop.notifications show-banners false
   test -n "$n" || set n 7
-  fill 0 126 61
+  fill (getcolor 0 wakeup_colors)
   keycolor (getcolor random sleep_colors) 64
   if [ "$n" -gt 0 ]
     set pth (/usr/bin/pwd)

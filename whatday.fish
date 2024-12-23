@@ -12,5 +12,7 @@ function whatday --description 'specifies the day with some counters'
   set ds (math --scale 0 "$dt/86400")
   set dow (math "(($ds + 3) % 7) + 1")
   set dp (math "($ds % 2) + 1")
-  echo -e "\e[48;2;$colors[$dow];$tcol[$dow]m$polars[$dp]  $planets[$dow] "(date '+%d %b')" $caf  "(sdate)" "(advent)" \e[0m"
+  set bat (date +%s)
+  set bat (math "round((($bat - 730800) % 1209600) / 12096)")
+  echo -e "\e[48;2;$colors[$dow];$tcol[$dow]m$polars[$dp]  $planets[$dow] "(date '+%d %b')" $caf  "(sdate)" "(advent)"  🔋$bat% \e[0m"
 end
