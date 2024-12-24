@@ -71,8 +71,9 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`weather`**: obtain the weather based on GeoIP;
  - **`whatday`**: write the date in a color of the week;
  - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command;
- - **`...`**: move to the root directory of the git repository, if that exists; and
- - **`🍅`**: alias for pomodoro.
+ - **`...`**: move to the root directory of the git repository, if that exists;
+ - **`🍅`**: alias for `pomodoro`; and
+ - **`😴`**: alias for `sleep_for`.
 
 ## Variables
 
