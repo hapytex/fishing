@@ -1,4 +1,5 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
+  test -n "$n" || set n '-6'
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
