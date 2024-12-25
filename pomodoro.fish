@@ -36,7 +36,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
         set pausetitle '⏹️ pause '
         gh_status 'Long pause' 'couch_and_lamp' (date '+%Y-%m-%dT%H:%M:%S%z' -d '15 minutes') false
       else
-        keycolor 255 219 100 255
+        keycolor (getcolor random health_colors) 255
         gh_status 'Short pause' 'teapot' (date '+%Y-%m-%dT%H:%M:%S%z' -d '5 minutes') false
       end
       xdotool key XF86AudioPlay &
