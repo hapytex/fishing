@@ -10,6 +10,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`assets`**: get the directory where the fish assets are stored;
  - **`author`**: prefix the given file names with the name of the author;
  - **`backup`**: make readonly timestamped copies of the list of parameters;
+ - **`battery`**: print the percentage of the battery;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
