@@ -12,5 +12,5 @@ function battery --description 'print the percentage of the battery' -a numerato
   else
     set emo '🪫'
   end
-  echo "$emo $pct%"
+  echo "$emo$pct%"
 end
