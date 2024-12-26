@@ -3,9 +3,11 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
+    gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
     gh_status '' '⏰' (date '+%Y-%m-%d %H:%M:%S%z' -d '+25 minutes') false
   end
   airplane &
+  gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled &
   killall element-deskop thunderbird >/dev/null 2>/dev/null &
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   gsettings set org.gnome.desktop.notifications show-banners false
@@ -38,5 +40,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   end
   sleep 300
   gsettings set org.gnome.desktop.notifications show-banners "$banners"
+  gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
   wakeup (tty) (tput lines) (tput cols)
 end
