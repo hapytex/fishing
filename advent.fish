@@ -1,5 +1,6 @@
 function advent --description 'shows the number of candles to lit for advent' -a day
   set candles 🕯️ 🕯️🕯️ 🕯️🕯️🕯️ 🕯️🕯️🕯️🕯️
+  # TODO: same year
   set christmas (date +%s --utc -d 'december 25 0:00')
   set weekday (date +%w -d "@$christmas")
   test $weekday -eq 0 && set weekday 7
