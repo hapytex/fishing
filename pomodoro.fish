@@ -26,7 +26,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       set gamma (noising)
       trap "endpom $gamma" EXIT
       keycolor (getcolor random focus_colors) 255
-      gh_status 'Focusing' 'arrow_forward' (date '+%Y-%m-%dT%H:%M:%S%z' -d '25 minutes') true
+      gh_status 'Focusing' 'arrow_forward' '25 minutes' true
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working ' 1
       kill "$gamma"
       if [ "$i" -gt  3 ]
@@ -34,10 +34,10 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
         set pause 900
         set pausetype '\e[10D\e[33m[long pause]\e[0m'
         set pausetitle '⏹️ pause '
-        gh_status 'Long pause' 'stop_button' (date '+%Y-%m-%dT%H:%M:%S%z' -d '15 minutes') false
+        gh_status 'Long pause' 'stop_button' '15 minutes' false
       else
         keycolor (getcolor random heal_colors) 255
-        gh_status 'Short pause' 'pause_button' (date '+%Y-%m-%dT%H:%M:%S%z' -d '5 minutes') false
+        gh_status 'Short pause' 'pause_button' '5 minutes' false
       end
       xdotool key XF86AudioPlay &
       here_is_the_news &

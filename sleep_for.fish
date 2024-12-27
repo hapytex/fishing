@@ -4,7 +4,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
     gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
-    gh_status '' '⏰' (date '+%Y-%m-%d %H:%M:%S%z' -d '+25 minutes') false
+    gh_status '' 'alarm_clock' '25 minutes' false
   end
   airplane &
   gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled &
