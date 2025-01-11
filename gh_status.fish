@@ -14,5 +14,5 @@ function gh_status --description 'set the GitHub status' -a message -a emoji -a 
           }
         }
       }
-    }' # >/dev/null 2>/dev/null &
+    }' >/dev/null 2>/dev/null &
 end
