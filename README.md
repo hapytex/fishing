@@ -52,6 +52,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`sleep_for`**: sleep a given number of hours;
+ - **`sortit`**: sort the given files and copy the result to the original files;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
  - **`stackd`**: build the documentation of the Haskell stack project;
