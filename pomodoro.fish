@@ -27,6 +27,8 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       trap "endpom $gamma" EXIT
       keycolor (getcolor random focus_colors) 255
       gh_status 'Focusing' 'arrow_forward' '25 minutes' true
+      set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+40 minutes")
+      echo "$end" > "$HOME/block_sleep"
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working ' 1
       kill "$gamma"
       if [ "$i" -gt  3 ]

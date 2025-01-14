@@ -13,6 +13,6 @@ function whatday --description 'specifies the day with some counters'
   set dow (math "(($ds + 3) % 7) + 1")
   set dp (math "($ds % 2) + 1")
   set bat (date +%s)
-  set bat (math "round(((((126000 - $bat) % 1209600) + 1209600) % 1209600) / 12096)")
+  set bat (math "round(((((39600 - $bat) % 1209600) + 1209600) % 1209600) / 12096)")
   echo -e "\e[48;2;$colors[$dow];$tcol[$dow]m$polars[$dp]  $planets[$dow] "(date '+%d %b')" $caf  "(sdate)" "(advent)"  "(battery $bat)" "(battery)" \e[0m"
 end
