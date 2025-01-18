@@ -75,6 +75,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command;
  - **`...`**: move to the root directory of the git repository, if that exists;
  - **`🍅`**: alias for `pomodoro`;
+ - **`🚨`**: alias for `alarm`;
  - **`💼`**: alias for `pomodoro`; and
  - **`😴`**: alias for `sleep_for`.
 
