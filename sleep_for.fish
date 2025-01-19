@@ -4,10 +4,12 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
     gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
+    xinput -enable 11
     gh_status '' 'alarm_clock' '25 minutes' false
   end
   airplane &
   gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled &
+  xinput -disable 11
   killall element-deskop thunderbird >/dev/null 2>/dev/null &
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   gsettings set org.gnome.desktop.notifications show-banners false
@@ -41,5 +43,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   sleep 300
   gsettings set org.gnome.desktop.notifications show-banners "$banners"
   gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
+  xinput -enable 11
   wakeup (tty) (tput lines) (tput cols)
 end
