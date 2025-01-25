@@ -66,6 +66,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`taskd`**: set the task with the given id as done;
  - **`teeth`**: help cleaning teeth;
  - **`unpart`**: look for parts with a corresponding file;
+ - **`update_system`**: update the system in an asynchronous way;
  - **`videos`**: see random videos;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
