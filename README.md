@@ -46,6 +46,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`quickread`**: 𝗯𝗼𝗹face the 𝗳𝗶rst 𝗹𝗲𝘁ters of 𝗲ach 𝘄ord, 𝘀𝗽𝗲eding up 𝗿𝗲𝗮ding;
  - **`redo`**: redo a command until the exit code is 0;
+ - **`remake`**: a loop to remake certain products with a Makefile;
  - **`rmake`**: walk up the filetree until it finds a Makefile;
  - **`rmemptydir`**: remove empty directories;
  - **`sensors`**: print the status of the sensors every second;
