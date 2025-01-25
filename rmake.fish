@@ -5,6 +5,6 @@ function rmake --wraps='git pull' --description 'walk up the filetree until it f
     set pre (basename (pwd))"/$pre"
     cd '..'
   end
-  make "$pre"$argv
+  wrapampel make "$pre"$argv
   cd "$cur"
 end

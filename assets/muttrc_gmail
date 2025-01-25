@@ -1,0 +1,24 @@
+# generate an app password at https://myaccount.google.com/apppasswords
+
+# ================  IMAP ====================
+set imap_user = <account>@gmail.com
+set imap_pass = "<app-password>"
+set spoolfile = imaps://imap.gmail.com/INBOX
+set folder = imaps://imap.gmail.com/
+set record="imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+set mbox="imaps://imap.gmail.com/[Gmail]/All Mail"
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+# ================  SMTP  ====================
+set smtp_url = "smtp://<account>@gmail.com@smtp.gmail.com:587/"
+set smtp_pass = $imap_pass
+set ssl_force_tls = yes
+set editor = "vim"
+set edit_headers = yes
+set charset = UTF-8
+unset use_domain
+set realname = "<name>"
+set from = "<account>@gmail.com"
+set use_from = yes

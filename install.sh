@@ -6,7 +6,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo add-apt-repository ppa:tatokis/alarm-clock-applet
 
 sudo apt-get update
-sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs haskell-stack hlint hoogle ipython3 jq lambdabot nodejs npm pandoc pdfsam powerline pylint python-wxtools python3-pytest rename sdate supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
+sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs haskell-stack hlint hoogle ipython3 jq lambdabot lynx nodejs npm pandoc pdfsam powerline pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
 sudo snap install upscayl
 git lfs install
 
@@ -54,5 +54,10 @@ rm -rf fonts
 # TODO:!!!
 abbr -a --regex '[.][.][.]([/].*)?' --position anywhere --function ... -- git_root
 abbr -a --regex '.*[{]-?[0-9]+[:]-?[0-9]+([:]-?[0-9]+)?[}].*' --position anywhere --function expand -- expand
+
+sudo groupadd light
+usermod -aG light "$USER"
+sudo chgrp light /sys/class/leds/rgb:kbd_backlight/
+sudo chmod g+w -R /sys/class/leds/rgb:kbd_backlight/
 
 wait

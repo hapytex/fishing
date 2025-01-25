@@ -1,11 +1,16 @@
-# 🐟 Fishing
+# 🎣 Fishing
 
 A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This is mainly made for a programmer in Haskell and Python, so it has some programs to make the Haskell stack and Python shell more convenient.
 
 ## List of functions
 
+ - **`advent`**: shows the number of candles to lit for advent;
+ - **`airplane`**: turn on airplane mode;
+ - **`alarm`**: show distress;
+ - **`assets`**: get the directory where the fish assets are stored;
  - **`author`**: prefix the given file names with the name of the author;
  - **`backup`**: make readonly timestamped copies of the list of parameters;
+ - **`battery`**: print the percentage of the battery;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
@@ -17,6 +22,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`fundo`**: desugar a `do` expression of Haskell;
  - **`fundjinn`**: generate a function implementation from a signature with *Djinn*;
  - **`funtype`**: determine the type of a Haskell expression;
+ - **`getcolor`**: get the color for a given name;
+ - **`gh_status`**: set the GitHub status;
  - **`gitc`**: make a git commit (short for `git commit -am`);
  - **`gitd`**: calculate the git difference and work with a pager to read the full response;
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
@@ -29,6 +36,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`igrep`**: run grep in a case insensitive way;
  - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
+ - **`keycolor`**: set the keyboard color to a specific color and intensity;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
@@ -36,13 +44,16 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
  - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
+ - **`quickread`**: 𝗯𝗼𝗹face the 𝗳𝗶rst 𝗹𝗲𝘁ters of 𝗲ach 𝘄ord, 𝘀𝗽𝗲eding up 𝗿𝗲𝗮ding;
  - **`redo`**: redo a command until the exit code is 0;
+ - **`remake`**: a loop to remake certain products with a Makefile;
  - **`rmake`**: walk up the filetree until it finds a Makefile;
  - **`rmemptydir`**: remove empty directories;
  - **`sensors`**: print the status of the sensors every second;
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`sleep_for`**: sleep a given number of hours;
+ - **`sortit`**: sort the given files and copy the result to the original files;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
  - **`stackd`**: build the documentation of the Haskell stack project;
@@ -60,8 +71,14 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
- - **`whatday`**: write the date in a color of the week; and
- - **`...`**: move to the root directory of the git repository, if that exists.
+ - **`weather`**: obtain the weather based on GeoIP;
+ - **`whatday`**: write the date in a color of the week;
+ - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command;
+ - **`...`**: move to the root directory of the git repository, if that exists;
+ - **`🍅`**: alias for `pomodoro`;
+ - **`🚨`**: alias for `alarm`;
+ - **`💼`**: alias for `pomodoro`; and
+ - **`😴`**: alias for `sleep_for`.
 
 ## Variables
 
