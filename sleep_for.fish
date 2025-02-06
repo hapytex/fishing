@@ -1,5 +1,5 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
-  test -n "$n" || set n '-7'
+  test -n "$n" || set n '7'
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
@@ -16,14 +16,14 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   test -n "$n" || set n 7
   fill (getcolor 0 wakeup_colors)
   keycolor (getcolor random sleep_colors) 64
-  if [ "$n" -gt 0 ]
+  if [ "$n" -lt 0 ]
+    set n (math "-$n")
     set pth (/usr/bin/pwd)
     cd (assets)'/music/'
     nohup nice -n 19 vlc --no-random --no-loop --qt-start-minimized --play-and-exit $n'h_sleep.xspf' >/dev/null 2>/dev/null &
     disown "$last_pid"
     cd "$pth"
   else
-    set n (math "-$n")
     timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0125 &
     set gamma $last_pid
   end
