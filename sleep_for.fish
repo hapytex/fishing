@@ -10,7 +10,8 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   airplane &
   gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled &
   xinput -disable 11
-  killall element-deskop thunderbird >/dev/null 2>/dev/null &
+  # kill noisy apps
+  killall element-deskop thunderbird java >/dev/null 2>/dev/null &
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   gsettings set org.gnome.desktop.notifications show-banners false
   test -n "$n" || set n 7
