@@ -64,6 +64,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`swapfiles`**: swap two or more files by renaming the second to the first, the third to the second, and the first to the last;
  - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
  - **`taskd`**: set the task with the given id as done;
+ - **`taskflush`**: set all expired tasks to done;
  - **`teeth`**: help cleaning teeth;
  - **`unpart`**: look for parts with a corresponding file;
  - **`update_system`**: update the system in an asynchronous way;

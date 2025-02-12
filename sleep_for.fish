@@ -24,7 +24,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     disown "$last_pid"
     cd "$pth"
   else
-    timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0125 &
+    timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0250 &
     set gamma $last_pid
   end
   trap "cleanup $gamma" EXIT
