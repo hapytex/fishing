@@ -14,6 +14,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
+ - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
  - **`fill`**: fill the entire screen with a certain color;
  - **`frmclip`**: copy from the clipboard to the stdout;
@@ -80,8 +81,9 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`...`**: move to the root directory of the git repository, if that exists;
  - **`🍅`**: alias for `pomodoro`;
  - **`🚨`**: alias for `alarm`;
- - **`💼`**: alias for `pomodoro`; and
- - **`😴`**: alias for `sleep_for`.
+ - **`💼`**: alias for `pomodoro`;
+ - **`😴`**: alias for `sleep_for`; and
+ - **`🥚`**: alias for `eggs`.
 
 ## Variables
 
