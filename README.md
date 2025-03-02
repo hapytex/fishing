@@ -13,6 +13,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`battery`**: print the percentage of the battery;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`dated`**: add the timestamp as a prefix of the given files;
+ - **`dishwasher`**: wait until the dishwasher has finished;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
