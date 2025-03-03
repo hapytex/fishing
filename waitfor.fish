@@ -19,7 +19,8 @@ function waitfor --description 'wait a certain amount of time, or until the user
     end
     set n (string length "$txt")
     if [ "$n" -lt "$oldn" ]
-      # TODO: erase previous one if length differs
+      # erase previous one if length differs
+      echo -en '        \e[8D'
     end
     echo -en "\e[1m$txt\e[0m\e["$n"D"
     set pct (math "round(100*($time-$i)/$time)")
