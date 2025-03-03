@@ -6,6 +6,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
     set label ''
   end
   set oldval 256
+  set oldn 8
   set time (math "round($time)")
   for i in (seq "$time" -1 0)
     set sc (math "$i % 60")
@@ -17,6 +18,9 @@ function waitfor --description 'wait a certain amount of time, or until the user
       set txt (printf "%02d:%02d:%02d" $hr $mn $sc)
     end
     set n (string length "$txt")
+    if [ "$n" -lt "$oldn" ]
+      # TODO: erase previous one if length differs
+    end
     echo -en "\e[1m$txt\e[0m\e["$n"D"
     set pct (math "round(100*($time-$i)/$time)")
     echo -en "\033]0;$desc$txt\007\033]9;4;1;$pct;\007"
@@ -28,6 +32,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
       end
     end
     sleep 1
+    set oldn "$n"
   end
   # clear progress
   echo -en "\033]9;4;0\007"
