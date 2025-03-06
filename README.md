@@ -85,6 +85,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`🍅`**: alias for `pomodoro`;
  - **`🚨`**: alias for `alarm`;
  - **`💼`**: alias for `pomodoro`;
+ - **`👕`**: alias for `washingmachine`;
+ - **`🍽️`**: alias for `dishwasher`;
  - **`😴`**: alias for `sleep_for`; and
  - **`🥚`**: alias for `eggs`.
 
