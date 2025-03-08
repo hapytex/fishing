@@ -12,6 +12,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`backup`**: make readonly timestamped copies of the list of parameters;
  - **`battery`**: print the percentage of the battery;
  - **`biblespeak`**: speak the next verse of the *Bible*;
+ - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`dishwasher`**: wait until the dishwasher has finished;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
@@ -42,6 +43,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
  - **`keycolor`**: set the keyboard color to a specific color and intensity;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
+ - **`makealias`**: make an alias file;
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
@@ -84,9 +86,11 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command;
  - **`...`**: move to the root directory of the git repository, if that exists;
  - **`🍅`**: alias for `pomodoro`;
+ - **`☕`**: alias for `coffee`;
  - **`🚨`**: alias for `alarm`;
  - **`💼`**: alias for `pomodoro`;
  - **`👕`**: alias for `washingmachine`;
+ - **`🦷`**: alias for `teeth`;
  - **`🍽️`**: alias for `dishwasher`;
  - **`😴`**: alias for `sleep_for`; and
  - **`🥚`**: alias for `eggs`.
