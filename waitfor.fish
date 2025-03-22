@@ -22,7 +22,8 @@ function waitfor --description 'wait a certain amount of time, or until the user
       # erase previous one if length differs
       echo -en '        \e[8D'
     end
-    echo -en "\e[1m$txt\e[0m\e["$n"D"
+    set cl (math "min(255, 4*$i)")
+    echo -en "\e[1m\e[38;2;255;$cl;"$cl"m$txt\e[0m\e["$n"D"
     set pct (math "round(100*($time-$i)/$time)")
     echo -en "\033]0;$desc$txt\007\033]9;4;1;$pct;\007"
     if [ -n "$keydown" ]
