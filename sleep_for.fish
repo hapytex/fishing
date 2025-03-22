@@ -25,7 +25,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     disown "$last_pid"
     cd "$pth"
   else
-    timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0250 fade 5 &
+    timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0250 fade 5 >/dev/null 2>/dev/null &
     set gamma $last_pid
   end
   trap "cleanup $gamma" EXIT
@@ -36,6 +36,8 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off
   set eps (math "6*$n-3")
+  set sleepsec (math "round(3600 * $n)")
+  waitfor $sleepsec '💤 sleep' '💤 ' &
   for f in (seq "$eps")
     sleep 600
     keycolor (getcolor random sleep_colors) 32
