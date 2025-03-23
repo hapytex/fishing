@@ -29,7 +29,13 @@ if __name__ == "__main__":
                 d += int(di)
             val = d
         else:
-            val = literal_eval(val)
+            try:
+                val = literal_eval(val)
+            except ValueError:
+                try:
+                    val = json.loads(val)
+                except ValueError:
+                    pass  # keep it a string
         datum = data
         for ky in key.split("."):
             datum = datum.setdefault(ky, {})
