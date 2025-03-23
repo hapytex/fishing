@@ -20,6 +20,9 @@ if __name__ == "__main__":
     for i in range(1, len(sys.argv) - 1, 2):
         key = sys.argv[i]
         val = literal_eval(sys.argv[i + 1])
-        data.setdefault(key, {})[dt] = val
+        datum = data
+        for ky in key.split('.'):
+            datum = datum.setdefault(ky, {})
+        datum[dt] = val
     with open(ASSET_PATH, "w") as f:
         json.dump(data, f, indent=4)
