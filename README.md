@@ -44,6 +44,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`keycolor`**: set the keyboard color to a specific color and intensity;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
  - **`makealias`**: make an alias file;
+ - **`measure`**: add a given measurement at a given time;
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
