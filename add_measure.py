@@ -6,7 +6,7 @@ from datetime import datetime
 import json
 import re
 
-DURATION = re.compile(r'\d{1,2}([:]\d{2})+')
+DURATION = re.compile(r"\d{1,2}([:]\d{2})+")
 ASSET_PATH = "measurements.json"
 
 if __name__ == "__main__":
@@ -24,14 +24,14 @@ if __name__ == "__main__":
         val = sys.argv[i + 1].strip()
         if DURATION.fullmatch(val.strip()):
             d = 0
-            for di in val.split(':'):
+            for di in val.split(":"):
                 d *= 60
                 d += int(di)
             val = d
         else:
             val = literal_eval(val)
         datum = data
-        for ky in key.split('.'):
+        for ky in key.split("."):
             datum = datum.setdefault(ky, {})
         datum[dt] = val
     with open(ASSET_PATH, "w") as f:
