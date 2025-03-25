@@ -48,5 +48,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   gsettings set org.gnome.desktop.notifications show-banners "$banners"
   gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
   xinput -enable 11
-  wakeup (tty) (tput lines) (tput cols)
+  wakeup (tty) (tput lines) (tput cols) &
+  wait
 end
