@@ -20,7 +20,7 @@ if __name__ == "__main__":
     except IOError:
         data = {}
     dt = datetime.now().replace(microsecond=0).isoformat()
-    to_sort = {}
+    to_sort = {id(data): data}
     for i in range(1, len(sys.argv) - 1, 2):
         key = sys.argv[i]
         try:
@@ -49,8 +49,8 @@ if __name__ == "__main__":
         datum = data
         for ky in key.split("."):
             datum = datum.setdefault(ky, {})
+            to_sort[id(datum)] = datum
         datum[key_dt] = val
-        to_sort[id(datum)] = datum
     for datum in to_sort.values():
         datum_sort = {k: v for k, v in sorted(datum.items())}
         datum.clear()
