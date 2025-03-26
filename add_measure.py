@@ -20,11 +20,12 @@ if __name__ == "__main__":
     except IOError:
         data = {}
     dt = datetime.now().replace(microsecond=0).isoformat()
-    to_sort = {id(data): data}
+    to_sort = {}
+    _def = {}
     for i in range(1, len(sys.argv) - 1, 2):
         key = sys.argv[i]
         try:
-            key, dt2 = key.rsplit('@', 1)
+            key, dt2 = key.rsplit("@", 1)
             dt2 = parse(dt2)
             if dt2 is not None:
                 key_dt = dt2.isoformat()
@@ -48,8 +49,12 @@ if __name__ == "__main__":
                     pass  # keep it a string
         datum = data
         for ky in key.split("."):
-            datum = datum.setdefault(ky, {})
-            to_sort[id(datum)] = datum
+            _datum = datum.setdefault(ky, _def)
+            if _datum is _def:
+                _def = {}  # new one
+                # need to resort datum, new entry
+                to_sort[id(datum)] = datum
+            datum = _datum
         datum[key_dt] = val
     for datum in to_sort.values():
         datum_sort = {k: v for k, v in sorted(datum.items())}
