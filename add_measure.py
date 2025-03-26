@@ -56,6 +56,7 @@ if __name__ == "__main__":
                 to_sort[id(datum)] = datum
             datum = _datum
         datum[key_dt] = val
+        to_sort[id(datum)] = datum
     for datum in to_sort.values():
         datum_sort = {k: v for k, v in sorted(datum.items())}
         datum.clear()
