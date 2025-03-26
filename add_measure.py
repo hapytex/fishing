@@ -19,7 +19,8 @@ if __name__ == "__main__":
             data = json.load(f)
     except IOError:
         data = {}
-    dt = datetime.now().isoformat()
+    dt = datetime.now().replace(microsecond=0).isoformat()
+    to_sort = {}
     for i in range(1, len(sys.argv) - 1, 2):
         key = sys.argv[i]
         try:
@@ -49,5 +50,10 @@ if __name__ == "__main__":
         for ky in key.split("."):
             datum = datum.setdefault(ky, {})
         datum[key_dt] = val
+        to_sort[id(datum)] = datum
+    for datum in to_sort.values():
+        datum_sort = {k: v for k, v in sorted(datum.items())}
+        datum.clear()
+        datum.update(datum_sort)
     with open(ASSET_PATH, "w") as f:
         json.dump(data, f, indent=4)
