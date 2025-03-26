@@ -1,7 +1,7 @@
 function homebattery --description 'determine how long it will take to load the battery full' -a cur -a upto
   test -n "$cur" || set cur 0
   test -n "$upto" || set upto 100
-  measure home.battery "$cur"
+  measure home.battery "$cur" &
   # 0% -> 80% @300Watts
   set s0 (math "min(80, $upto) - min(80, $cur)")
   # 80% -> 100% @150Watts

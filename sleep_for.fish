@@ -1,6 +1,6 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
   test -n "$n" || set n '7'
-  measure health.sleep.program "$n"
+  measure health.sleep.program "$n" &
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
