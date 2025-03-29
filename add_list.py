@@ -5,7 +5,7 @@ import re
 import sys
 
 from filelock import FileLock
-from pprint import pprint
+from color_pprint import cprint
 
 LIST_PATH = "list.json"
 DEFAULT_NAME = "main"
@@ -27,7 +27,7 @@ if __name__ == "__main__":
             data = data.setdefault(list_name, {})
         my_list = data.setdefault(list_names[-1], [])
         if len(sys.argv) < 2:
-            pprint(my_list)
+            cprint(my_list)
         else:
             for arg in sys.argv[2:]:
                 if arg == "clear":
