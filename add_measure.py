@@ -45,7 +45,7 @@ if __name__ == "__main__":
             else:
                 try:
                     val = literal_eval(val)
-                except ValueError:
+                except (ValueError, SyntaxError):
                     try:
                         val = json.loads(val)
                     except ValueError:
