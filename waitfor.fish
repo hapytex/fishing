@@ -6,12 +6,24 @@ function waitfor --description 'wait a certain amount of time, or until the user
     set label ''
   end
   set oldval 256
+  set oldn 8
+  set time (math "round($time)")
   for i in (seq "$time" -1 0)
-    set mn (math "$i % 60")
-    set hr (math --scale 0 "($i - $mn) / 60")
-    set txt (printf "%02d:%02d" $hr $mn)
+    set sc (math "$i % 60")
+    set mn (math --scale 0 "($i - $sc) / 60")
+    set txt (printf "%02d:%02d" $mn $sc)
+    if [ "$mn" -ge 60 ]
+      set hr (math "floor($mn / 60)")
+      set mn (math "$mn - 60*$hr")
+      set txt (printf "%02d:%02d:%02d" $hr $mn $sc)
+    end
     set n (string length "$txt")
-    echo -en "$txt\e["$n"D"
+    if [ "$n" -lt "$oldn" ]
+      # erase previous one if length differs
+      echo -en '        \e[8D'
+    end
+    set cl (math "min(255, 4*$i)")
+    echo -en "\e[1m\e[38;2;255;$cl;"$cl"m$txt\e[0m\e["$n"D"
     set pct (math "round(100*($time-$i)/$time)")
     echo -en "\033]0;$desc$txt\007\033]9;4;1;$pct;\007"
     if [ -n "$keydown" ]
@@ -22,6 +34,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
       end
     end
     sleep 1
+    set oldn "$n"
   end
   # clear progress
   echo -en "\033]9;4;0\007"

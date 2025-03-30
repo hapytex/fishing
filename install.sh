@@ -6,7 +6,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo add-apt-repository ppa:tatokis/alarm-clock-applet
 
 sudo apt-get update
-sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs haskell-stack hlint hoogle ipython3 jq lambdabot lynx nodejs npm pandoc pdfsam powerline pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
+sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs haskell-stack hlint hoogle ipython3 jq lambdabot lynx nodeenv nodejs npm pandoc pdfsam powerline pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
 sudo snap install upscayl
 git lfs install
 
@@ -14,7 +14,7 @@ git config --global push.default current
 
 
 stack update &
-pip3 install --upgrade black Click isort jinja2-cli jupyter keras nltk numpy pandas pip prefect pygments scipy scikit-learn sympy tabulate tensorflow thefuck youtube-dl &
+pip3 install --upgrade autopep8 black Click color-pprint dateparser isort jinja2-cli jupyter keras nltk numpy pandas pip prefect pygments scipy scikit-learn sympy tabulate tensorflow thefuck youtube-dl &
 
 # load the apt cache to find out what package exposes a certain command
 sudo apt-file update

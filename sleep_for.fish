@@ -1,5 +1,6 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
-  test -n "$n" || set n '-7'
+  test -n "$n" || set n '7'
+  measure health.sleep.program "$n" &
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
@@ -10,21 +11,22 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   airplane &
   gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled &
   xinput -disable 11
-  killall element-deskop thunderbird >/dev/null 2>/dev/null &
+  # kill noisy apps
+  killall element-desktop thunderbird-bin java >/dev/null 2>/dev/null &
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   gsettings set org.gnome.desktop.notifications show-banners false
   test -n "$n" || set n 7
   fill (getcolor 0 wakeup_colors)
   keycolor (getcolor random sleep_colors) 64
-  if [ "$n" -gt 0 ]
+  if [ "$n" -lt 0 ]
+    set n (math "-$n")
     set pth (/usr/bin/pwd)
     cd (assets)'/music/'
     nohup nice -n 19 vlc --no-random --no-loop --qt-start-minimized --play-and-exit $n'h_sleep.xspf' >/dev/null 2>/dev/null &
     disown "$last_pid"
     cd "$pth"
   else
-    set n (math "-$n")
-    timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0125 &
+    timeout (math "3600*$n") play -q -n synth pinknoise vol 0.0250 fade 5 >/dev/null 2>/dev/null &
     set gamma $last_pid
   end
   trap "cleanup $gamma" EXIT
@@ -35,6 +37,8 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off
   set eps (math "6*$n-3")
+  set sleepsec (math "round(3600 * $n)")
+  waitfor $sleepsec '💤 sleep' '💤 ' &
   for f in (seq "$eps")
     sleep 600
     keycolor (getcolor random sleep_colors) 32
@@ -44,5 +48,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   gsettings set org.gnome.desktop.notifications show-banners "$banners"
   gsettings set org.gnome.desktop.peripherals.touchpad send-events enabled
   xinput -enable 11
-  wakeup (tty) (tput lines) (tput cols)
+  wakeup (tty) (tput lines) (tput cols) &
+  wait
 end

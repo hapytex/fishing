@@ -12,8 +12,11 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`backup`**: make readonly timestamped copies of the list of parameters;
  - **`battery`**: print the percentage of the battery;
  - **`biblespeak`**: speak the next verse of the *Bible*;
+ - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
  - **`dated`**: add the timestamp as a prefix of the given files;
+ - **`dishwasher`**: wait until the dishwasher has finished;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
+ - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
  - **`fill`**: fill the entire screen with a certain color;
  - **`frmclip`**: copy from the clipboard to the stdout;
@@ -34,14 +37,20 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
  - **`here_is_the_news`**: beeps a few times to mark a certain event;
  - **`hlint`**: run Haskell lint and use a pager for the results;
+ - **`homebattery`**: determine how long it will take to load the battery full;
+ - **`household`**: wait until a household device has finished with info;
  - **`igrep`**: run grep in a case insensitive way;
  - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
  - **`keycolor`**: set the keyboard color to a specific color and intensity;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
+ - **`list`**: add or inspect a (shopping) list;
+ - **`makealias`**: make an alias file;
+ - **`measure`**: add a given measurement at a given time;
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
+ - **`presleep`**: first gradually make a person sleepy before the sleep_for;
  - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
  - **`quickread`**: 𝗯𝗼𝗹face the 𝗳𝗶rst 𝗹𝗲𝘁ters of 𝗲ach 𝘄ord, 𝘀𝗽𝗲eding up 𝗿𝗲𝗮ding;
@@ -53,6 +62,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
  - **`sleep_for`**: sleep a given number of hours;
+ - **`sleep_survey`**: a short survey about sleep quality;
+ - **`smartwatch`**: determine how long it will take to load the smartwatch;
  - **`sortit`**: sort the given files and copy the result to the original files;
  - **`stackb`**: build the haskell stack project with all warnings enabled;
  - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
@@ -64,21 +75,35 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`swapfiles`**: swap two or more files by renaming the second to the first, the third to the second, and the first to the last;
  - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
  - **`taskd`**: set the task with the given id as done;
+ - **`taskflush`**: set all expired tasks to done;
  - **`teeth`**: help cleaning teeth;
  - **`unpart`**: look for parts with a corresponding file;
+ - **`update_system`**: update the system in an asynchronous way;
  - **`videos`**: see random videos;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
+ - **`washingmachine`**: wait until the washing machine has finished;
  - **`weather`**: obtain the weather based on GeoIP;
  - **`whatday`**: write the date in a color of the week;
- - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command;
- - **`...`**: move to the root directory of the git repository, if that exists;
+ - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command; and
+ - **`...`**: move to the root directory of the git repository, if that exists.
+
+## Emoji aliasses
+
+The following emoji aliasses can be used as commands:
+
  - **`🍅`**: alias for `pomodoro`;
+ - **`☕`**: alias for `coffee`;
  - **`🚨`**: alias for `alarm`;
- - **`💼`**: alias for `pomodoro`; and
- - **`😴`**: alias for `sleep_for`.
+ - **`💼`**: alias for `pomodoro`;
+ - **`👕`**: alias for `washingmachine`;
+ - **`🦷`**: alias for `teeth`;
+ - **`🍽️`**: alias for `dishwasher`;
+ - **`⌚`**: alias for `smartwatch`;
+ - **`😴`**: alias for `sleep_for`; and
+ - **`🥚`**: alias for `eggs`.
 
 ## Variables
 

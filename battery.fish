@@ -7,7 +7,7 @@ function battery --description 'print the percentage of the battery' -a numerato
   else
     set pct "$numerator"
   end
-  if [ "$pct" -gt 20 ]
+  if [ "$pct" -gt 29 ]
     set emo '🔋'
   else
     set emo '🪫'
