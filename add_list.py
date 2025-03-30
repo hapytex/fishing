@@ -37,6 +37,11 @@ if __name__ == "__main__":
                 if arg == "clear":
                     my_list.clear()
                 else:
-                    my_list += arg.split(",")
+                    items = arg.split(',')
+                    if items and items[0] == 'remove':
+                        items = set(items[1:])
+                        my_list[:] = [item for item in my_list if item not in items]
+                    else:
+                        my_list += items
             with open(LIST_PATH, "w") as f:
                 json.dump(data, f, indent=4)
