@@ -35,10 +35,12 @@ if __name__ == "__main__":
         else:
             for arg in sys.argv[2:]:
                 if arg == "clear":
+                    print("use CLEAR to clear")
+                elif arg == "CLEAR":
                     my_list.clear()
                 else:
-                    items = arg.split(',')
-                    if items and items[0] == 'remove':
+                    items = arg.split(",")
+                    if items and items[0] == "remove":
                         items = set(items[1:])
                         my_list[:] = [item for item in my_list if item not in items]
                     else:
