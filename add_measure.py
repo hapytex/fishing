@@ -5,8 +5,8 @@ import re
 import sys
 from ast import literal_eval
 from datetime import datetime
-from color_pprint import cprint
 
+from color_pprint import cprint
 from dateparser import parse
 from filelock import FileLock
 

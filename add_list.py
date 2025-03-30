@@ -4,8 +4,8 @@ import json
 import re
 import sys
 
-from filelock import FileLock
 from color_pprint import cprint
+from filelock import FileLock
 
 LIST_PATH = "list.json"
 DEFAULT_NAME = "main"
