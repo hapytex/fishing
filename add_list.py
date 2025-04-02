@@ -17,19 +17,19 @@ if __name__ == "__main__":
                 data = json.load(f)
         except IOError:
             data = {}
-        _def = {}
+        datum = data
         if len(sys.argv) <= 1:
             list_name = DEFAULT_NAME
         else:
             list_name = sys.argv[1]
         list_names = list_name.split(".")
         for list_name in list_names[:-1]:
-            data = data.setdefault(list_name, {})
+            datum = datum.setdefault(list_name, {})
         if list_names[-1]:
-            my_list = data.setdefault(list_names[-1], [])
+            my_list = datum.setdefault(list_names[-1], [])
         else:
             # print all
-            my_list = data
+            my_list = datum
         if len(sys.argv) <= 2:
             cprint(my_list)
         else:
