@@ -1,4 +1,5 @@
 function wakeup --description 'Make some noise to wake someone up' -a tty -a l -a c
+  waitfor 1800 '🌄 wake up' '🌄 ' '' &
   test -n "$tty" | set tty (tty)
   switch (random 0 1)
     case 0
