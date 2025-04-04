@@ -1,3 +1,4 @@
 measurements.json
 list.json
 *.lock
+*.pyc
