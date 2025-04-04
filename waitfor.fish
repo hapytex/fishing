@@ -1,14 +1,15 @@
-function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown
+function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown -a until
   if [ ! -z "$label" ]
     set label "$label "
     echo -en "$label"
   else
     set label ''
   end
+  test -n "$until" || set until 0
   set oldval 256
   set oldn 8
   set time (math "round($time)")
-  for i in (seq "$time" -1 0)
+  for i in (seq "$time" -1 "$until")
     set sc (math "$i % 60")
     set mn (math --scale 0 "($i - $sc) / 60")
     set txt (printf "%02d:%02d" $mn $sc)
