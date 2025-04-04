@@ -1,4 +1,4 @@
-function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown -a until
+function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown -a until -a step
   if [ ! -z "$label" ]
     set label "$label "
     echo -en "$label"
@@ -6,10 +6,11 @@ function waitfor --description 'wait a certain amount of time, or until the user
     set label ''
   end
   test -n "$until" || set until 0
+  test -n "$step" || set step 1
   set oldval 256
   set oldn 8
   set time (math "round($time)")
-  for i in (seq "$time" -1 "$until")
+  for i in (seq "$time" "-$step" "$until")
     set sc (math "$i % 60")
     set mn (math --scale 0 "($i - $sc) / 60")
     set txt (printf "%02d:%02d" $mn $sc)
@@ -34,7 +35,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
          set oldval $newval
       end
     end
-    sleep 1
+    sleep "$step"
     set oldn "$n"
   end
   # clear progress
