@@ -29,6 +29,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       gh_status 'Focusing' 'arrow_forward' '25 minutes' true
       set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+40 minutes")
       echo "$end" > "$HOME/block_sleep"
+      measure pomodoro.work true &
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  working ' 1
       kill "$gamma"
       if [ "$i" -gt  3 ]
@@ -45,6 +46,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       here_is_the_news &
       gsettings set org.gnome.desktop.notifications show-banners "$banners"
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
+      measure pomodoro.pause true &
       waitfor "$pause" "$pausetype" "$pausetitle" 1
       here_is_the_news &
     end
