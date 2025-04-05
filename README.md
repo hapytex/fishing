@@ -78,6 +78,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`taskd`**: set the task with the given id as done;
  - **`taskflush`**: set all expired tasks to done;
  - **`teeth`**: help cleaning teeth;
+ - **`todo`**: add or inspect to a todo list;
  - **`unpart`**: look for parts with a corresponding file;
  - **`update_system`**: update the system in an asynchronous way;
  - **`videos`**: see random videos;
