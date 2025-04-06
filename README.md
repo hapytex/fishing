@@ -116,7 +116,8 @@ The following emoji aliasses can be used as commands:
  - **`COFFEE_MAX`**: end time of the day when coffee is no longer allowed, for example `1900`;
  - **`COFFEE_MIN`**: start time of the day when coffee is allowed in decimal notation, for example `0800`;
  - **`GIT_BRANCH`**: the default branch, used to automatically map the remote to the local default branch in `gitremote`;
- - **`GIT_REPO_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`; and
+ - **`GIT_REPO_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`;
+ - **`GROQ_API_TOKEN`**: the API token for *Groq* to make chatbot requests, can be found [here](https://console.groq.com/keys); and
  - **`USER_SLUG`**: the slug used to prepend to file names when adding an author to it, for example `Elon_Musk`.
 
 ## Installation
