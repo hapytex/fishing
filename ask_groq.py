@@ -6,6 +6,9 @@ from groq import Groq
 
 if __name__ == "__main__":
     assert len(sys.argv) > 1, "Need to provide the GROQ API key"
+    if not sys.stdin.isatty():
+        total = "".join(sys.stdin.readlines())
+        sys.argv.append(total)
     assert len(sys.argv) > 2, "Need to provide at least one prompt"
     roles = ("user",)
     if len(sys.argv) > 3:
