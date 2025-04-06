@@ -3,6 +3,7 @@
 import json
 import re
 import sys
+from shutil import move
 
 from color_pprint import cprint
 from filelock import FileLock
@@ -45,5 +46,6 @@ if __name__ == "__main__":
                         my_list[:] = [item for item in my_list if item not in items]
                     else:
                         my_list += items
-            with open(LIST_PATH, "w") as f:
+            with open(f"{LIST_PATH}.tmp", "w") as f:
                 json.dump(data, f, indent=4)
+            move(f"{LIST_PATH}.tmp", LIST_PATH)
