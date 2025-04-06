@@ -5,6 +5,7 @@ import re
 import sys
 from ast import literal_eval
 from datetime import datetime
+from shutil import move
 
 from color_pprint import cprint
 from dateparser import parse
@@ -71,5 +72,6 @@ if __name__ == "__main__":
             datum_sort = {k: v for k, v in sorted(datum.items())}
             datum.clear()
             datum.update(datum_sort)
-        with open(ASSET_PATH, "w") as f:
+        with open(f"{ASSET_PATH}.tmp", "w") as f:
             json.dump(data, f, indent=4)
+        move(f"{ASSET_PATH}.tmp", ASSET_PATH)
