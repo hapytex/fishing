@@ -5,20 +5,22 @@ import sys
 from groq import Groq
 
 if __name__ == "__main__":
-    assert len(sys.argv) > 1, "Need to provide the GROQ API key"
+    argv = list(sys.argv)
+    assert len(argv) > 1, "Need to provide the GROQ API key"
     if not sys.stdin.isatty():
         total = "".join(sys.stdin.readlines())
-        sys.argv.append(total)
-    assert len(sys.argv) > 2, "Need to provide at least one prompt"
+        argv.append(total)
+    n = len(argv)
+    assert n > 2, "Need to provide at least one prompt"
     roles = ("user",)
-    if len(sys.argv) > 3:
-        roles = ("system", *(roles * (len(sys.argv) - 3)))
-    client = Groq(api_key=sys.argv[1])
+    if len(argv) > 3:
+        roles = ("system", *(roles * (n - 3)))
+    client = Groq(api_key=argv[1])
     completion = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[
             {"role": role, "content": prompt.strip()}
-            for role, prompt in zip(roles, sys.argv[2:])
+            for role, prompt in zip(roles, argv[2:])
             if prompt
         ],
         temperature=1,
