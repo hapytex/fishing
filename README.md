@@ -105,6 +105,7 @@ The following emoji aliasses can be used as commands:
  - **`🦷`**: alias for `teeth`;
  - **`🍽️`**: alias for `dishwasher`;
  - **`⌚`**: alias for `smartwatch`;
+ - **`🤖`**: alias for `groq`;
  - **`😴`**: alias for `sleep_for`; and
  - **`🥚`**: alias for `eggs`.
 
