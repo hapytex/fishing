@@ -19,6 +19,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
  - **`fill`**: fill the entire screen with a certain color;
+ - **`fish_home`**: get the directory where the fish functions are stored;
  - **`frmclip`**: copy from the clipboard to the stdout;
  - **`from`**: initializes the python shell with `from …`, so `from datetime import date` for example can be written in the shell as first Python command;
  - **`fromtemplate`**: copies the file from the `templates/` subdirectory into the pwd, add it to git (if applicable), and starts editing;
