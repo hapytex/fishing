@@ -32,3 +32,4 @@ if __name__ == "__main__":
 
     for chunk in completion:
         print(chunk.choices[0].delta.content or "", end="")
+    print()  # eol
