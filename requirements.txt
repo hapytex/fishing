@@ -3,6 +3,7 @@ black
 Click
 color-pprint
 dateparser
+filelock
 groq
 isort
 jinja2-cli
@@ -14,8 +15,8 @@ pandas
 pip
 prefect
 pygments
-scipy
 scikit-learn
+scipy
 sympy
 tabulate
 tensorflow
