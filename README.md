@@ -49,6 +49,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`makealias`**: make an alias file;
  - **`measure`**: add a given measurement at a given time;
  - **`natrix`**: the Python interpreter of the fish environment;
+ - **`natrix-env`**: run a Python program in the natrix environment;
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
