@@ -5,11 +5,11 @@ import re
 import sys
 from ast import literal_eval
 from datetime import datetime
-from shutil import move
 
 from color_pprint import cprint
 from dateparser import parse
 from filelock import FileLock
+from os import link
 
 DURATION = re.compile(r"\d{1,2}([:]\d{2})+")
 ASSET_PATH = "measurements.json"
