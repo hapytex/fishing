@@ -104,19 +104,20 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 The following emoji aliasses can be used as commands:
 
- - **`🩸`**: alias for `blooddonation`;
- - **`🍅`**: alias for `pomodoro`;
- - **`☕`**: alias for `coffee`;
  - **`🚨`**: alias for `alarm`;
- - **`💼`**: alias for `pomodoro`;
- - **`👕`**: alias for `washingmachine`;
- - **`🦷`**: alias for `teeth`;
+ - **`🩸`**: alias for `blooddonation`;
+ - **`☕`**: alias for `coffee`;
  - **`🍽️`**: alias for `dishwasher`;
- - **`⌚`**: alias for `smartwatch`;
+ - **`🥚`**: alias for `eggs`;
  - **`🤖`**: alias for `groq`;
- - **`🌄`**: alias for `wakeup`;
- - **`😴`**: alias for `sleep_for`; and
- - **`🥚`**: alias for `eggs`.
+ - **`🎥`**: alias for `movie`;
+ - **`🍅`**: alias for `pomodoro`;
+ - **`💼`**: alias for `pomodoro`;
+ - **`😴`**: alias for `sleep_for`;
+ - **`⌚`**: alias for `smartwatch`;
+ - **`🦷`**: alias for `teeth`;
+ - **`🌄`**: alias for `wakeup`; and
+ - **`👕`**: alias for `washingmachine`.
 
 ## Variables
 
