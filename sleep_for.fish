@@ -36,10 +36,11 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   echo "$end" > "$HOME/block_sleep"
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off
-  set eps (math "6*$n-3")
+  set eps (math "6*$n")
   set sleepsec (math "round(3600 * $n)")
   # waitfor $sleepsec '💤 sleep' '💤 ' '' 1800 60 &
-  for f in (seq "$eps")
+  for f in (seq "$eps" -1 4)
+    timeformat (math "600 * $eps")
     sleep 600
     keycolor (getcolor random sleep_colors) 32
     xset dpms force off
