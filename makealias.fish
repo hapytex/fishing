@@ -11,4 +11,6 @@ function makealias --description 'make an alias file' -a origin -a new
 end""" > "$new.fish"
   git add "$origin.fish"
   git add "$new.fish"
+  echo " - **`$new`**: alias for `$origin`;" >> README.md
+  editor README.md
 end

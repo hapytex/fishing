@@ -9,7 +9,7 @@ from datetime import datetime
 from color_pprint import cprint
 from dateparser import parse
 from filelock import FileLock
-from os import link
+from shutil import move
 
 DURATION = re.compile(r"\d{1,2}([:]\d{2})+")
 ASSET_PATH = "measurements.json"
