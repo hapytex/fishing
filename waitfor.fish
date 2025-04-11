@@ -11,14 +11,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
   set oldn 8
   set time (math "round($time)")
   for i in (seq "$time" "-$step" "$until")
-    set sc (math "$i % 60")
-    set mn (math --scale 0 "($i - $sc) / 60")
-    set txt (printf "%02d:%02d" $mn $sc)
-    if [ "$mn" -ge 60 ]
-      set hr (math "floor($mn / 60)")
-      set mn (math "$mn - 60*$hr")
-      set txt (printf "%02d:%02d:%02d" $hr $mn $sc)
-    end
+    set txt (timeformat "$i")
     set n (string length "$txt")
     if [ "$n" -lt "$oldn" ]
       # erase previous one if length differs
