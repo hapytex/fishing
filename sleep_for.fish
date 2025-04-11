@@ -40,7 +40,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   set sleepsec (math "round(3600 * $n)")
   # waitfor $sleepsec '💤 sleep' '💤 ' '' 1800 60 &
   for f in (seq "$eps" -1 4)
-    timeformat (math "600 * $eps")
+    timeformat (math "600 * $f")
     sleep 600
     keycolor (getcolor random sleep_colors) 32
     xset dpms force off
