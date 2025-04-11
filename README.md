@@ -38,6 +38,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`gits`**: prints the status of the current Git repository (short for `git status`);
  - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
  - **`groq`**: ask *Groq* something;
+ - **`groqquick`**: ask Groq something and read the result with `quickread`;
  - **`here_is_the_news`**: beeps a few times to mark a certain event;
  - **`hlint`**: run Haskell lint and use a pager for the results;
  - **`homebattery`**: determine how long it will take to load the battery full;
