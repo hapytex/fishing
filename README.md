@@ -13,6 +13,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`battery`**: print the percentage of the battery;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`blooddonation`**: register a blood donation together with blood metrics;
+ - **`bloodpressure`**: register a blood pressure measurement;
  - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`dishwasher`**: wait until the dishwasher has finished;
