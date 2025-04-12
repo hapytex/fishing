@@ -1,3 +1,3 @@
 function pandas
-    natrix -i (assets)/_pandas.py  $argv;
+    python3 -i (assets)/_pandas.py  $argv;
 end
