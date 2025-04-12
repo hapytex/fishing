@@ -9,11 +9,13 @@ isort
 jinja2-cli
 jupyter
 keras
+matplotlib
 nltk
 numpy
 pandas
 pip
 prefect
+pycountry
 pygments
 scikit-learn
 scipy
@@ -21,4 +23,5 @@ sympy
 tabulate
 tensorflow
 thefuck
+wxPython
 youtube-dl
