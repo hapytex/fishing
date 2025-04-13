@@ -29,7 +29,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`fundjinn`**: generate a function implementation from a signature with *Djinn*;
  - **`funtype`**: determine the type of a Haskell expression;
  - **`getcolor`**: get the color for a given name;
- - **`gh_status`**: set the GitHub status;
+ - **`gh_status`**: set the *GitHub* status;
+ - **`gh_emo`**: get the *GitHub* emoji name for a given emoji;
  - **`gitc`**: make a git commit (short for `git commit -am`);
  - **`gitd`**: calculate the git difference and work with a pager to read the full response;
  - **`gitmaster`**: checkout the master branch (and stash work in progress if any);

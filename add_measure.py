@@ -15,6 +15,7 @@ DURATION = re.compile(r"\d{1,2}([:]\d{2})+")
 ASSET_PATH = "measurements.json"
 
 if __name__ == "__main__":
+    # TODO: allow retrieving items *after* certain timestamp
     n = len(sys.argv)
     assert (
         n > 1
