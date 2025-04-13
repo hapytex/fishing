@@ -23,5 +23,6 @@ sympy
 tabulate
 tensorflow
 thefuck
+tqdm
 wxPython
 youtube-dl
