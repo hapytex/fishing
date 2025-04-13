@@ -98,6 +98,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
  - **`wakeup`**: make some noise to wake someone up;
+ - **`walking`**: register a walk;
  - **`washingmachine`**: wait until the washing machine has finished;
  - **`weather`**: obtain the weather based on GeoIP;
  - **`whatday`**: write the date in a color of the week;
