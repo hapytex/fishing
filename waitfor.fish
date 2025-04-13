@@ -1,4 +1,7 @@
 function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown -a until -a step
+  if set emo_name (gh_emo "$desc")
+    gh_status '' "$emo_name" "$time seconds" false  &
+  end
   if [ ! -z "$label" ]
     set label "$label "
     echo -en "$label"
