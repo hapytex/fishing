@@ -121,7 +121,8 @@ The following emoji aliasses can be used as commands:
  - **`😴`**: alias for `sleep_for`;
  - **`⌚`**: alias for `smartwatch`;
  - **`🦷`**: alias for `teeth`;
- - **`🌄`**: alias for `wakeup`; and
+ - **`🌄`**: alias for `wakeup`;
+ - **`🚶`**: alias for `walking`; and
  - **`👕`**: alias for `washingmachine`.
 
 ## Variables
