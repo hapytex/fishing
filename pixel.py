@@ -3,6 +3,7 @@
 import json
 import os
 import sys
+import urllib.request
 
 import cv2
 import numpy as np
@@ -10,13 +11,19 @@ import numpy as np
 if __name__ == "__main__":
     col, __ = os.get_terminal_size()
     for arg in sys.argv[1:]:
-        img = cv2.imread(arg)
+        if arg.startswith("https://") or arg.startswith("http://"):
+            url_response = urllib.request.urlopen(arg)
+            img = cv2.imdecode(
+                np.array(bytearray(url_response.read()), dtype=np.uint8), -1
+            )
+        else:
+            img = cv2.imread(arg)
         h, w, d = img.shape
         mulw = max(1, (w + col - 1) // col)
         h10 = h // mulw
         w20 = w // mulw
         img = (
-            img[: mulw * h10, : mulw * w20]
+            img[: mulw * h10, : mulw * w20, :3]
             .reshape(h10, mulw, w20, mulw, -1)
             .swapaxes(1, 2)
         )
