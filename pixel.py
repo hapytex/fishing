@@ -6,8 +6,8 @@ import sys
 import cv2
 import numpy as np
 
-MUL_W = 2
-MUL_H = 4
+MUL_W = 4
+MUL_H = 8
 
 if __name__ == "__main__":
     for arg in sys.argv[1:]:
@@ -23,6 +23,6 @@ if __name__ == "__main__":
         pix = np.round(img.mean(axis=2).mean(axis=2)).astype(int)
         for i in range(h10):
             for j in range(w20):
-                r, g, b = pix[i, j]
+                b, g, r = pix[i, j]
                 print(f"\033[48;2;{r};{g};{b}m ", end="")
             print("\033[0m")
