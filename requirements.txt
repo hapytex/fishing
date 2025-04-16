@@ -12,6 +12,7 @@ keras
 matplotlib
 nltk
 numpy
+opencv-python
 pandas
 pip
 prefect
