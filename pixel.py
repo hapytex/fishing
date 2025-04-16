@@ -1,28 +1,37 @@
 #!/usr/bin/python3
 
 import json
-import re
+import os
 import sys
+
 import cv2
 import numpy as np
 
-MUL_W = 4
-MUL_H = 8
-
 if __name__ == "__main__":
+    col, __ = os.get_terminal_size()
     for arg in sys.argv[1:]:
         img = cv2.imread(arg)
         h, w, d = img.shape
-        h10 = h // MUL_H
-        w20 = w // MUL_W
+        mulw = max(1, (w + col - 1) // col)
+        h10 = h // mulw
+        w20 = w // mulw
         img = (
-            img[: MUL_H * h10, : MUL_W * w20]
-            .reshape(h10, MUL_H, w20, MUL_W, -1)
+            img[: mulw * h10, : mulw * w20]
+            .reshape(h10, mulw, w20, mulw, -1)
             .swapaxes(1, 2)
         )
         pix = np.round(img.mean(axis=2).mean(axis=2)).astype(int)
-        for i in range(h10):
+        # bor = np.zeros((h10+(h10&1), w20, 3))
+        # bor[:h10] = pix
+        for i in range(0, h10 + (h10 & 1), 2):
             for j in range(w20):
-                b, g, r = pix[i, j]
-                print(f"\033[48;2;{r};{g};{b}m ", end="")
+                first, *rest = pix[i: i + 2, j]
+                [b1, g1, r1] = first
+                if rest:
+                    first = rest[0]
+                else:
+                    first = [0, 0, 0]
+                [b2, g2, r2] = first
+                print(
+                    f"\033[48;2;{r1};{g1};{b1}m\033[38;2;{r2};{g2};{b2}m▄", end="")
             print("\033[0m")
