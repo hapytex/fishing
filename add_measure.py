@@ -5,6 +5,7 @@ import re
 import sys
 from ast import literal_eval
 from datetime import datetime
+from shutil import move
 
 from color_pprint import cprint
 from dateparser import parse
@@ -12,6 +13,23 @@ from filelock import FileLock
 
 DURATION = re.compile(r"\d{1,2}([:]\d{2})+")
 ASSET_PATH = "measurements.json"
+
+
+def filter_dict(data, dt):
+    if isinstance(data, dict):
+        result = {}
+        for k, v in data.items():
+            v = filter_dict(v, dt)
+            if v:
+                try:
+                    dt2 = datetime.fromisoformat(k)
+                except ValueError:
+                    result[k] = v
+                else:
+                    if dt2 >= dt:
+                        result[k] = v
+        return result
+    return data
 
 if __name__ == "__main__":
     n = len(sys.argv)
@@ -24,18 +42,20 @@ if __name__ == "__main__":
                 data = json.load(f)
         except IOError:
             data = {}
-        dt = datetime.now().replace(microsecond=0).isoformat()
+        timestamp = datetime.now().replace(microsecond=0)
+        dt = timestamp.isoformat()
         to_sort = {}
         _def = {}
         for i in range(1, n, 2):
             key = sys.argv[i]
             try:
                 key, dt2 = key.rsplit("@", 1)
-                dt2 = parse(dt2)
+                timefilter = dt2 = parse(dt2)
                 if dt2 is not None:
                     key_dt = dt2.isoformat()
             except ValueError:
                 # key is already fine
+                timefilter = datetime.min
                 key_dt = dt
             datum = data
             for ky in key.split("."):
@@ -66,10 +86,11 @@ if __name__ == "__main__":
                     # we add a key from the past
                     to_sort[id(datum)] = datum
             else:
-                cprint(datum)
+                cprint(filter_dict(datum, timefilter))
         for datum in to_sort.values():
             datum_sort = {k: v for k, v in sorted(datum.items())}
             datum.clear()
             datum.update(datum_sort)
-        with open(ASSET_PATH, "w") as f:
+        with open(f"{ASSET_PATH}.tmp", "w") as f:
             json.dump(data, f, indent=4)
+        move(f"{ASSET_PATH}.tmp", ASSET_PATH)

@@ -30,16 +30,17 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     set gamma $last_pid
   end
   trap "cleanup $gamma" EXIT
-  set nn (math "$n+1")
+  set nn (math "ceil($n+1)")
   set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+$nn hours")
   gh_status 'Sleeping' 'sleeping' "$end" true
   echo "$end" > "$HOME/block_sleep"
   xrandr --output eDP-1 --brightness '0.25'
   xset dpms force off
-  set eps (math "6*$n-3")
+  set eps (math "6*$n")
   set sleepsec (math "round(3600 * $n)")
-  waitfor $sleepsec '💤 sleep' '💤 ' &
-  for f in (seq "$eps")
+  # waitfor $sleepsec '💤 sleep' '💤 ' '' 1800 60 &
+  for f in (seq "$eps" -1 4)
+    timeformat (math "600 * $f")
     sleep 600
     keycolor (getcolor random sleep_colors) 32
     xset dpms force off

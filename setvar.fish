@@ -1,4 +1,5 @@
-function setvar --description 'check if a variable exists, and otherwise prompt for a value'
-  set -q "$argv[1]" || read -Ux "$argv[1]" -P (string unescape '\e[31m')"\$$argv[1]"(string unescape '\e[0m> ')
-  eval "echo \"\$$argv[1]\""
+function setvar --description 'check if a variable exists, and otherwise prompt for a value' -a name -a helptext
+  test -n "$helptext" && set helptext " [$helptext]"
+  set -q "$name" || read -Ux "$name" -P (string unescape '$\e[31m')"$name$helptext"(string unescape '\e[0m> ')
+  eval "echo \"\$$name\""
 end

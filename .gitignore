@@ -1,1 +1,10 @@
 *.lock
+*.pyc
+__pycache__
+__pycache__/
+__pycache__/*
+__pycache__/**
+.venv
+.venv/
+.venv/*
+.venv/**
