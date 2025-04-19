@@ -31,7 +31,6 @@ def filter_dict(data, dt):
         return result
     return data
 
-
 if __name__ == "__main__":
     n = len(sys.argv)
     assert (

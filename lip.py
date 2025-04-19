@@ -29,9 +29,8 @@ def insert_datum(*dates, years=None):
         dat[date.month - 1][date.day - 1] = "█"
     return years
 
-
-if __name__ == "__main__":
-    years = insert_datum(*[parse(d) for d in sys.argv[1:]])
+def life_in_pixels(*data):
+    years = insert_datum(*data)
     y1 = len(years) - 1
     muly = y1 > 0
     print("┏" + ("━" * 35 + "┳") * y1 + "━" * 35 + "┓")
@@ -60,4 +59,8 @@ if __name__ == "__main__":
         if d == -1:
             print(("──┼" * 11 + "──╂") * y1 + "──┼" * 11 + "──┨", end="")
         print()
-print("┗" + ("━━┷" * 11 + "━━┻") * y1 + "━━┷" * 11 + "━━┛")
+    print("┗" + ("━━┷" * 11 + "━━┻") * y1 + "━━┷" * 11 + "━━┛")
+
+
+if __name__ == "__main__":
+  life_in_pixels(*[parse(d) for d in sys.argv[1:]])
