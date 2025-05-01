@@ -16,6 +16,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`bloodpressure`**: register a blood pressure measurement;
  - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
  - **`dated`**: add the timestamp as a prefix of the given files;
+ - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
  - **`dishwasher`**: wait until the dishwasher has finished;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
@@ -56,6 +57,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`natrix-env`**: run a Python program in the natrix environment;
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
+ - **`pixel`**: print a list of images to the stdout;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
  - **`presleep`**: first gradually make a person sleepy before the `sleep_for`;
