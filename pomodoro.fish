@@ -25,21 +25,20 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       gsettings set org.gnome.desktop.notifications show-banners false
       set gamma (noising)
       trap "endpom $gamma" EXIT
-      keycolor (getcolor random focus_colors) 255
       gh_status 'Focusing' 'arrow_forward' '25 minutes' true
       set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+40 minutes")
       echo "$end" > "$HOME/block_sleep"
       measure pomodoro.work true &
-      waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' 1
+      waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus_colors ,)
       kill "$gamma"
       if [ "$i" -gt  3 ]
-        keycolor 255 3 32 255
+        set waitcolor '255,3,32'
         set pause 900
         set pausetype '\e[10D\e[33m[long pause]\e[0m'
         set pausetitle '⏹️ '
         gh_status 'Long pause' 'stop_button' '15 minutes' false
       else
-        keycolor (getcolor random heal_colors) 255
+        set waitcolor (getcolor random heal_colors ,)
         gh_status 'Short pause' 'pause_button' '5 minutes' false
       end
       xdotool key XF86AudioPlay &
@@ -47,7 +46,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       gsettings set org.gnome.desktop.notifications show-banners "$banners"
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
       measure pomodoro.pause true &
-      waitfor "$pause" "$pausetype" "$pausetitle" 1
+      waitfor "$pause" "$pausetype" "$pausetitle" "$waitcolor"
       here_is_the_news &
     end
   end
