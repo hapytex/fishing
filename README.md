@@ -97,6 +97,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`update_system`**: update the system in an asynchronous way;
  - **`videos`**: see random videos;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
+ - **`vimo`**: open two or more files in vim next to each other;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
