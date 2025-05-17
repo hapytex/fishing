@@ -16,6 +16,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`bloodpressure`**: register a blood pressure measurement;
  - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
  - **`dated`**: add the timestamp as a prefix of the given files;
+ - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
  - **`dishwasher`**: wait until the dishwasher has finished;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
@@ -56,6 +57,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`natrix-env`**: run a Python program in the natrix environment;
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
+ - **`pixel`**: print a list of images to the stdout;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
  - **`presleep`**: first gradually make a person sleepy before the `sleep_for`;
@@ -95,6 +97,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`update_system`**: update the system in an asynchronous way;
  - **`videos`**: see random videos;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
+ - **`vimo`**: open two or more files in vim next to each other;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
@@ -103,6 +106,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`washingmachine`**: wait until the washing machine has finished;
  - **`weather`**: obtain the weather based on GeoIP;
  - **`whatday`**: write the date in a color of the week;
+ - **`whenonline`**: wait to execute a command until the system can somehow contact the outer world;
  - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command; and
  - **`...`**: move to the root directory of the git repository, if that exists.
 
