@@ -15,6 +15,7 @@ numpy
 opencv-python
 pandas
 pip
+piper-tts
 prefect
 pycountry
 pygments
