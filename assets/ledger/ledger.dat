@@ -1,0 +1,3 @@
+!include config.dat
+!include account.dat
+!include transaction.dat

@@ -1,0 +1,7 @@
+account Assets:Main
+  assert commodity == "€"
+  alias main
+
+account Assets:Cash
+  assert commodity == "€"
+  alias cash

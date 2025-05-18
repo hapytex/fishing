@@ -1,3 +1,0 @@
-!include ledger.config.dat
-!include ledger.account.dat
-!include ledger.transaction.dat
