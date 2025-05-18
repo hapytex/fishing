@@ -4,6 +4,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ## List of functions
 
+ - **`activity_survey`**: a short survey about a physical activity;
  - **`advent`**: shows the number of candles to lit for advent;
  - **`airplane`**: turn on airplane mode;
  - **`alarm`**: show distress;
@@ -62,6 +63,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
  - **`presleep`**: first gradually make a person sleepy before the `sleep_for`;
  - **`proofread`**: proofread a text from the stdin with *Groq* to find spelling and grammatical errors;
+ - **`proofreadedit`**: let vim open the file along with the proofread file;
  - **`proofreadmd`**: proofread Markdown files with Groq to find spelling and grammatical errors;
  - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
