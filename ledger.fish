@@ -1,4 +1,4 @@
-function ledger --description 'book a financial transaction and see the balance' -a am -a to -a fm -a nm -a date -a cy -a rf
+function ledger --description 'book a financial transaction and see the balance' -a am -a to -a nm -a fm -a date -a cy -a rf
   set ass (assets)
   if set -q argv[1]
     set nl (echo -e '\n')
@@ -10,7 +10,7 @@ function ledger --description 'book a financial transaction and see the balance'
     test -n "$fm" && set fm "\n  $fm"
     test -n "$rf" && set rf " ($rf)"
     test -n "$nm" || set nm transaction
-    echo -e "$dt$rf * $nm\n  $to  $cy$am$fm" | tee -a "assets/ledger/transaction.dat"
+    echo -e "\n$dt$rf * $nm\n  $to  $cy$am$fm" | tee -a "$ass/ledger/transaction.dat"
   end
   /usr/bin/ledger -f $ass/ledger/ledger.dat balance
 end
