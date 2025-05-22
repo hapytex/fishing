@@ -8,4 +8,5 @@ account Assets:Main
 
 account Expense:Taxes
   assert commodity == "€"
+  alias tax
   alias taxes
