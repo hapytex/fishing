@@ -5,12 +5,7 @@ function ledger --description 'book a financial transaction and see the balance'
     if [ "$argv[1]" = 'budget' ]
       set task "$argv[1]"
     else
-      if string match -r '/' "$am"
-        set ams (string split / -m 1 "$am")
-        set am "$ams[1]"
-        set tx "$ams[2]"
-      else
-      end
+      set ams (string split / -m 2 "$am")
       set nl (echo -e '\n')
       test -n "$dt" || set dt (date '+%Y/%m/%d')
       test -n "$am" || read -P (string unescape '\e[31mamount\e[0m> ') am
@@ -21,7 +16,14 @@ function ledger --description 'book a financial transaction and see the balance'
       test -n "$rf" && set rf " ($rf)"
       test -n "$nm" || set nm transaction
       test -n "$tx" && set tx "\n  tax  $cy$tx"
-      echo -e "\n$dt$rf * $nm\n  $to  $cy$am$tx$fm" | tee -a "$ass/ledger/transaction.dat"
+      set tos "$to" 'tax' 'ship'
+      set tot ''
+      set idx 1
+      for am in $ams
+        set tot "$tot\n  $tos[$idx]  $cy$am"
+        set idx (math "$idx+1")
+      end
+      echo -e "\n$dt$rf * $nm$tot$fm" | tee -a "$ass/ledger/transaction.dat"
     end
   end
   /usr/bin/ledger -f $ass/ledger/ledger.dat "$task"

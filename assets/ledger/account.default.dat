@@ -10,3 +10,10 @@ account Expense:Taxes
   assert commodity == "€"
   alias tax
   alias taxes
+
+
+account Expense:Shipping
+  assert commodity == "€"
+  alias ship
+  alias shipping
+  alias shipment
