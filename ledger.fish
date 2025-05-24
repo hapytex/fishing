@@ -5,7 +5,7 @@ function ledger --description 'book a financial transaction and see the balance'
     if [ "$argv[1]" = 'budget' ]
       set task "$argv[1]"
     else
-      set ams (string split / -m 2 "$am")
+      set ams (string split '/' "$am")
       set nl (echo -e '\n')
       test -n "$dt" || set dt (date '+%Y/%m/%d')
       test -n "$am" || read -P (string unescape '\e[31mamount\e[0m> ') am
@@ -16,7 +16,7 @@ function ledger --description 'book a financial transaction and see the balance'
       test -n "$rf" && set rf " ($rf)"
       test -n "$nm" || set nm transaction
       test -n "$tx" && set tx "\n  tax  $cy$tx"
-      set tos "$to" 'tax' 'ship'
+      set tos (string split '/' "$to") 'tax' 'ship'
       set tot ''
       set idx 1
       for am in $ams
