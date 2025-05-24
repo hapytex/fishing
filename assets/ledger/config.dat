@@ -1,0 +1,12 @@
+commodity €
+  note Euros
+  format €1,000.00
+  alias e
+  alias eu
+  alias eur
+  alias euro
+  alias E
+  alias EU
+  alias EUR
+  alias EURO
+  default
