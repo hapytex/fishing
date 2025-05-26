@@ -1,4 +1,4 @@
-function dockersave --description 'load a docker image from a compressed tarball'
+function dockerload --description 'load a docker image from a compressed tarball'
   set i 1
   set n (count $argv)
   for name in $argv
