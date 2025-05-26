@@ -19,6 +19,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
  - **`dishwasher`**: wait until the dishwasher has finished;
+ - **`dockerload`**: load a docker image from a compressed tarball;
  - **`dockersave`**: save a docker image as a compressed tarball;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
