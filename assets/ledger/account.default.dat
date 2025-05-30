@@ -29,3 +29,6 @@ account Discount
   assert commodity == "€"
   alias discount
   alias reduction
+  alias deduction
+  alias rebate
+  alias deal
