@@ -1,4 +1,4 @@
-function ledger --description 'book a financial transaction and see the balance' -a am -a to -a nm -a date -a fm -a cy -a rf
+function ledger --description 'book a financial transaction and see the balance' -a am -a to -a nm -a dt -a fm -a cy -a rf
   set ass (assets)
   set task 'balance'
   if set -q argv[1]
