@@ -6,14 +6,22 @@ account Assets:Main
   assert commodity == "€"
   alias main
 
-account Expense:Taxes
+account Taxes
   assert commodity == "€"
   alias tax
   alias taxes
 
+account Taxes:VAT
+  assert commodity == "€"
+  alias vat
 
-account Expense:Shipping
+account Shipping
   assert commodity == "€"
   alias ship
   alias shipping
   alias shipment
+
+account Discount
+  assert commodity == "€"
+  alias discount
+  alias reduction
