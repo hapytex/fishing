@@ -15,6 +15,11 @@ account Taxes:VAT
   assert commodity == "€"
   alias vat
 
+account Equity:OpeningBalances
+  assert commodity == "€"
+  alias opening
+  alias openingbalance
+
 account Taxes:Income
   assert commodity == "€"
   alias incometax

@@ -7,7 +7,7 @@ function ledger --description 'book a financial transaction and see the balance'
     else
       set ams (string split '/' -- "$am")
       set nl (echo -e '\n')
-      test -n "$dt" || set dt (date '+%Y/%m/%d')
+      test -n "$dt" || set dt 'today'
       test -n "$am" || read -P (string unescape '\e[31mamount\e[0m> ') am
       test -n "$cy" || set cy 'E'
       test -n "$to" || read -P (string unescape '\e[31msource\e[0m> ') to
@@ -23,6 +23,7 @@ function ledger --description 'book a financial transaction and see the balance'
         set tot "$tot\n  $tos[$idx]  $cy$am"
         set idx (math "$idx+1")
       end
+      set dt (date '+%Y/%m/%d' -d "$dt")
       echo -e "\n$dt$rf * $nm$tot$fm" | tee -a "$ass/ledger/transaction.dat"
     end
   end
