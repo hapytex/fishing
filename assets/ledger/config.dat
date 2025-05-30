@@ -10,3 +10,12 @@ commodity €
   alias EUR
   alias EURO
   default
+
+commodity $
+  note Dollars
+  format $1,000.00
+  alias usd
+  alias us$
+  alias DOLLAR
+  alias USD
+  alias US$
