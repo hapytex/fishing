@@ -15,6 +15,10 @@ account Taxes:VAT
   assert commodity == "€"
   alias vat
 
+account Taxes:Income
+  assert commodity == "€"
+  alias incometax
+
 account Shipping
   assert commodity == "€"
   alias ship

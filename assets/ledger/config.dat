@@ -19,3 +19,10 @@ commodity $
   alias DOLLAR
   alias USD
   alias US$
+
+commodity £
+  note Pounds
+  format £1,000.00
+  alias gbp
+  alias GBP
+  alias POUNDS
