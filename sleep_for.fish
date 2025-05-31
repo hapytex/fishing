@@ -41,8 +41,9 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   # waitfor $sleepsec '💤 sleep' '💤 ' '' 1800 60 &
   for f in (seq "$eps" -1 4)
     set tf (timeformat (math "600 * $f"))
+    set ntf (string length "$tf")
     set pct (math "round(100*($eps-$f)/$eps)")
-    echo -e "\033]0;💤 $tf\007\033]9;4;1;$pct\033\0134$tf"
+    echo -en "\033]0;💤 $tf\007\033]9;4;1;$pct\033\0134$tf\e[0m\e["$ntf"D"
     sleep 600
     keycolor (getcolor random sleep_colors) 32
     xset dpms force off
