@@ -1,0 +1,28 @@
+commodity €
+  note Euros
+  format €1,000.00
+  alias e
+  alias eu
+  alias eur
+  alias euro
+  alias E
+  alias EU
+  alias EUR
+  alias EURO
+  default
+
+commodity $
+  note Dollars
+  format $1,000.00
+  alias usd
+  alias us$
+  alias DOLLAR
+  alias USD
+  alias US$
+
+commodity £
+  note Pounds
+  format £1,000.00
+  alias gbp
+  alias GBP
+  alias POUNDS

@@ -1,3 +1,3 @@
 function gitp --wraps='git push' --description 'alias gitp git push'
-  git push $argv;
+  redo whenonline git push $argv;
 end
