@@ -121,6 +121,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 The following emoji aliasses can be used as commands:
 
  - **`🚨`**: alias for `alarm`;
+ - **`✝️`**: alias for `biblespeak`;
  - **`🩸`**: alias for `blooddonation`;
  - **`☕`**: alias for `coffee`;
  - **`🍽️`**: alias for `dishwasher`;
