@@ -37,3 +37,18 @@ account Discount
   alias deduction
   alias rebate
   alias deal
+
+account Expense:Living:Fuel:Diesel
+  assert commodity == "€"
+  alias diesel
+
+account Expense:Living:Fuel:Super98
+  assert commodity == "€"
+  alias super98
+
+account Expense:Living:Fuel:Super95
+  assert commodity == "€"
+  alias super
+  alias super95
+
+
