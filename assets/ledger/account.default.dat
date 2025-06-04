@@ -50,5 +50,3 @@ account Expense:Living:Fuel:Super95
   assert commodity == "€"
   alias super
   alias super95
-
-
