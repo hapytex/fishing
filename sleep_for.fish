@@ -1,5 +1,7 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
   test -n "$n" || set n '7'
+  test "$n" -le 12 || (echo "Too long" && return 1)
+  test "$n" -ge -12 || (echo "Too long" && return 1)
   measure health.sleep.program "$n" &
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
@@ -15,7 +17,6 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   killall element-desktop thunderbird-bin java >/dev/null 2>/dev/null &
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   gsettings set org.gnome.desktop.notifications show-banners false
-  test -n "$n" || set n 7
   fill (getcolor 0 wakeup_colors)
   keycolor (getcolor random sleep_colors) 64
   if [ "$n" -lt 0 ]
