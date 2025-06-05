@@ -1,7 +1,9 @@
 function sleep_for --description 'Sleep a given number of hours' -a n
   test -n "$n" || set n '7'
-  test "$n" -le 12 || (echo "Too long" && return 1)
-  test "$n" -ge -12 || (echo "Too long" && return 1)
+  if test "$n" -gt 12 -o "$n" -lt -12
+    echo "Too long"
+    return 1
+  end
   measure health.sleep.program "$n" &
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
