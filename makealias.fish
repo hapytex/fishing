@@ -13,5 +13,5 @@ end""" > "$new.fish"
   git add "$new.fish"
   echo " - **`$new`**: alias for `$origin`;" >> README.md
   editor README.md
-  git commit -am "alias for $old"
+  git commit -am "alias for $origin"
 end
