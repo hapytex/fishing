@@ -21,6 +21,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`dishwasher`**: wait until the dishwasher has finished;
  - **`dockerload`**: load a docker image from a compressed tarball;
  - **`dockersave`**: save a docker image as a compressed tarball;
+ - **`dockersavescp`**: save a docker image as a compressed tarball and copy it with `scp`;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
