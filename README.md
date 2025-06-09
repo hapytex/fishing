@@ -76,6 +76,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`remake`**: a loop to remake certain products with a Makefile;
  - **`rmake`**: walk up the filetree until it finds a Makefile;
  - **`rmemptydir`**: remove empty directories;
+ - **`roughsvg`**: convert a given .svg file to its roughjs equivalent;
  - **`sensors`**: print the status of the sensors every second;
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
