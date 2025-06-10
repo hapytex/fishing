@@ -20,6 +20,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
  - **`dishwasher`**: wait until the dishwasher has finished;
  - **`dockerload`**: load a docker image from a compressed tarball;
+ - **`dockerprune`**: prune unused docker images;
  - **`dockersave`**: save a docker image as a compressed tarball;
  - **`dockersavescp`**: save a docker image as a compressed tarball and copy it with `scp`;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
