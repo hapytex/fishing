@@ -27,5 +27,5 @@ function ledger --description 'book a financial transaction and see the balance'
       echo -e "\n$dt$rf * $nm$tot$fm" | tee -a "$ass/ledger/transaction.dat"
     end
   end
-  /usr/bin/ledger -f $ass/ledger/ledger.dat "$task"
+  /usr/bin/ledger -f $ass/ledger/ledger.dat "$task" --ansi --current '^[^:]+[:][^:]+[:]*[^:]*$'
 end
