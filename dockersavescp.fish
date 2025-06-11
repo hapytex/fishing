@@ -7,14 +7,10 @@ function dockersavescp --description 'save a docker image as a compressed tarbal
     set target "$nms[1]"
     echo -en "\033]0;🐳 $i/$n dockersave $name\7"
     set sz (docker image inspect -f '{{ .Size }}' "$name")
-    docker save "$name" | pv -s "$sz" | gzip > "$target.tar.gz"
-    chmod a-w "$target.tar.gz"
-    if [ -n "$host" ]
-      if [ "$i" -lt "$n" ]
-        scp "$target.tar.gz" "$host/$target.tar.gz" &
-      else
-        scp "$target.tar.gz" "$host/$target.tar.gz"
-      end
+    if [ -n "$host "]
+      docker save "$name" | pv -s "$sz" | ssh "$host" "cat - > \"$target.tar.gz\""
+    else
+      docker save "$name" | pv -s "$sz" > "$target.tar.gz"
     end
     set i (math "$i+1")
   end
