@@ -16,7 +16,6 @@ account Taxes:VAT
   alias vat
 
 account Equity:OpeningBalances
-  assert commodity == "€"
   alias opening
   alias openingbalance
 

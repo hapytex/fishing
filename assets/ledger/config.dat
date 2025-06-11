@@ -14,9 +14,13 @@ commodity €
 commodity $
   note Dollars
   format $1,000.00
+  alias u
+  alias us
   alias usd
   alias us$
   alias DOLLAR
+  alias U
+  alias US
   alias USD
   alias US$
 
@@ -786,3 +790,14 @@ commodity ZWG
     note Zimbabwe gold
     format 1,000.00ZWG
     alias zwg
+
+commodity ticket
+    note ticket
+    format 1,000 ticket
+    alias tickets
+    alias admission
+    alias voucher
+    alias coupon
+    alias token
+    alias pass
+    alias boardingpass
