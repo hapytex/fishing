@@ -1,5 +1,7 @@
 measurements.json
+*_measurements.json
 list.json
+*_list.json
 *.lock
 *.pyc
 __pycache__

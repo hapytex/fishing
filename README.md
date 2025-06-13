@@ -4,6 +4,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ## List of functions
 
+ - **`activity_survey`**: a short survey about a physical activity;
  - **`advent`**: shows the number of candles to lit for advent;
  - **`airplane`**: turn on airplane mode;
  - **`alarm`**: show distress;
@@ -16,7 +17,14 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`bloodpressure`**: register a blood pressure measurement;
  - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
  - **`dated`**: add the timestamp as a prefix of the given files;
+ - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
  - **`dishwasher`**: wait until the dishwasher has finished;
+ - **`dockercup`**: compose the docker containers and run this eagerly;
+ - **`dockercupd`**: compose the docker containers and run this as daemon;
+ - **`dockerload`**: load a docker image from a compressed tarball;
+ - **`dockerprune`**: prune unused docker images;
+ - **`dockersave`**: save a docker image as a compressed tarball;
+ - **`dockersavescp`**: save a docker image as a compressed tarball and copy it with `scp`;
  - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
  - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
  - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
@@ -48,6 +56,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`igrep`**: run grep in a case insensitive way;
  - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
  - **`keycolor`**: set the keyboard color to a specific color and intensity;
+ - **`ledger`**: book a financial transaction and see the balance;
  - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
  - **`list`**: add or inspect a (shopping) list;
  - **`makealias`**: make an alias file;
@@ -56,10 +65,12 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`natrix-env`**: run a Python program in the natrix environment;
  - **`numpy`**: start a Python shell with `numpy` imported;
  - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
+ - **`pixel`**: print a list of images to the stdout;
  - **`pointfree`**: determine the pointfree version of a Haskell expression;
  - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
  - **`presleep`**: first gradually make a person sleepy before the `sleep_for`;
  - **`proofread`**: proofread a text from the stdin with *Groq* to find spelling and grammatical errors;
+ - **`proofreadedit`**: let vim open the file along with the proofread file;
  - **`proofreadmd`**: proofread Markdown files with Groq to find spelling and grammatical errors;
  - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
  - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
@@ -68,6 +79,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`remake`**: a loop to remake certain products with a Makefile;
  - **`rmake`**: walk up the filetree until it finds a Makefile;
  - **`rmemptydir`**: remove empty directories;
+ - **`roughsvg`**: convert a given .svg file to its roughjs equivalent;
  - **`sensors`**: print the status of the sensors every second;
  - **`setvar`**: check if a variable with the name exists; if not, query for a value;
  - **`shlint`**: download the latest version of Haskell lint and run this version;
@@ -95,6 +107,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`update_system`**: update the system in an asynchronous way;
  - **`videos`**: see random videos;
  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
+ - **`vimo`**: open two or more files in vim next to each other;
  - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
  - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
  - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
@@ -103,6 +116,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`washingmachine`**: wait until the washing machine has finished;
  - **`weather`**: obtain the weather based on GeoIP;
  - **`whatday`**: write the date in a color of the week;
+ - **`whenonline`**: wait to execute a command until the system can somehow contact the outer world;
+ - **`wishlist`**: add items to or inspect the wishlist;
  - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command; and
  - **`...`**: move to the root directory of the git repository, if that exists.
 
@@ -111,6 +126,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 The following emoji aliasses can be used as commands:
 
  - **`🚨`**: alias for `alarm`;
+ - **`✝️`**: alias for `biblespeak`;
  - **`🩸`**: alias for `blooddonation`;
  - **`☕`**: alias for `coffee`;
  - **`🍽️`**: alias for `dishwasher`;
