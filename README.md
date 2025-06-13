@@ -19,6 +19,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
  - **`dishwasher`**: wait until the dishwasher has finished;
+ - **`dockercup`**: compose the docker containers and run this eagerly;
+ - **`dockercupd`**: compose the docker containers and run this as daemon;
  - **`dockerload`**: load a docker image from a compressed tarball;
  - **`dockerprune`**: prune unused docker images;
  - **`dockersave`**: save a docker image as a compressed tarball;
