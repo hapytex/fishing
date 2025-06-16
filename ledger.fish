@@ -16,7 +16,7 @@ function ledger --description 'book a financial transaction and see the balance'
       test -n "$rf" && set rf " ($rf)"
       test -n "$nm" || set nm transaction
       test -n "$tx" && set tx "\n  tax  $cy$tx"
-      set tos (string split '/' "$to") 'vat' 'ship' 'discount' 'tax'
+      set tos (string split '/' "$to") 'vat' 'ship' 'discount' 'tip' 'tax'
       set tot ''
       set idx 1
       for am in $ams

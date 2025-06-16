@@ -41,6 +41,11 @@ account Discount
   alias rebate
   alias deal
 
+account Tips
+  alias gratuity
+  alias tips
+  alias tip
+
 account Expense:Living:Fuel:Diesel
   assert commodity == "€"
   alias diesel
