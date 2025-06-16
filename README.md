@@ -12,6 +12,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`author`**: prefix the given file names with the name of the author;
  - **`backup`**: make readonly timestamped copies of the list of parameters;
  - **`battery`**: print the percentage of the battery;
+ - **`between`**: check if the given values are ordered, usually used for three items to check membership of a range;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`blooddonation`**: register a blood donation together with blood metrics;
  - **`bloodpressure`**: register a blood pressure measurement;
