@@ -8,7 +8,7 @@ function teeth --description 'help cleaning teeth'
     # echo "$kin -- $tt"
     echo -e (echo "\e[90m$tooth_map\e[0m" | sed -E "s/$kin$tt(.)/$col\1$ecol/g;s/[oui][0-9](.)/\1/g;s/T([^ ]+)/ $tongue\1$ecol/g")
   end
-  measure health.teeth.cleaning true &
+  measurelog health.teeth.cleaning true &
   # based on the Tooth brushing timer of the Delta Dental of Tennessee https://youtu.be/gAODutgIIVQ
   set cheeks ⬆️  ⬇️
   set teeth 7-8 5-6 3-4 1-2

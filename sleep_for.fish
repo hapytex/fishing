@@ -4,7 +4,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     echo "Too long"
     return 1
   end
-  measure health.sleep.program "$n" &
+  measurelog health.sleep.program "$n" &
   function cleanup -a gamma
     test -n "$gamma" && kill "$gamma"
     xrandr --output eDP-1 --brightness '1'
