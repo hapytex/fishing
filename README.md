@@ -15,6 +15,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`between`**: check if the given values are ordered, usually used for three items to check membership of a range;
  - **`biblespeak`**: speak the next verse of the *Bible*;
  - **`blooddonation`**: register a blood donation together with blood metrics;
+ - **`bloodresults`**: store blood result measurements;
  - **`bloodpressure`**: register a blood pressure measurement;
  - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
  - **`dated`**: add the timestamp as a prefix of the given files;
@@ -62,6 +63,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`list`**: add or inspect a (shopping) list;
  - **`makealias`**: make an alias file;
  - **`measure`**: add a given measurement at a given time and print the current timestamp;
+ - **`measureall`**: start asking for a lot of measures in bulk, used as helper function;
  - **`measurelog`**: add a given measurement at a given time;
  - **`natrix`**: the Python interpreter of the fish environment;
  - **`natrix-env`**: run a Python program in the natrix environment;
