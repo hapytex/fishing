@@ -34,7 +34,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n
   end
   trap "cleanup $gamma" EXIT
   set nn (math "ceil($n+1)")
-  set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+$nn hours")
+  set end (date '+%Y-%m-%d %T%z' -d "+$nn hours")
   gh_status 'Sleeping' 'sleeping' "$end" true
   echo "$end" > "$HOME/block_sleep"
   xrandr --output eDP-1 --brightness '0.25'

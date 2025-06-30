@@ -26,7 +26,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       set gamma (noising)
       trap "endpom $gamma" EXIT
       gh_status 'Focusing' 'arrow_forward' '25 minutes' true
-      set end (date '+%Y-%m-%d %H:%M:%S%z' -d "+40 minutes")
+      set end (date '+%Y-%m-%d %T%z' -d "+40 minutes")
       echo "$end" > "$HOME/block_sleep"
       measurelog pomodoro.work true &
       waitfor 1500 '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus_colors ,)
