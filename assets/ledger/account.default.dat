@@ -58,3 +58,10 @@ account Expense:Living:Fuel:Super95
   assert commodity == "€"
   alias super
   alias super95
+
+account Expense:Fines
+  assert commodity == "€"
+  alias fine
+  alias fines
+  alias penalty
+  alias penalties
