@@ -18,6 +18,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`bloodresults`**: store blood result measurements;
  - **`bloodpressure`**: register a blood pressure measurement;
  - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
+ - **`cpvim`**: copy the given file to another path, and start the editor;
  - **`dated`**: add the timestamp as a prefix of the given files;
  - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
  - **`dishwasher`**: wait until the dishwasher has finished;
@@ -67,6 +68,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`measureall`**: start asking for a lot of measures in bulk, used as helper function;
  - **`measurelog`**: add a given measurement at a given time;
  - **`mkdircd`**: make a directory, if it does not yet exists, and move the cd to that directory;
+ - **`mkvim`**: make the directories needed to edit a file;
  - **`natrix`**: the Python interpreter of the fish environment;
  - **`natrix-env`**: run a Python program in the natrix environment;
  - **`numpy`**: start a Python shell with `numpy` imported;
