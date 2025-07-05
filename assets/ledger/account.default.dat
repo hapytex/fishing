@@ -62,3 +62,19 @@ account Expense:Transport:Train
 
 account Expense:Transport:Bike
   alias bike
+
+account Expense:Transport:Plane
+  alias plane
+  alias airplaine
+
+account Expense:Transport:Parking
+  alias parking
+
+account Expense:Travel
+  alias travel
+
+account Expense:Entertainment
+  alias entertainment
+
+account Expense:Living:Food
+  alias food
