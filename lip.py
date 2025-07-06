@@ -13,24 +13,34 @@ from dateparser import parse
 MONTHS = ("JA", "FE", "MR", "AP", "MY", "JN",
           "JL", "AU", "SE", "OC", "NV", "DE")
 
-
 def gen_year(year):
-    return [[" "] * 31 for _ in range(1, 13)]
+    return [[set() for _ in range(31)] for _ in range(1, 13)]
 
 
-def insert_datum(*dates, years=None):
+def insert_datum(dates, years=None):
+    if isinstance(dates, (list, tuple)):
+        dates = dict.fromkeys(dates, True)
     if years is None:
         years = {}
-    for date in dates:
+    for date, dateval in dates.items():
         year = date.year
         dat = years.get(year)
         if dat is None:
             years[year] = dat = gen_year(year)
-        dat[date.month - 1][date.day - 1] = "█"
+        dat[date.month - 1][date.day - 1].add(dateval)
     return years
 
+def get_distict(years):
+    return {di for y in years.values() for m in y for d in m for di in d}
+
+def to_infill(value):
+    if not value:
+        return '  '
+    else:
+        return '██'
+
 def life_in_pixels(*data):
-    years = insert_datum(*data)
+    years = insert_datum(data)
     y1 = len(years) - 1
     muly = y1 > 0
     print("┏" + ("━" * 35 + "┳") * y1 + "━" * 35 + "┓")
@@ -50,11 +60,7 @@ def life_in_pixels(*data):
                     if d == -2:
                         print(MONTHS[m], end="")
                     else:
-                        mo = vs[m]
-                        if len(mo) > d:
-                            print(mo[d] * 2, end="")
-                        else:
-                            print(" ", end="")
+                        print(to_infill(vs[m][d]), end="")
                     print("│" if m < 11 else "┃", end="")
         if d == -1:
             print(("──┼" * 11 + "──╂") * y1 + "──┼" * 11 + "──┨", end="")

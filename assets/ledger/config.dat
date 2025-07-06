@@ -1,0 +1,803 @@
+commodity €
+  note Euros
+  format €1,000.00
+  alias e
+  alias eu
+  alias eur
+  alias euro
+  alias E
+  alias EU
+  alias EUR
+  alias EURO
+  default
+
+commodity $
+  note Dollars
+  format $1,000.00
+  alias u
+  alias us
+  alias usd
+  alias us$
+  alias DOLLAR
+  alias U
+  alias US
+  alias USD
+  alias US$
+
+commodity £
+  note Pounds
+  format £1,000.00
+  alias gbp
+  alias GBP
+  alias POUNDS
+
+commodity AED
+    note United Arab Emirates dirham
+    format 1,000.00AED
+    alias aed
+
+commodity AFN
+    note Afghan afghani
+    format 1,000.00AFN
+    alias afn
+
+commodity ALL
+    note Albanian lek
+    format 1,000.00ALL
+    alias all
+
+commodity AMD
+    note Armenian dram
+    format 1,000.00AMD
+    alias amd
+
+commodity AOA
+    note Angolan kwanza
+    format 1,000.00AOA
+    alias aoa
+
+commodity ARS
+    note Argentine peso
+    format 1,000.00ARS
+    alias ars
+
+commodity AUD
+    note Australian dollar
+    format 1,000.00AUD
+    alias aud
+
+commodity AWG
+    note Aruban florin
+    format 1,000.00AWG
+    alias awg
+
+commodity AZN
+    note Azerbaijani manat
+    format 1,000.00AZN
+    alias azn
+
+commodity BAM
+    note Bosnia and Herzegovina convertible mark
+    format 1,000.00BAM
+    alias bam
+
+commodity BBD
+    note Barbadian dollar
+    format 1,000.00BBD
+    alias bbd
+
+commodity BDT
+    note Bangladeshi taka
+    format 1,000.00BDT
+    alias bdt
+
+commodity BGN
+    note Bulgarian lev
+    format 1,000.00BGN
+    alias bgn
+
+commodity BHD
+    note Bahraini dinar
+    format 1,000.00BHD
+    alias bhd
+
+commodity BIF
+    note Burundian franc
+    format 1,000.00BIF
+    alias bif
+
+commodity BMD
+    note Bermudian dollar
+    format 1,000.00BMD
+    alias bmd
+
+commodity BND
+    note Brunei dollar
+    format 1,000.00BND
+    alias bnd
+
+commodity BOB
+    note Bolivian boliviano
+    format 1,000.00BOB
+    alias bob
+
+commodity BRL
+    note Brazilian real
+    format 1,000.00BRL
+    alias brl
+
+commodity BSD
+    note Bahamian dollar
+    format 1,000.00BSD
+    alias bsd
+
+commodity BTN
+    note Bhutanese ngultrum
+    format 1,000.00BTN
+    alias btn
+
+commodity BWP
+    note Botswana pula
+    format 1,000.00BWP
+    alias bwp
+
+commodity BYN
+    note Belarusian ruble
+    format 1,000.00BYN
+    alias byn
+
+commodity BZD
+    note Belize dollar
+    format 1,000.00BZD
+    alias bzd
+
+commodity CAD
+    note Canadian dollar
+    format 1,000.00CAD
+    alias cad
+
+commodity CDF
+    note Congolese franc
+    format 1,000.00CDF
+    alias cdf
+
+commodity CHF
+    note Swiss franc
+    format 1,000.00CHF
+    alias chf
+
+commodity CLP
+    note Chilean peso
+    format 1,000.00CLP
+    alias clp
+
+commodity CNY
+    note Renminbi
+    format 1,000.00CNY
+    alias cny
+
+commodity COP
+    note Colombian peso
+    format 1,000.00COP
+    alias cop
+
+commodity CRC
+    note Costa Rican colÃ³n
+    format 1,000.00CRC
+    alias crc
+
+commodity CUP
+    note Cuban peso
+    format 1,000.00CUP
+    alias cup
+
+commodity CVE
+    note Cape Verdean escudo
+    format 1,000.00CVE
+    alias cve
+
+commodity CZK
+    note Czech koruna
+    format 1,000.00CZK
+    alias czk
+
+commodity DJF
+    note Djiboutian franc
+    format 1,000.00DJF
+    alias djf
+
+commodity DKK
+    note Danish krone
+    format 1,000.00DKK
+    alias dkk
+
+commodity DOP
+    note Dominican peso
+    format 1,000.00DOP
+    alias dop
+
+commodity DZD
+    note Algerian dinar
+    format 1,000.00DZD
+    alias dzd
+
+commodity EGP
+    note Egyptian pound
+    format 1,000.00EGP
+    alias egp
+
+commodity ERN
+    note Eritrean nakfa
+    format 1,000.00ERN
+    alias ern
+
+commodity ETB
+    note Ethiopian birr
+    format 1,000.00ETB
+    alias etb
+
+commodity FJD
+    note Fijian dollar
+    format 1,000.00FJD
+    alias fjd
+
+commodity FKP
+    note Falkland Islands pound
+    format 1,000.00FKP
+    alias fkp
+
+commodity GEL
+    note Georgian lari
+    format 1,000.00GEL
+    alias gel
+
+commodity GHS
+    note Ghanaian cedi
+    format 1,000.00GHS
+    alias ghs
+
+commodity GIP
+    note Gibraltar pound
+    format 1,000.00GIP
+    alias gip
+
+commodity GMD
+    note Gambian dalasi
+    format 1,000.00GMD
+    alias gmd
+
+commodity GNF
+    note Guinean franc
+    format 1,000.00GNF
+    alias gnf
+
+commodity GTQ
+    note Guatemalan quetzal
+    format 1,000.00GTQ
+    alias gtq
+
+commodity GYD
+    note Guyanese dollar
+    format 1,000.00GYD
+    alias gyd
+
+commodity HKD
+    note Hong Kong dollar
+    format 1,000.00HKD
+    alias hkd
+
+commodity HNL
+    note Honduran lempira
+    format 1,000.00HNL
+    alias hnl
+
+commodity HTG
+    note Haitian gourde
+    format 1,000.00HTG
+    alias htg
+
+commodity HUF
+    note Hungarian forint
+    format 1,000.00HUF
+    alias huf
+
+commodity IDR
+    note Indonesian rupiah
+    format 1,000.00IDR
+    alias idr
+
+commodity ILS
+    note Israeli new shekel
+    format 1,000.00ILS
+    alias ils
+
+commodity INR
+    note Indian rupee
+    format 1,000.00INR
+    alias inr
+
+commodity IQD
+    note Iraqi dinar
+    format 1,000.00IQD
+    alias iqd
+
+commodity IRR
+    note Iranian rial
+    format 1,000.00IRR
+    alias irr
+
+commodity ISK
+    note Icelandic krÃ³na
+    format 1,000.00ISK
+    alias isk
+
+commodity JMD
+    note Jamaican dollar
+    format 1,000.00JMD
+    alias jmd
+
+commodity JOD
+    note Jordanian dinar
+    format 1,000.00JOD
+    alias jod
+
+commodity JPY
+    note Japanese yen
+    format 1,000.00JPY
+    alias jpy
+
+commodity KES
+    note Kenyan shilling
+    format 1,000.00KES
+    alias kes
+
+commodity KGS
+    note Kyrgyz som
+    format 1,000.00KGS
+    alias kgs
+
+commodity KHR
+    note Cambodian riel
+    format 1,000.00KHR
+    alias khr
+
+commodity KMF
+    note Comorian franc
+    format 1,000.00KMF
+    alias kmf
+
+commodity KPW
+    note North Korean won
+    format 1,000.00KPW
+    alias kpw
+
+commodity KRW
+    note South Korean won
+    format 1,000.00KRW
+    alias krw
+
+commodity KWD
+    note Kuwaiti dinar
+    format 1,000.00KWD
+    alias kwd
+
+commodity KYD
+    note Cayman Islands dollar
+    format 1,000.00KYD
+    alias kyd
+
+commodity KZT
+    note Kazakhstani tenge
+    format 1,000.00KZT
+    alias kzt
+
+commodity LAK
+    note Lao kip
+    format 1,000.00LAK
+    alias lak
+
+commodity LBP
+    note Lebanese pound
+    format 1,000.00LBP
+    alias lbp
+
+commodity LKR
+    note Sri Lankan rupee
+    format 1,000.00LKR
+    alias lkr
+
+commodity LRD
+    note Liberian dollar
+    format 1,000.00LRD
+    alias lrd
+
+commodity LSL
+    note Lesotho loti
+    format 1,000.00LSL
+    alias lsl
+
+commodity LYD
+    note Libyan dinar
+    format 1,000.00LYD
+    alias lyd
+
+commodity MAD
+    note Moroccan dirham
+    format 1,000.00MAD
+    alias mad
+
+commodity MDL
+    note Moldovan leu
+    format 1,000.00MDL
+    alias mdl
+
+commodity MGA
+    note Malagasy ariary
+    format 1,000.00MGA
+    alias mga
+
+commodity MKD
+    note Macedonian denar
+    format 1,000.00MKD
+    alias mkd
+
+commodity MMK
+    note Burmese kyat
+    format 1,000.00MMK
+    alias mmk
+
+commodity MNT
+    note Mongolian tÃ¶grÃ¶g
+    format 1,000.00MNT
+    alias mnt
+
+commodity MOP
+    note Macanese pataca
+    format 1,000.00MOP
+    alias mop
+
+commodity MRU
+    note Mauritanian ouguiya
+    format 1,000.00MRU
+    alias mru
+
+commodity MUR
+    note Mauritian rupee
+    format 1,000.00MUR
+    alias mur
+
+commodity MVR
+    note Maldivian rufiyaa
+    format 1,000.00MVR
+    alias mvr
+
+commodity MWK
+    note Malawian kwacha
+    format 1,000.00MWK
+    alias mwk
+
+commodity MXN
+    note Mexican peso
+    format 1,000.00MXN
+    alias mxn
+
+commodity MYR
+    note Malaysian ringgit
+    format 1,000.00MYR
+    alias myr
+
+commodity MZN
+    note Mozambican metical
+    format 1,000.00MZN
+    alias mzn
+
+commodity NAD
+    note Namibian dollar
+    format 1,000.00NAD
+    alias nad
+
+commodity NGN
+    note Nigerian naira
+    format 1,000.00NGN
+    alias ngn
+
+commodity NIO
+    note Nicaraguan cÃ³rdoba
+    format 1,000.00NIO
+    alias nio
+
+commodity NOK
+    note Norwegian krone
+    format 1,000.00NOK
+    alias nok
+
+commodity NPR
+    note Nepalese rupee
+    format 1,000.00NPR
+    alias npr
+
+commodity NZD
+    note New Zealand dollar
+    format 1,000.00NZD
+    alias nzd
+
+commodity OMR
+    note Omani rial
+    format 1,000.00OMR
+    alias omr
+
+commodity PAB
+    note Panamanian balboa
+    format 1,000.00PAB
+    alias pab
+
+commodity PEN
+    note Peruvian sol
+    format 1,000.00PEN
+    alias pen
+
+commodity PGK
+    note Papua New Guinean kina
+    format 1,000.00PGK
+    alias pgk
+
+commodity PHP
+    note Philippine peso
+    format 1,000.00PHP
+    alias php
+
+commodity PKR
+    note Pakistani rupee
+    format 1,000.00PKR
+    alias pkr
+
+commodity PLN
+    note Polish zÅoty
+    format 1,000.00PLN
+    alias pln
+
+commodity PYG
+    note Paraguayan guaranÃ­
+    format 1,000.00PYG
+    alias pyg
+
+commodity QAR
+    note Qatari riyal
+    format 1,000.00QAR
+    alias qar
+
+commodity RON
+    note Romanian leu
+    format 1,000.00RON
+    alias ron
+
+commodity RSD
+    note Serbian dinar
+    format 1,000.00RSD
+    alias rsd
+
+commodity RUB
+    note Russian ruble
+    format 1,000.00RUB
+    alias rub
+
+commodity RWF
+    note Rwandan franc
+    format 1,000.00RWF
+    alias rwf
+
+commodity SAR
+    note Saudi riyal
+    format 1,000.00SAR
+    alias sar
+
+commodity SBD
+    note Solomon Islands dollar
+    format 1,000.00SBD
+    alias sbd
+
+commodity SCR
+    note Seychellois rupee
+    format 1,000.00SCR
+    alias scr
+
+commodity SDG
+    note Sudanese pound
+    format 1,000.00SDG
+    alias sdg
+
+commodity SEK
+    note Swedish krona
+    format 1,000.00SEK
+    alias sek
+
+commodity SGD
+    note Singapore dollar
+    format 1,000.00SGD
+    alias sgd
+
+commodity SHP
+    note Saint Helena pound
+    format 1,000.00SHP
+    alias shp
+
+commodity SLE
+    note Sierra Leonean leone
+    format 1,000.00SLE
+    alias sle
+
+commodity SOS
+    note Somali shilling
+    format 1,000.00SOS
+    alias sos
+
+commodity SRD
+    note Surinamese dollar
+    format 1,000.00SRD
+    alias srd
+
+commodity SSP
+    note South Sudanese pound
+    format 1,000.00SSP
+    alias ssp
+
+commodity STN
+    note SÃ£o TomÃ© and PrÃ­ncipe dobra
+    format 1,000.00STN
+    alias stn
+
+commodity SYP
+    note Syrian pound
+    format 1,000.00SYP
+    alias syp
+
+commodity SZL
+    note Swazi lilangeni
+    format 1,000.00SZL
+    alias szl
+
+commodity THB
+    note Thai baht
+    format 1,000.00THB
+    alias thb
+
+commodity TJS
+    note Tajikistani somoni
+    format 1,000.00TJS
+    alias tjs
+
+commodity TMT
+    note Turkmenistani manat
+    format 1,000.00TMT
+    alias tmt
+
+commodity TND
+    note Tunisian dinar
+    format 1,000.00TND
+    alias tnd
+
+commodity TOP
+    note Tongan paÊ»anga
+    format 1,000.00TOP
+    alias top
+
+commodity TRY
+    note Turkish lira
+    format 1,000.00TRY
+    alias try
+
+commodity TTD
+    note Trinidad and Tobago dollar
+    format 1,000.00TTD
+    alias ttd
+
+commodity TWD
+    note New Taiwan dollar
+    format 1,000.00TWD
+    alias twd
+
+commodity TZS
+    note Tanzanian shilling
+    format 1,000.00TZS
+    alias tzs
+
+commodity UAH
+    note Ukrainian hryvnia
+    format 1,000.00UAH
+    alias uah
+
+commodity UGX
+    note Ugandan shilling
+    format 1,000.00UGX
+    alias ugx
+
+commodity UYU
+    note Uruguayan peso
+    format 1,000.00UYU
+    alias uyu
+
+commodity UZS
+    note Uzbekistani sum
+    format 1,000.00UZS
+    alias uzs
+
+commodity VED
+    note Venezuelan digital bolÃ­var
+    format 1,000.00VED
+    alias ved
+
+commodity VES
+    note Venezuelan sovereign bolÃ­var
+    format 1,000.00VES
+    alias ves
+
+commodity VND
+    note Vietnamese Äá»ng
+    format 1,000.00VND
+    alias vnd
+
+commodity VUV
+    note Vanuatu vatu
+    format 1,000.00VUV
+    alias vuv
+
+commodity WST
+    note Samoan tÄlÄ
+    format 1,000.00WST
+    alias wst
+
+commodity XAF
+    note Central African CFA franc
+    format 1,000.00XAF
+    alias xaf
+
+commodity XCD
+    note Eastern Caribbean dollar
+    format 1,000.00XCD
+    alias xcd
+
+commodity XCG
+    note Caribbean guilder
+    format 1,000.00XCG
+    alias xcg
+
+commodity XOF
+    note West African CFA franc
+    format 1,000.00XOF
+    alias xof
+
+commodity XPF
+    note CFP franc
+    format 1,000.00XPF
+    alias xpf
+
+commodity YER
+    note Yemeni rial
+    format 1,000.00YER
+    alias yer
+
+commodity ZAR
+    note South African rand
+    format 1,000.00ZAR
+    alias zar
+
+commodity ZMW
+    note Zambian kwacha
+    format 1,000.00ZMW
+    alias zmw
+
+commodity ZWG
+    note Zimbabwe gold
+    format 1,000.00ZWG
+    alias zwg
+
+commodity ticket
+    note ticket
+    format 1,000 ticket
+    alias tickets
+    alias admission
+    alias voucher
+    alias coupon
+    alias token
+    alias pass
+    alias boardingpass

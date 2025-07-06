@@ -1,0 +1,89 @@
+account Assets:Cash
+  alias cash
+
+account Assets:Main
+  alias main
+
+account Taxes
+  alias tax
+  alias taxes
+
+account Taxes:VAT
+  alias vat
+
+account Taxes:DividendTax
+  alias dividendtax
+
+account Equity:OpeningBalances
+  alias opening
+  alias openingbalance
+
+account Taxes:Income
+  alias incometax
+
+account Shipping
+  alias ship
+  alias shipping
+  alias shipment
+
+account Discount
+  alias discount
+  alias reduction
+  alias deduction
+  alias rebate
+  alias deal
+
+account Tips
+  alias gratuity
+  alias tips
+  alias tip
+
+account Expense:Living:Fuel:Diesel
+  alias diesel
+
+account Expense:Living:Fuel:Super98
+  alias super98
+
+account Expense:Living:Fuel:Super95
+  alias super
+  alias super95
+
+account Expense:Fines
+  alias fine
+  alias fines
+  alias penalty
+  alias penalties
+
+account Expense:Transport
+  alias transport
+
+account Expense:Transport:Train
+  alias train
+
+account Expense:Transport:Bike
+  alias bike
+
+account Expense:Transport:Plane
+  alias plane
+  alias airplaine
+
+account Expense:Transport:Parking
+  alias parking
+
+account Expense:Travel
+  alias travel
+
+account Expense:Entertainment
+  alias entertainment
+
+account Expense:Living:Food
+  alias food
+
+account Expense:Living:Health
+  alias health
+
+account Expense:Living:Health:Doctor
+  alias doctor
+
+account Expense:Living:Health:Pharmacist
+  alias pharmacist

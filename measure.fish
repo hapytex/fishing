@@ -1,3 +1,4 @@
-function measure --description 'Add a given measurement at a given time' -a name -a value
-  assets natrix ../add_measure.py $argv
+function measure --description 'Add a given measurement at a given time and print the current timestamp' -a name -a value
+  measurelog $argv
+  date
 end

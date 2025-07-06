@@ -31,6 +31,7 @@ def filter_dict(data, dt):
         return result
     return data
 
+
 if __name__ == "__main__":
     n = len(sys.argv)
     assert (
@@ -81,10 +82,11 @@ if __name__ == "__main__":
                             val = json.loads(val)
                         except ValueError:
                             pass  # keep it a string
-                datum[key_dt] = val
-                if key_dt is not dt:
-                    # we add a key from the past
-                    to_sort[id(datum)] = datum
+                if val:  # None, False, etc. are all omitted
+                    datum[key_dt] = val
+                    if key_dt is not dt:
+                        # we add a key from the past
+                        to_sort[id(datum)] = datum
             else:
                 cprint(filter_dict(datum, timefilter))
         for datum in to_sort.values():
