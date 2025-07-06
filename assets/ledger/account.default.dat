@@ -78,3 +78,12 @@ account Expense:Entertainment
 
 account Expense:Living:Food
   alias food
+
+account Expense:Living:Health
+  alias health
+
+account Expense:Living:Health:Doctor
+  alias doctor
+
+account Expense:Living:Health:Pharmacist
+  alias pharmacist
