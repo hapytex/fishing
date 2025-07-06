@@ -18,6 +18,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
  - **`bloodresults`**: store blood result measurements;
  - **`bloodpressure`**: register a blood pressure measurement;
  - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
+ - **`cpgit`**: copy the given file to another path, and add the file to git;
  - **`cpvim`**: copy the given file to another path, and start the editor;
  - **`cpvimgit`**: copy the given file to another path, add the file to git, and start the editor;
  - **`dated`**: add the timestamp as a prefix of the given files;
