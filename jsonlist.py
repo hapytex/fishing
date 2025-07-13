@@ -7,12 +7,16 @@ from ast import literal_eval
 if __name__ == "__main__":
     lst = []
     dct = {}
+    aslst = False
     for val in sys.argv[1:]:
         key = None
-        if val.startswith('-'):
+        if not aslst and val.startswith('-'):
             val = val[1:]
             if val.startswith('-'):
                 val = val[1:]
+                if not val:
+                    aslst = True
+                    continue
             key, val = val.split('=', 1)
         try:
             val = literal_eval(val)
