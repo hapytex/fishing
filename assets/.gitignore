@@ -1,4 +1,4 @@
-measurements.json
+measurements*.json
 *_measurements.json
 list.json
 *_list.json

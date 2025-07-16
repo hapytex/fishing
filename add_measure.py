@@ -12,7 +12,7 @@ from dateparser import parse
 from filelock import FileLock
 
 DURATION = re.compile(r"\d{1,2}([:]\d{2})+")
-ASSET_PATH = "measurements.json"
+ASSET_PATH = "assets/measurements.json"
 
 
 def filter_dict(data, dt):
