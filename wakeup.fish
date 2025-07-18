@@ -1,4 +1,5 @@
 function wakeup --description 'Make some noise to wake someone up' -a tty -a l -a c
+  measurelog health.sleep.wakeup true &
   # waitfor 1800 '🌄 wake up' '🌄 ' &
   test -n "$tty" | set tty (tty)
   switch (random 0 1)

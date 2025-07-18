@@ -1,4 +1,5 @@
 function alarm --description 'show distress'
+  measurelog health.sleep.alarm true &
   function endpom -a gamma
     if kill -0 "$gamma" >/dev/null
       kill "$gamma" >/dev/null 
