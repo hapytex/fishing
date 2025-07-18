@@ -44,6 +44,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 - **`E`**
 
+  - **`eat`**: keep track of what we eat;
   - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
   - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
   - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
