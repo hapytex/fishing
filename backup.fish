@@ -5,8 +5,8 @@ function backup --description 'make readonly timestamped copies of the list of p
     cp "$item" $dt"_$item"
     set -a targets $dt"_$item"
   end
-  if set -q arv[1]
-    chmod -w $targets
+  if set -q targets[1]
+    chmod a-w $targets
     chattr +c $targets
   end
 end
