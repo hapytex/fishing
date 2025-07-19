@@ -84,6 +84,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`hlint`**: run Haskell lint and use a pager for the results;
   - **`homebattery`**: determine how long it will take to load the battery full;
   - **`household`**: wait until a household device has finished with info;
+  - **`hydrate`**: keep track of the amount of water we drink;
 
 - **`I`**
 
