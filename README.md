@@ -188,7 +188,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`vimo`**: open two or more files in vim next to each other;
   - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
   - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
-  - **`vitamins`**: take our daily vitamines and magnesium;
+  - **`vitamins`**: take our daily vitamins and magnesium;
 
 - **`W`**
 
