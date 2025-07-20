@@ -1,5 +1,6 @@
 measurements*.json
 *_measurements.json
+*_measurements.json.gz
 list.json
 *_list.json
 *.lock
