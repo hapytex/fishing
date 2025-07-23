@@ -104,7 +104,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`ledger`**: book a financial transaction and see the balance;
   - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
   - **`list`**: add or inspect a (shopping) list;
-  - **`llive`**: update the directory listing every second;
+  - **`live`**: run a command every second and update the result in the console;
   - **`lunar`**: determine the phase of the moon for a given date;
 
 - **`M`**
@@ -150,7 +150,6 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 - **`S`**
 
-  - **`sensors`**: print the status of the sensors every second;
   - **`setvar`**: check if a variable with the name exists; if not, query for a value;
   - **`shlint`**: download the latest version of Haskell lint and run this version;
   - **`sleep_for`**: sleep a given number of hours;
