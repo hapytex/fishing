@@ -3,7 +3,7 @@ function backupgz --description 'make readonly timestamped compressed copies of 
   set -l targets
   for item in $argv
     set targ $dt"_$item.gz"
-    gzip -9 < "$item" > "$targ"
+    pv -- "$item" | gzip -9 > "$targ"
     set -a targets "$targ"
   end
   if set -q targets[1]
