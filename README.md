@@ -107,6 +107,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
   - **`list`**: add or inspect a (shopping) list;
   - **`live`**: run a command every second and update the result in the console;
+  - **`llive`**: show the list of files updated every second;
   - **`lunar`**: determine the phase of the moon for a given date;
 
 - **`M`**
