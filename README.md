@@ -163,6 +163,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`stackbench`**: to run benchmarks on the haskell stack project, and write the results to a file named `benchmarks.html`;
   - **`stackd`**: build the documentation of the Haskell stack project;
   - **`stackg`**: run a ghci session for the given Haskell stack project;
+  - **`stackn`**: create a new Haskell stack project;
   - **`stackr`**: run the program, this is an alias of `stack run`;
   - **`stackt`**: test the Haskell stack project;
   - **`stacktcov`**: test the Haskell project, and keep track of the coverage;
