@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # can be added as cronjob, for example as:
 #
 #   00 10 01 * * /path/to/backup.sh measurements.json
