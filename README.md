@@ -69,6 +69,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitb`**: make a new git branch;
   - **`gitc`**: make a git commit (short for `git commit -am`);
   - **`gitd`**: calculate the git difference and work with a pager to read the full response;
+  - **`gitf`**: alias for `git fetch`;
   - **`gith`**: checkout a given branch;
   - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
   - **`gitmastertag`**: checkout the mater branch, pull from remote, tag the commit and push the tag to the repository;
