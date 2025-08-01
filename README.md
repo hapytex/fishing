@@ -76,6 +76,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
   - **`gitremote`**: add the remote as origin with the given `GIT_PREFIX` and the name of the directory as git project;
   - **`gits`**: prints the status of the current Git repository (short for `git status`);
+  - **`gitt`**: make a git tag and push the tag;
   - **`gitu`**: pull the changes from the remote repository (short for `git pull`);
   - **`greprec`**: recursively search for files matching the given glob;
   - **`groq`**: ask *Groq* something;
