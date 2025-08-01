@@ -180,7 +180,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`teeth`**: help cleaning teeth;
   - **`timestamp`**: get a string that specifies date and time, used for filenames mainly;
   - **`todo`**: add or inspect to a todo list;
-  - **`truthful`**: check if at least one of the given Python literals or JSON values has turthiness true;
+  - **`truthful`**: check if at least one of the given Python literals or JSON values has truthiness `true`;
 
 - **`U`**
 
