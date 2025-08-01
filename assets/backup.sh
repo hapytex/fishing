@@ -4,7 +4,7 @@ set -e
 
 # can be added as cronjob, for example as:
 #
-#   00 10 01 * * /path/to/backup.sh measurements.json
+#   00 22 01 * * /path/to/backup.sh measurements.json
 #
 # to backup asset files periodically (here every month)
 
