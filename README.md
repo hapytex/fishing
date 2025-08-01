@@ -223,6 +223,7 @@ The following emoji aliasses can be used as commands:
   - **`🍽️`**: alias for `dishwasher`;
   - **`🥚`**: alias for `eggs`;
   - **`🤖`**: alias for `groq`;
+  - **`🌙`**: alias for `lunar`;
   - **`🎥`**: alias for `movie`;
   - **`🍅`**: alias for `pomodoro`;
   - **`💼`**: alias for `pomodoro`;
