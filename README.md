@@ -68,6 +68,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gh_emo`**: get the *GitHub* emoji name for a given emoji;
   - **`gitb`**: make a new git branch;
   - **`gitc`**: make a git commit (short for `git commit -am`);
+  - **`gitcp`**: commit with the given parameters, and push the changes;
   - **`gitd`**: calculate the git difference and work with a pager to read the full response;
   - **`gitf`**: alias for `git fetch`;
   - **`gith`**: checkout a given branch;
