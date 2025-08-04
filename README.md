@@ -131,6 +131,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 - **`P`**
 
   - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
+  - **`pipr`**: install the `requirements.txt` file with `pip`;
   - **`pixel`**: print a list of images to the stdout;
   - **`pointfree`**: determine the pointfree version of a Haskell expression;
   - **`pomodoro`**: a tool to use the pomodoro technique for work and pause;
