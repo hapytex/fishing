@@ -2,7 +2,7 @@ function pipr --wraps='pip install -r requirements.txt' --description 'install t
   if set -q argv[1]
     set itm $argv
   else
-    set itm 'requirements.txt'
+    set itm (find . -name 'requirements.txt' | head -n 1)
   end
   pip install -r $itm
 end
