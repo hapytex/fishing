@@ -1,4 +1,4 @@
-function advent --description 'shows the number of candles to lit for advent' -a day
+function advent --description 'shows the number of candles to light for Advent' -a day
   set candles 🕯️ 🕯️🕯️ 🕯️🕯️🕯️ 🕯️🕯️🕯️🕯️
   # TODO: same year
   set christmas (date +%s --utc -d 'december 25 0:00')

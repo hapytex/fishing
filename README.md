@@ -7,7 +7,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 - **`A`**
 
   - **`activity_survey`**: a short survey about a physical activity;
-  - **`advent`**: shows the number of candles to lit for advent;
+  - **`advent`**: shows the number of candles to light for Advent;
   - **`airplane`**: turn on airplane mode;
   - **`alarm`**: show distress;
   - **`assets`**: get the directory where the fish assets are stored;
@@ -74,7 +74,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gith`**: checkout a given branch;
   - **`gitm`**: move a given file in a git repository;
   - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
-  - **`gitmastertag`**: checkout the mater branch, pull from remote, tag the commit and push the tag to the repository;
+  - **`gitmastertag`**: checkout the master branch, pull from remote, tag the commit and push the tag to the repository;
   - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
   - **`gitremote`**: add the remote as origin with the given `GIT_PREFIX` and the name of the directory as git project;
   - **`gits`**: prints the status of the current Git repository (short for `git status`);
@@ -118,9 +118,9 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
   - **`makealias`**: make an alias file;
   - **`measure`**: add a given measurement at a given time and print the current timestamp;
-  - **`measureall`**: start asking for a lot of measures in bulk, used as helper function;
+  - **`measureall`**: start asking for many measures in bulk, used as helper function;
   - **`measurelog`**: add a given measurement at a given time;
-  - **`mkdircd`**: make a directory, if it does not yet exists, and move the cd to that directory;
+  - **`mkdircd`**: make a directory, if it does not yet exist, and move the cd to that directory;
   - **`mkvim`**: make the directories needed to edit a file;
   - **`mkvimgit`**: make the directories needed to edit a file and add the file to git;
 
@@ -146,7 +146,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 - **`Q`**
 
-  - **`quickread`**: 𝗯𝗼𝗹face the 𝗳𝗶rst 𝗹𝗲𝘁ters of 𝗲ach 𝘄ord, 𝘀𝗽𝗲eding up 𝗿𝗲𝗮ding;
+  - **`quickread`**: 𝗯𝗼𝗹dface the 𝗳𝗶rst 𝗹𝗲𝘁ters of 𝗲ach 𝘄ord, 𝘀𝗽𝗲eding up 𝗿𝗲𝗮ding;
 
 - **`R`**
 
@@ -195,7 +195,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 - **`V`**
 
   - **`videos`**: see random videos;
-  - **`vimc`**: create a directory if the directory does not yet exists before running `vim`;
+  - **`vimc`**: create a directory if the directory does not yet exist before running `vim`;
   - **`vimo`**: open two or more files in vim next to each other;
   - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
   - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
@@ -217,9 +217,9 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
   - **`...`**: move to the root directory of the git repository, if that exists.
 
-## Emoji aliasses
+## Emoji aliases
 
-The following emoji aliasses can be used as commands:
+The following emoji aliases can be used as commands:
 
   - **`🚨`**: alias for `alarm`;
   - **`✝️`**: alias for `biblespeak`;
@@ -257,5 +257,5 @@ directory.
 You can of course also clone this repository at that location and thus *pull* new changes directly to the configuration directory:
 
 ```bash
-git clone github.com/hapytex/fishing.git ~/.config/fish/functions/
+git clone https://github.com/hapytex/fishing.git ~/.config/fish/functions/
 ```

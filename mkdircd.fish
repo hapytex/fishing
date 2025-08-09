@@ -1,3 +1,3 @@
-function mkdircd --description 'make a directory, if it does not yet exists, and move the cd to that directory' -a dir
+function mkdircd --description 'make a directory, if it does not yet exist, and cd into that directory' -a dir
   mkdir -p "$dir" && cd "$dir"
 end

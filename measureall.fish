@@ -1,4 +1,4 @@
-function measureall --description 'Start asking for a lot of measures in bulk, used as helper function' -a prefix
+function measureall --description 'Start asking for many measures in bulk; used as a helper function' -a prefix
   read -P (string unescape '\e[31mtimestamp\e[0m> ') timestamp
   set result ()
   for item in $argv[2..]
