@@ -223,24 +223,24 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 The following emoji aliases can be used as commands:
 
-  ### 🚨: alias for `alarm`;
-  ### ✝️: alias for `biblespeak`;
-  ### 🩸: alias for `blooddonation`;
-  ### ☕: alias for `coffee`;
-  ### 🍽️: alias for `dishwasher`;
-  ### 🥚: alias for `eggs`;
-  ### 🤖: alias for `groq`;
-  ### 📒: alias for `ledger`;
-  ### 🌙: alias for `lunar`;
-  ### 🎥: alias for `movie`;
-  ### 🍅: alias for `pomodoro`;
-  ### 💼: alias for `pomodoro`;
-  ### 😴: alias for `sleep_for`;
-  ### ⌚: alias for `smartwatch`;
-  ### 🦷: alias for `teeth`;
-  ### 🌄: alias for `wakeup`;
-  ### 🚶: alias for `walking`; and
-  ### 👕: alias for `washingmachine`.
+ - **`🚨`**: alias for `alarm`;
+ - **`✝️`**: alias for `biblespeak`;
+ - **`🩸`**: alias for `blooddonation`;
+ - **`☕`**: alias for `coffee`;
+ - **`🍽️`**: alias for `dishwasher`;
+ - **`🥚`**: alias for `eggs`;
+ - **`🤖`**: alias for `groq`;
+ - **`📒`**: alias for `ledger`;
+ - **`🌙`**: alias for `lunar`;
+ - **`🎥`**: alias for `movie`;
+ - **`🍅`**: alias for `pomodoro`;
+ - **`💼`**: alias for `pomodoro`;
+ - **`😴`**: alias for `sleep_for`;
+ - **`⌚`**: alias for `smartwatch`;
+ - **`🦷`**: alias for `teeth`;
+ - **`🌄`**: alias for `wakeup`;
+ - **`🚶`**: alias for `walking`; and
+ - **`👕`**: alias for `washingmachine`.
 
 ## Variables
 
