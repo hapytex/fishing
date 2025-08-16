@@ -13,6 +13,6 @@ if __name__ == "__main__":
             pkg, mj, mn, rest = match.groups()
             rest = rest or ""
             mn = int(mn)
-            print(f"{pkg} >={mj}.{mn}{rest} <{mj}.{mn+1}")
+            print(f"{pkg} >={mj}.{mn}{rest}, <{mj}.{mn+1}")
         else:
             print(line)
