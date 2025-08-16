@@ -4,7 +4,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ## List of functions
 
-- **`A`**
+### A
 
   - **`activity_survey`**: a short survey about a physical activity;
   - **`advent`**: shows the number of candles to light for Advent;
@@ -13,7 +13,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`assets`**: get the directory where the fish assets are stored;
   - **`author`**: prefix the given file names with the name of the author;
 
-- **`B`**
+### B
 
   - **`backup`**: make readonly timestamped copies of the list of parameters;
   - **`backupgz`**: make readonly timestamped compressed copies of the list of parameters;
@@ -24,14 +24,14 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`bloodresults`**: store blood result measurements;
   - **`bloodpressure`**: register a blood pressure measurement;
 
-- **`C`**
+### C
 
   - **`coffee`**: wait until the coffee machine has finished two cups of coffee;
   - **`cpgit`**: copy the given file to another path, and add the file to git;
   - **`cpvim`**: copy the given file to another path, and start the editor;
   - **`cpvimgit`**: copy the given file to another path, add the file to git, and start the editor;
 
-- **`D`**
+### D
 
   - **`dated`**: add the timestamp as a prefix of the given files;
   - **`descale_coffee`**: prevent wasting time with the coffee machine descaling process;
@@ -43,14 +43,14 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`dockersave`**: save a docker image as a compressed tarball;
   - **`dockersavescp`**: save a docker image as a compressed tarball and copy it with `scp`;
 
-- **`E`**
+### E
 
   - **`eat`**: keep track of what we eat;
   - **`edithstack`**: will run the editor with the `.cabal` file(s) and the `.hs` files in the `src/` directory;
   - **`eggs`**: wait until the eggs are fully cooked in the water boiler;
   - **`expand`**: a helper function to expand ranges and comma separated values to a (larger) list of parameters;
 
-- **`F`**
+### F
 
   - **`fill`**: fill the entire screen with a certain color;
   - **`fish_home`**: get the directory where the fish functions are stored;
@@ -61,7 +61,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`fundjinn`**: generate a function implementation from a signature with *Djinn*;
   - **`funtype`**: determine the type of a Haskell expression;
 
-- **`G`**
+### G
 
   - **`getcolor`**: get the color for a given name;
   - **`gh_status`**: set the *GitHub* status;
@@ -85,7 +85,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`groq`**: ask *Groq* something;
   - **`groqquick`**: ask Groq something and read the result with `quickread`;
 
-- **`H`**
+### H
 
   - **`here_is_the_news`**: beeps a few times to mark a certain event;
   - **`hlint`**: run Haskell lint and use a pager for the results;
@@ -93,20 +93,20 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`household`**: wait until a household device has finished with info;
   - **`hydrate`**: keep track of the amount of water we drink;
 
-- **`I`**
+### I
 
   - **`igrep`**: run grep in a case insensitive way;
   - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
 
-- **`J`**
+### J
 
   - **`jsonlist`**: parse each parameter as Python literal or JSON item, and generate a JSON list of these items;
 
-- **`K`**
+### K
 
   - **`keycolor`**: set the keyboard color to a specific color and intensity;
 
-- **`L`**
+### L
 
   - **`ledger`**: book a financial transaction and see the balance;
   - **`lessr`**: run `less` but allow to render ANSI terminal directives like color, etc.
@@ -115,7 +115,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`llive`**: show the list of files updated every second;
   - **`lunar`**: determine the phase of the moon for a given date;
 
-- **`M`**
+### M
 
   - **`makealias`**: make an alias file;
   - **`measure`**: add a given measurement at a given time and print the current timestamp;
@@ -125,13 +125,13 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`mkvim`**: make the directories needed to edit a file;
   - **`mkvimgit`**: make the directories needed to edit a file and add the file to git;
 
-- **`N`**
+### N
 
   - **`natrix`**: the Python interpreter of the fish environment;
   - **`natrix-env`**: run a Python program in the natrix environment;
   - **`numpy`**: start a Python shell with `numpy` imported;
 
-- **`P`**
+### P
 
   - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
   - **`pipr`**: install the `requirements.txt` file with `pip`;
@@ -145,11 +145,11 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
   - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
 
-- **`Q`**
+### Q
 
   - **`quickread`**: 𝗯𝗼𝗹dface the 𝗳𝗶rst 𝗹𝗲𝘁ters of 𝗲ach 𝘄ord, 𝘀𝗽𝗲eding up 𝗿𝗲𝗮ding;
 
-- **`R`**
+### R
 
   - **`redo`**: redo a command until the exit code is 0;
   - **`remake`**: a loop to remake certain products with a Makefile;
@@ -157,7 +157,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`rmemptydir`**: remove empty directories;
   - **`roughsvg`**: convert a given .svg file to its roughjs equivalent;
 
-- **`S`**
+### S
 
   - **`semver`**: convert a given requirements file to its sem-ver equivalent;
   - **`sensors`**: show the temperature measured by sensors updated every second;
@@ -179,7 +179,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`summarize`**: ask *Groq* to summarize the text from the *stdin*;
   - **`swapfiles`**: swap two or more files by renaming the second to the first, the third to the second, and the first to the last;
 
-- **`T`**
+### T
 
   - **`task`**: wrapper for `/usr/bin/task`, except that it reports tasks after the modification;
   - **`taskd`**: set the task with the given id as done;
@@ -189,12 +189,12 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`todo`**: add or inspect to a todo list;
   - **`truthful`**: check if at least one of the given Python literals or JSON values has truthiness `true`;
 
-- **`U`**
+### U
 
   - **`unpart`**: look for parts with a corresponding file;
   - **`update_system`**: update the system in an asynchronous way;
 
-- **`V`**
+### V
 
   - **`videos`**: see random videos;
   - **`vimc`**: create a directory if the directory does not yet exist before running `vim`;
@@ -203,7 +203,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
   - **`vitamins`**: take our daily vitamins and magnesium;
 
-- **`W`**
+### W
 
   - **`waitfor`**: takes an argument and waits that amount of time with a countdown;
   - **`wakeup`**: make some noise to wake someone up;
@@ -215,7 +215,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`wishlist`**: add items to or inspect the wishlist;
   - **`wrapampel`**: set the terminal title with the ampel signs between the start and the end of the given command; and
 
-- **`#`**
+### #
 
   - **`...`**: move to the root directory of the git repository, if that exists.
 
@@ -223,24 +223,24 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 The following emoji aliases can be used as commands:
 
-  - **`🚨`**: alias for `alarm`;
-  - **`✝️`**: alias for `biblespeak`;
-  - **`🩸`**: alias for `blooddonation`;
-  - **`☕`**: alias for `coffee`;
-  - **`🍽️`**: alias for `dishwasher`;
-  - **`🥚`**: alias for `eggs`;
-  - **`🤖`**: alias for `groq`;
-  - **`📒`**: alias for `ledger`;
-  - **`🌙`**: alias for `lunar`;
-  - **`🎥`**: alias for `movie`;
-  - **`🍅`**: alias for `pomodoro`;
-  - **`💼`**: alias for `pomodoro`;
-  - **`😴`**: alias for `sleep_for`;
-  - **`⌚`**: alias for `smartwatch`;
-  - **`🦷`**: alias for `teeth`;
-  - **`🌄`**: alias for `wakeup`;
-  - **`🚶`**: alias for `walking`; and
-  - **`👕`**: alias for `washingmachine`.
+  ### 🚨: alias for `alarm`;
+  ### ✝️: alias for `biblespeak`;
+  ### 🩸: alias for `blooddonation`;
+  ### ☕: alias for `coffee`;
+  ### 🍽️: alias for `dishwasher`;
+  ### 🥚: alias for `eggs`;
+  ### 🤖: alias for `groq`;
+  ### 📒: alias for `ledger`;
+  ### 🌙: alias for `lunar`;
+  ### 🎥: alias for `movie`;
+  ### 🍅: alias for `pomodoro`;
+  ### 💼: alias for `pomodoro`;
+  ### 😴: alias for `sleep_for`;
+  ### ⌚: alias for `smartwatch`;
+  ### 🦷: alias for `teeth`;
+  ### 🌄: alias for `wakeup`;
+  ### 🚶: alias for `walking`; and
+  ### 👕: alias for `washingmachine`.
 
 ## Variables
 
