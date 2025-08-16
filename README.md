@@ -66,6 +66,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`getcolor`**: get the color for a given name;
   - **`gh_status`**: set the *GitHub* status;
   - **`gh_emo`**: get the *GitHub* emoji name for a given emoji;
+  - **`gitacp`**: add items to the repository, commit, and push;
   - **`gitb`**: make a new git branch;
   - **`gitc`**: make a git commit (short for `git commit -am`);
   - **`gitcp`**: commit with the given parameters, and push the changes;
