@@ -24,7 +24,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
       gsettings set org.gnome.desktop.notifications show-banners false
       set gamma (noising)
-      trap "endpom $gamma" EXIT
+      trap "endpom $gamma" EXIT KILL INT QUIT STOP
       gh_status 'Focusing' 'arrow_forward' '25 minutes' true
       set end (date '+%Y-%m-%d %T%z' -d "+40 minutes")
       echo "$end" > "$HOME/block_sleep"

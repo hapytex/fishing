@@ -10,8 +10,8 @@ import cv2
 import numpy as np
 from dateparser import parse
 
-MONTHS = ("JA", "FE", "MR", "AP", "MY", "JN",
-          "JL", "AU", "SE", "OC", "NV", "DE")
+MONTHS = ("JA", "FE", "MR", "AP", "MY", "JN", "JL", "AU", "SE", "OC", "NV", "DE")
+
 
 def gen_year(year):
     return [[set() for _ in range(31)] for _ in range(1, 13)]
@@ -30,14 +30,17 @@ def insert_datum(dates, years=None):
         dat[date.month - 1][date.day - 1].add(dateval)
     return years
 
+
 def get_distict(years):
     return {di for y in years.values() for m in y for d in m for di in d}
 
+
 def to_infill(value):
     if not value:
-        return '  '
+        return "  "
     else:
-        return '██'
+        return "██"
+
 
 def life_in_pixels(*data):
     years = insert_datum(data)
@@ -69,4 +72,4 @@ def life_in_pixels(*data):
 
 
 if __name__ == "__main__":
-  life_in_pixels(*[parse(d) for d in sys.argv[1:]])
+    life_in_pixels(*[parse(d) for d in sys.argv[1:]])

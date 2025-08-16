@@ -12,7 +12,7 @@ from dateparser import parse
 from filelock import FileLock
 
 DURATION = re.compile(r"\d{1,2}([:]\d{2})+")
-ASSET_PATH = "measurements.json"
+ASSET_PATH = "assets/measurements.json"
 
 
 def filter_dict(data, dt):
@@ -53,7 +53,7 @@ if __name__ == "__main__":
                 key, dt2 = key.rsplit("@", 1)
                 timefilter = dt2 = parse(dt2)
                 if dt2 is not None:
-                    key_dt = dt2.isoformat()
+                    key_dt = dt2.replace(microsecond=0, tzinfo=None).isoformat()
             except ValueError:
                 # key is already fine
                 timefilter = datetime.min
