@@ -38,7 +38,9 @@ function waitfor --description 'wait a certain amount of time, or until the user
          set oldval $newval
       end
     end
-    sleep "$step"
+    if ! timeprompt "$step"
+      set cur "$tar"
+    end
     set oldn "$n"
   end
   # clear progress
