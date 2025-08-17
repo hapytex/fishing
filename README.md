@@ -131,6 +131,10 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`natrix-env`**: run a Python program in the natrix environment;
   - **`numpy`**: start a Python shell with `numpy` imported;
 
+### O
+
+ - **`otp`**: generate/configure One Time Passwords (OTPs) with pass-extension-otp;
+
 ### P
 
   - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
