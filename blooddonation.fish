@@ -5,6 +5,6 @@ function blooddonation --description 'register a blood donation together with bl
   test -n "$bpm" || read -P (string unescape '\e[31mBPM\e[0m> ') bpm
   bloodpressure "$systolic" "$diastolic" &
   measurelog "blooddonation.$kind" true health.bodilyfunction.bpm "$bpm" &
-  waitfor 2700 '🩸 donation' '🩸 ' (getcolor blood body_colors ,)
+  waitfor 2700 '' '🩸 donation' '🩸 ' (getcolor blood body_colors ,)
   here_is_the_news
 end

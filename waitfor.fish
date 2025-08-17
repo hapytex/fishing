@@ -1,4 +1,4 @@
-function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown -a until -a step
+function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a allow -a label -a desc -a keydown -a until -a step
   if [ -n "$keydown" ]
     keycolor (string split , "$keydown") 255 &
   end
@@ -16,25 +16,35 @@ function waitfor --description 'wait a certain amount of time, or until the user
   set oldval 256
   set oldn 8
   set time (math "round($time)")
-  for i in (seq "$time" "-$step" "$until")
-    set txt (timeformat "$i")
+  set cur (date '+%s')
+  set tar (math "$cur + $time")
+  while test "$cur" -lt "$tar"
+    set cur (date '+%s')
+    set rmd (math "$tar - $cur")
+    set txt (timeformat "$rmd")
     set n (string length "$txt")
     if [ "$n" -lt "$oldn" ]
       # erase previous one if length differs
       echo -en '        \e[8D'
     end
-    set cl (math "min(255, 4*$i)")
+    set cl (math "min(255, 4*$rmd)")
     echo -en "\e[1m\e[38;2;255;$cl;"$cl"m$txt\e[0m\e["$n"D"
-    set pct (math "round(100*($time-$i)/$time)")
+    set pct (math "round(100*($time-$rmd)/$time)")
     echo -en "\033]0;$desc$txt\007\033]9;4;1;$pct\033\0134"
     if [ -n "$keydown" ]
-      set newval (math "round(235*$i/$time)+20")
+      set newval (math "round(235*$rmd/$time)+20")
       if [ "$oldval" -ne "$newval" ]
          echo "$newval" > /sys/class/leds/rgb:kbd_backlight/brightness &
          set oldval $newval
       end
     end
-    sleep "$step"
+    if [ -z "$allow" ]
+      if ! timeprompt "$step"
+        set cur "$tar"
+      end
+    else
+      sleep "$step"
+    end
     set oldn "$n"
   end
   # clear progress

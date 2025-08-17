@@ -131,6 +131,10 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`natrix-env`**: run a Python program in the natrix environment;
   - **`numpy`**: start a Python shell with `numpy` imported;
 
+### O
+
+ - **`otp`**: generate/configure One Time Passwords (OTPs) with pass-extension-otp;
+
 ### P
 
   - **`pandas`**: start a Python shell with `numpy` and `pandas` imported;
@@ -185,6 +189,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`taskd`**: set the task with the given id as done;
   - **`taskflush`**: set all expired tasks to done;
   - **`teeth`**: help cleaning teeth;
+  - **`timeprompt`**: wait for a given amount of time, or until the person hits a key exits with 1 if the user interrupted;
   - **`timestamp`**: get a string that specifies date and time, used for filenames mainly;
   - **`todo`**: add or inspect to a todo list;
   - **`truthful`**: check if at least one of the given Python literals or JSON values has truthiness `true`;
