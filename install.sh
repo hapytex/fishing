@@ -6,7 +6,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo add-apt-repository ppa:tatokis/alarm-clock-applet
 
 sudo apt-get update
-sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs gnuplot-nox haskell-stack hlint hoogle ipython3 jq lambdabot ledger lynx nodeenv nodejs npm pandoc pdfsam powerline pv pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
+sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs gnuplot-nox haskell-stack hlint hoogle ipython3 jq lambdabot ledger lynx nodeenv nodejs npm pandoc pass-extension-otp pdfsam powerline pv pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
 sudo snap install upscayl
 git lfs install
 
