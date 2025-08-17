@@ -1,4 +1,4 @@
-function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a label -a desc -a keydown -a until -a step
+function waitfor --description 'wait a certain amount of time, or until the user hits ENTER' -a time -a allow -a label -a desc -a keydown -a until -a step
   if [ -n "$keydown" ]
     keycolor (string split , "$keydown") 255 &
   end
@@ -38,8 +38,12 @@ function waitfor --description 'wait a certain amount of time, or until the user
          set oldval $newval
       end
     end
-    if ! timeprompt "$step"
-      set cur "$tar"
+    if [ -z "$allow" ]
+      if ! timeprompt "$step"
+        set cur "$tar"
+      end
+    else
+      sleep "$step"
     end
     set oldn "$n"
   end
