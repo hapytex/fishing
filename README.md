@@ -155,6 +155,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ### R
 
+  - **`rabbitdoc`**: ask [*CodeRabbit*](https://github.com/coderabbitai) to generate docstrings for the latest pull request;
   - **`redo`**: redo a command until the exit code is 0;
   - **`remake`**: a loop to remake certain products with a Makefile;
   - **`rmake`**: walk up the filetree until it finds a Makefile;
