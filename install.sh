@@ -1,12 +1,15 @@
 #!/bin/bash
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list
 
 sudo add-apt-repository ppa:tatokis/alarm-clock-applet
 
 sudo apt-get update
-sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs gnuplot-nox haskell-stack hlint hoogle ipython3 jq lambdabot ledger lynx nodeenv nodejs npm pandoc pass-extension-otp pdfsam powerline pv pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
+sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish gh git git-filter-repo git-lfs gnuplot-nox haskell-stack hlint hoogle ipython3 jq lambdabot ledger lynx nodeenv nodejs npm pandoc pass-extension-otp pdfsam powerline pv pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
 sudo snap install upscayl
 git lfs install
 
