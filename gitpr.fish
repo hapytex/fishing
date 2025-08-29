@@ -1,3 +1,4 @@
 function gitpr --description 'open a pull request on GitHub'
-  firefox (gh pr create --title (echo "$argv"))
+  set title (echo "$argv")
+  firefox (gh pr create --title "$title" --body "$title")
 end
