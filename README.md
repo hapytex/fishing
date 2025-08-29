@@ -70,7 +70,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitb`**: make a new git branch;
   - **`gitc`**: make a git commit (short for `git commit -am`);
   - **`gitcp`**: commit with the given parameters, and push the changes;
-  - **`gitcpr`**: commit with the given parameters, push the changes and open een pull request;
+  - **`gitcpr`**: commit with the given parameters, push the changes and open a pull request on *GitHub*;
   - **`gitd`**: calculate the git difference and work with a pager to read the full response;
   - **`gitf`**: alias for `git fetch`;
   - **`gith`**: checkout a given branch;
@@ -78,6 +78,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
   - **`gitmastertag`**: checkout the master branch, pull from remote, tag the commit and push the tag to the repository;
   - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
+  - **`gitpr`**: open a pull request on *GitHub*;
   - **`gitremote`**: add the remote as origin with the given `GIT_PREFIX` and the name of the directory as git project;
   - **`gits`**: prints the status of the current Git repository (short for `git status`);
   - **`gitt`**: make a git tag and push the tag;
