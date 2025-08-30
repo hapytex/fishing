@@ -101,6 +101,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
   - **`igrep`**: run grep in a case insensitive way;
   - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
+  - **`isortcp`**: run the isort formatter, and if isort made changes, commit and push these;
 
 ### J
 
