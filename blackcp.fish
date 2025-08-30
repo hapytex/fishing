@@ -1,6 +1,6 @@
 function blackcp --description 'run the Black formatter, and if Black made changes, commit and push these'
   if set -q argv[1]
-    set args . $argv
+    set args $argv
   else
     set args .
   end
