@@ -3,7 +3,7 @@ function blackcp --description 'run the Black formatter, and if Black made chang
     set args . $argv
   else
     set args $argv
-  fi
+  end
   if ! black --check --quiet $args
     black $argv
     gitcp 'black reformatting'
