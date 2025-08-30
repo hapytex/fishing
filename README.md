@@ -20,6 +20,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`battery`**: print the percentage of the battery;
   - **`between`**: check if the given values are ordered, usually used for three items to check membership of a range;
   - **`biblespeak`**: speak the next verse of the *Bible*;
+  - **`blackcp`**: run the *Black* formatter, and if Black made changes, commit and push these;
   - **`blooddonation`**: register a blood donation together with blood metrics;
   - **`bloodresults`**: store blood result measurements;
   - **`bloodpressure`**: register a blood pressure measurement;
