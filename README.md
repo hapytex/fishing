@@ -71,6 +71,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitb`**: make a new git branch;
   - **`gitc`**: make a git commit (short for `git commit -am`);
   - **`gitci`**: list the last CI/CD runs on *GitHub*;
+  - **`gitclonec`**: clone a repository and chance the directory to that of the cloned repository;
   - **`gitcp`**: commit with the given parameters, and push the changes;
   - **`gitcpr`**: commit with the given parameters, push the changes and open a pull request on *GitHub*;
   - **`gitd`**: calculate the git difference and work with a pager to read the full response;

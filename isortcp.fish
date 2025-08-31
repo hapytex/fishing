@@ -1,4 +1,4 @@
-function isort --description 'run the isort formatter, and if isort made changes, commit and push these'
+function isortcp --description 'run the isort formatter, and if isort made changes, commit and push these'
   if set -q argv[1]
     set args $argv
   else
