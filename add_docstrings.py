@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+"""@coderabbitai generate docstrings"""
 
 import ast
 import os
@@ -9,25 +9,33 @@ import astor
 
 
 class AddDocString(ast.NodeTransformer):
+    """@coderabbitai generate docstrings"""
+
     def __init__(self, *args, docstring, **kwargs):
+        """@coderabbitai generate docstrings"""
         super().__init__(*args, **kwargs)
         self.docstring = docstring
 
     def add_docstring(self, node):
+        """@coderabbitai generate docstrings"""
         if ast.get_docstring(node) is None:
             node.body.insert(0, ast.Expr(value=ast.Constant(self.docstring)))
         return self.generic_visit(node)
 
     def visit_FunctionDef(self, node):
+        """@coderabbitai generate docstrings"""
         return self.add_docstring(node)
 
     def visit_AsyncFunctionDef(self, node):
+        """@coderabbitai generate docstrings"""
         return self.add_docstring(node)
 
     def visit_ClassDef(self, node):
+        """@coderabbitai generate docstrings"""
         return self.add_docstring(node)
 
     def visit_Module(self, node):
+        """@coderabbitai generate docstrings"""
         return self.add_docstring(node)
 
 
