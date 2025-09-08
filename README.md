@@ -153,6 +153,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`proofreadedit`**: let vim open the file along with the proofread file;
   - **`proofreadmd`**: proofread Markdown files with Groq to find spelling and grammatical errors;
   - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
+  - **`pydoc`**: add doc strings to all elements of a Python file;
   - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
 
 ### Q
