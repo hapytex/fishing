@@ -11,7 +11,7 @@ import astor
 class AddDocString(ast.NodeTransformer):
     """@coderabbitai generate docstrings"""
 
-    def __init__(self, *args, docstring, **kwargs):
+    def __init__(self, *args, docstring: str, **kwargs):
         """@coderabbitai generate docstrings"""
         super().__init__(*args, **kwargs)
         self.docstring = docstring
