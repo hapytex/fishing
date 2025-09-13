@@ -65,4 +65,4 @@ if __name__ == "__main__":
         converter.visit(tree)
         errors += converter.errors
     if errors:
-        exit(1 + (errors % 255))
+        exit(min(255, errors))
