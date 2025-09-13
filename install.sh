@@ -58,6 +58,9 @@ rm -rf fonts
 abbr -a --regex '[.][.][.]([/].*)?' --position anywhere --function ... -- git_root
 abbr -a --regex '.*[{]-?[0-9]+[:]-?[0-9]+([:]-?[0-9]+)?[}].*' --position anywhere --function expand -- expand
 
+# completions
+gh completion -s fish > ~/.config/fish/completions/gh.fish
+
 sudo groupadd light
 usermod -aG light "$USER"
 sudo chgrp light /sys/class/leds/rgb:kbd_backlight/

@@ -82,6 +82,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitmastertag`**: checkout the master branch, pull from remote, tag the commit and push the tag to the repository;
   - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
   - **`gitpr`**: open a pull request on *GitHub*;
+  - **`gitprv`**: show comments of the active pull request;
   - **`gitremote`**: add the remote as origin with the given `GIT_PREFIX` and the name of the directory as git project;
   - **`gits`**: prints the status of the current Git repository (short for `git status`);
   - **`gitt`**: make a git tag and push the tag;
