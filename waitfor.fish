@@ -20,7 +20,6 @@ function waitfor --description 'wait a certain amount of time, or until the user
   set cur (date '+%s')
   set tar (math "$cur + $time")
   while test "$cur" -lt "$tar"
-    set cur (date '+%s')
     set rmd (math "$tar - $cur")
     set txt (timeformat "$rmd")
     set n (string length "$txt")
@@ -48,6 +47,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
       sleep "$step"
     end
     set oldn "$n"
+    set cur (date '+%s')
   end
   # clear progress
   echo -en "\033]9;4;0\007"
