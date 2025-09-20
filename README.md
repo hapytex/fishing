@@ -172,6 +172,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ### S
 
+  - **`season`**: determine the season for a given day;
   - **`semver`**: convert a given requirements file to its sem-ver equivalent;
   - **`sensors`**: show the temperature measured by sensors updated every second;
   - **`setvar`**: check if a variable with the name exists; if not, query for a value;
