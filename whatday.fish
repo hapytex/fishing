@@ -4,14 +4,15 @@ function whatday --description 'specifies the day with some counters'
   set colors '232;20;22' '255;165;0' '250;235;54' '121;195;20' '72;125;231' '75;54;157' '112;54;157'
   set tcol 97 30 30 30 97 97 97
   set planets '☽ ' '♂' '☿' '♃' '♀' '♄' '☉'
-  set polars '↙' '↗'
+  set polars '↙' '↘' '↖' '↗'
+  echo "$npol"
   set caf '🚫☕'
   if test \( (setvar COFFEE_MIN) -le "$hr" \) -a \( "$hr" -le (setvar COFFEE_MAX) \)
     set caf '☕'
   end
   set ds (math --scale 0 "$dt/86400")
   set dow (math "(($ds + 3) % 7) + 1")
-  set dp (math "($ds % 2) + 1")
+  set dp (math "($ds % $npol) + 1")
   set bat (date +%s)
   set bat (math "round(((((39600 - $bat) % 1209600) + 1209600) % 1209600) / 12096)")
   echo -e "\e[48;2;$colors[$dow];$tcol[$dow]m$polars[$dp] "(lunar)(season)"  $planets[$dow] "(date '+%d %b')" $caf  "(sdate)" "(advent)"  "(battery $bat)" "(battery)" \e[0m"
