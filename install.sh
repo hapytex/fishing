@@ -62,7 +62,8 @@ abbr -a --regex '.*[{]-?[0-9]+[:]-?[0-9]+([:]-?[0-9]+)?[}].*' --position anywher
 gh completion -s fish > ~/.config/fish/completions/gh.fish
 
 sudo groupadd light
-usermod -aG light "$USER"
+sudo groupadd docker
+usermod -aG light,docker "$USER"
 sudo chgrp light /sys/class/leds/rgb:kbd_backlight/
 sudo chmod g+w -R /sys/class/leds/rgb:kbd_backlight/
 
