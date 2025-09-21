@@ -1,13 +1,16 @@
 #!/bin/bash
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
+
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list
 
 sudo add-apt-repository ppa:tatokis/alarm-clock-applet
 
 sudo apt-get update
-sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish git git-filter-repo git-lfs gnuplot-nox haskell-stack hlint hoogle ipython3 jq lambdabot ledger lynx nodeenv nodejs npm pandoc pdfsam powerline pv pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
-sudo snap install upscayl
+sudo apt-get install -y alarm-clock-applet apt-file agrep certbot cloc curl cvc4 djinn fish gh git git-filter-repo git-lfs gnuplot-nox haskell-stack hlint hoogle ipython3 jq lambdabot ledger lynx nodeenv nodejs npm pandoc pass-extension-otp pdfsam powerline pv pylint python-wxtools python3-pytest rename sdate sox supervisor swi-prolog-core tig tox xdotool yarn zbar-tools z3
+sudo snap install pyright upscayl
 git lfs install
 
 git config --global push.default current
@@ -55,8 +58,12 @@ rm -rf fonts
 abbr -a --regex '[.][.][.]([/].*)?' --position anywhere --function ... -- git_root
 abbr -a --regex '.*[{]-?[0-9]+[:]-?[0-9]+([:]-?[0-9]+)?[}].*' --position anywhere --function expand -- expand
 
+# completions
+gh completion -s fish > ~/.config/fish/completions/gh.fish
+
 sudo groupadd light
-usermod -aG light "$USER"
+sudo groupadd docker
+usermod -aG light,docker "$USER"
 sudo chgrp light /sys/class/leds/rgb:kbd_backlight/
 sudo chmod g+w -R /sys/class/leds/rgb:kbd_backlight/
 
