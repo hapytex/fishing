@@ -214,6 +214,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
   - **`videos`**: see random videos;
   - **`vimc`**: create a directory if the directory does not yet exist before running `vim`;
+  - **`vimgit`**: edit the given files in the parameters, and add these to git;
   - **`vimo`**: open two or more files in vim next to each other;
   - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
   - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
