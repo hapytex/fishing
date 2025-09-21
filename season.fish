@@ -1,5 +1,5 @@
 function season --description 'determine the season for a given day'
-  set seasons '0100 0299 🀩' '0300 0599 🀦' '0600 0899 🀧' '0900 1199 🀨' '1200 1299 🀩'
+  set seasons '0100 0299 ❄️ ' '0300 0599 🌱' '0600 0899 🌻' '0900 1199 🍂' '1200 1299 ❄️ '
   if set -q argv[1]
     set all $argv
   else
@@ -10,7 +10,7 @@ function season --description 'determine the season for a given day'
     for season in $seasons
       set s (string split ' ' $season)
       if test "$s[1]" -le "$dy" -a "$dy" -le "$s[2]"
-        echo "$s[3]"
+        echo -e "$s[3]"
       end
     end
   end
