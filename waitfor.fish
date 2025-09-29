@@ -12,6 +12,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
   else
     set label ''
   end
+  set clems '○' '◔' '◑' '◕' '⬤'
   set c (tput cols)
   set ll (string length "$label")
   set c (math "$c - $ll")
@@ -38,7 +39,8 @@ function waitfor --description 'wait a certain amount of time, or until the user
     set cl (math "min(255, 4*$rmd)")
     echo -en "\e[1m\e[38;2;255;$cl;"$cl"m$txt $fl\e[0m\e["$nnn"D"
     set pct (math "round(100*($time-$rmd)/$time)")
-    echo -en "\033]0;$desc$txt\007\033]9;4;1;$pct\033\0134"
+    set pcf (math "max(1, min(5, floor($pct/20)+1))")
+    echo -en "\033]0;$clems[$pcf]$desc$txt\007\033]9;4;1;$pct\033\0134"
     if [ -n "$keydown" ]
       set newval (math "round(235*$rmd/$time)+20")
       if [ "$oldval" -ne "$newval" ]
