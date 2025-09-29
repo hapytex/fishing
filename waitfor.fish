@@ -12,7 +12,7 @@ function waitfor --description 'wait a certain amount of time, or until the user
   else
     set label ''
   end
-  set clems '○' '◔' '◑' '◕' '⬤'
+  set clems '○' '◔' '◑' '◕' '●'
   set c (tput cols)
   set ll (string length "$label")
   set c (math "$c - $ll")
