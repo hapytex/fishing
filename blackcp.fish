@@ -6,6 +6,6 @@ function blackcp --description 'run the Black formatter, and if Black made chang
   end
   if ! black --check --quiet $args
     black $args
-    gitcp 'black reformatting'
+    gitcp 'ℬ𝓁𝒶𝒸𝓀 reformatting'
   end
 end
