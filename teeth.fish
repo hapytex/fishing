@@ -23,7 +23,7 @@ function teeth --description 'help cleaning teeth'
       for tooth in $teeth
         set kin (string sub -l 1 "$move")
         draw_teeth "$cc" "$tt" "$kin"
-        waitfor 3 "$cheek  - $move - $tooth" "clean teeth $cheek - $move - $tooth "
+        waitfor 3 '' "$cheek  - $move - $tooth" "clean teeth $cheek - $move - $tooth "
         echo -en '                 \e[100D\e[8A'
         set tt (math $tt+1)
       end
@@ -34,6 +34,6 @@ function teeth --description 'help cleaning teeth'
     echo '                                           '
   end
   echo -en '                 \e[100D\e[8A'
-  waitfor 5 'brush tongue' 'brush tongue '
+  waitfor 5 '' 'brush tongue' 'brush tongue '
   echo 'do NOT rinse with water        '
 end
