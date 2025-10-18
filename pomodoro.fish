@@ -21,35 +21,37 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
     set pausetype '\e[10D\e[32m[short pause]\e[0m'
     set pausetitle '⏸️ '
     for i in (seq 4)
-      xdotool key XF86AudioPlay &
-      notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
-      gsettings set org.gnome.desktop.notifications show-banners false
-      set gamma (noising)
-      trap "endpom $gamma" EXIT KILL INT QUIT STOP
-      gh_status 'Focusing' 'arrow_forward' '25 minutes' true
-      set end (date '+%Y-%m-%d %T%z' -d "+40 minutes")
-      echo "$end" > "$HOME/block_sleep"
-      measurelog pomodoro.work true &
-      waitfor 1500 '' '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus_colors ,) || set ending 1
-      kill "$gamma"
       if [ "$ending" -eq 0 ]
-        if [ "$i" -gt  3 ]
-          set waitcolor '255,3,32'
-          set pause 900
-          set pausetype '\e[10D\e[33m[long pause]\e[0m'
-          set pausetitle '⏹️ '
-          gh_status 'Long pause' 'stop_button' '15 minutes' false
-        else
-          set waitcolor (getcolor random heal_colors ,)
-          gh_status 'Short pause' 'pause_button' '5 minutes' false
-        end
         xdotool key XF86AudioPlay &
-        here_is_the_news &
-        gsettings set org.gnome.desktop.notifications show-banners "$banners"
-        notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
-        measurelog pomodoro.pause true &
-        waitfor "$pause" '' "$pausetype" "$pausetitle" "$waitcolor" || set ending 1
-        here_is_the_news &
+        notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '▶️ start working'
+        gsettings set org.gnome.desktop.notifications show-banners false
+        set gamma (noising)
+        trap "endpom $gamma" EXIT KILL INT QUIT STOP
+        gh_status 'Focusing' 'arrow_forward' '25 minutes' true
+        set end (date '+%Y-%m-%d %T%z' -d "+40 minutes")
+        echo "$end" > "$HOME/block_sleep"
+        measurelog pomodoro.work true &
+        waitfor 1500 '' '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus_colors ,) || set ending 1
+        kill "$gamma"
+        if [ "$ending" -eq 0 ]
+          if [ "$i" -gt  3 ]
+            set waitcolor '255,3,32'
+            set pause 900
+            set pausetype '\e[10D\e[33m[long pause]\e[0m'
+            set pausetitle '⏹️ '
+            gh_status 'Long pause' 'stop_button' '15 minutes' false
+          else
+            set waitcolor (getcolor random heal_colors ,)
+            gh_status 'Short pause' 'pause_button' '5 minutes' false
+          end
+          xdotool key XF86AudioPlay &
+          here_is_the_news &
+          gsettings set org.gnome.desktop.notifications show-banners "$banners"
+          notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
+          measurelog pomodoro.pause true &
+          waitfor "$pause" '' "$pausetype" "$pausetitle" "$waitcolor" || set ending 1
+          here_is_the_news &
+        end
       end
     end
   end
