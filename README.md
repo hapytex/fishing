@@ -96,6 +96,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`here_is_the_news`**: beeps a few times to mark a certain event;
   - **`hlint`**: run Haskell lint and use a pager for the results;
   - **`homebattery`**: determine how long it will take to load the battery full;
+  - **`hourcolor`**: change the keyboard to the hour color, can be scheduled as cronjob;
   - **`household`**: wait until a household device has finished with info;
   - **`hydrate`**: keep track of the amount of water we drink;
 
