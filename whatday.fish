@@ -4,7 +4,7 @@ function whatday --description 'specifies the day with some counters'
   set colors '232;20;22' '255;165;0' '250;235;54' '121;195;20' '72;125;231' '75;54;157' '112;54;157'
   set tcol 97 30 30 30 97 97 97
   set planets '☽ ' '♂' '☿' '♃' '♀' '♄' '☉'
-  set polars '↙' '↘' '↖' '↗'
+  set polars '↙' '↘' '↖' '↗' '⇙' '⇘' '⇖' '⇗'
   set npol (count "$polars")
   set caf '🚫☕'
   if test \( (setvar COFFEE_MIN) -le "$hr" \) -a \( "$hr" -le (setvar COFFEE_MAX) \)
