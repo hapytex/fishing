@@ -25,7 +25,7 @@ class CheckTypeHints(ast.NodeTransformer):
 
     def report(self, node, message):
         location = self.get_qualfied_name(node)
-        print(f'{location}: {message} has no typehint')
+        print(f"{location}: {message} has no typehint")
         self.errors += 1
 
     def get_qualfied_name(self, node: ast.AST):
@@ -44,7 +44,7 @@ class CheckTypeHints(ast.NodeTransformer):
                         not argi.annotation
                         and argi.arg not in self.IGNORE_PARAMETER_NAMES
                     ):
-                        self.report(node, f'argument \x1b[1m{argi.arg}\x1b[0m')
+                        self.report(node, f"argument \x1b[1m{argi.arg}\x1b[0m")
         if not node.returns:
             self.report(node, f"the return type")
         return self.generic_visit(node)
