@@ -17,6 +17,7 @@ opencv-python
 pandas
 pip
 piper-tts
+pre-commit
 prefect
 pycountry
 pygments
