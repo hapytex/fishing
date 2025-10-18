@@ -15,7 +15,8 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
     end
     echo "$last_pid"
   end
-  while true
+  set ending 0
+  while [ "$ending" -eq 0 ]
     set pause 300
     set pausetype '\e[10D\e[32m[short pause]\e[0m'
     set pausetitle '⏸️ '
@@ -29,25 +30,27 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
       set end (date '+%Y-%m-%d %T%z' -d "+40 minutes")
       echo "$end" > "$HOME/block_sleep"
       measurelog pomodoro.work true &
-      waitfor 1500 '' '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus_colors ,)
+      waitfor 1500 '' '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus_colors ,) || set ending 1
       kill "$gamma"
-      if [ "$i" -gt  3 ]
-        set waitcolor '255,3,32'
-        set pause 900
-        set pausetype '\e[10D\e[33m[long pause]\e[0m'
-        set pausetitle '⏹️ '
-        gh_status 'Long pause' 'stop_button' '15 minutes' false
-      else
-        set waitcolor (getcolor random heal_colors ,)
-        gh_status 'Short pause' 'pause_button' '5 minutes' false
+      if [ "$ending" -eq 0 ]
+        if [ "$i" -gt  3 ]
+          set waitcolor '255,3,32'
+          set pause 900
+          set pausetype '\e[10D\e[33m[long pause]\e[0m'
+          set pausetitle '⏹️ '
+          gh_status 'Long pause' 'stop_button' '15 minutes' false
+        else
+          set waitcolor (getcolor random heal_colors ,)
+          gh_status 'Short pause' 'pause_button' '5 minutes' false
+        end
+        xdotool key XF86AudioPlay &
+        here_is_the_news &
+        gsettings set org.gnome.desktop.notifications show-banners "$banners"
+        notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
+        measurelog pomodoro.pause true &
+        waitfor "$pause" '' "$pausetype" "$pausetitle" "$waitcolor" || set ending 1
+        here_is_the_news &
       end
-      xdotool key XF86AudioPlay &
-      here_is_the_news &
-      gsettings set org.gnome.desktop.notifications show-banners "$banners"
-      notify-send -i /usr/share/icons/hicolor/64x64/apps/io.github.alarm-clock-applet.clock.png -c productivity -u low 'pomodoro ⏰' '⏸️ take a break'
-      measurelog pomodoro.pause true &
-      waitfor "$pause" '' "$pausetype" "$pausetitle" "$waitcolor"
-      here_is_the_news &
     end
   end
 end
