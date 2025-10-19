@@ -5,7 +5,7 @@ function whatday --description 'specifies the day with some counters'
   set tcol 97 30 30 30 97 97 97
   set planets '☽ ' '♂' '☿' '♃' '♀' '♄' '☉'
   set polars '↙' '↘' '↖' '↗' '⇙' '⇘' '⇖' '⇗'
-  set npol (count "$polars")
+  set npol (count $polars)
   set caf '🚫☕'
   if test \( (setvar COFFEE_MIN) -le "$hr" \) -a \( "$hr" -le (setvar COFFEE_MAX) \)
     set caf '☕'
