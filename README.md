@@ -130,6 +130,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`measureall`**: start asking for many measures in bulk, used as helper function;
   - **`measurelog`**: add a given measurement at a given time;
   - **`mkdircd`**: make a directory, if it does not yet exist, and move the cd to that directory;
+  - **`mkdircdgit`**: make a directory, if it does not yet exist, cd into that directory, and start a git repository;
   - **`mkvim`**: make the directories needed to edit a file;
   - **`mkvimgit`**: make the directories needed to edit a file and add the file to git;
 
