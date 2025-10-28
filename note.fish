@@ -4,5 +4,9 @@ function note --description 'Add a notebook entry'
   else
     set nt (read -P (date '+%H%M> '))
   end
-  measurelog notebook "$nt"
+  if [ -n "$nt" ]
+    measurelog notebook "$nt"
+  else
+    return 1
+  end
 end
