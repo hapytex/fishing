@@ -139,7 +139,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`natrix`**: the Python interpreter of the fish environment;
   - **`natrix-env`**: run a Python program in the natrix environment;
   - **`note`**: add a notebook entry;
-  - **`noteloop`**: notebook in a loop to log entries;
+  - **`notes`**: notebook in a loop to log entries;
   - **`numpy`**: start a Python shell with `numpy` imported;
 
 ### O
