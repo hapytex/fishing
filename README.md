@@ -272,6 +272,10 @@ The following emoji aliases can be used as commands:
   - **`GROQ_API_TOKEN`**: the API token for *Groq* to make chatbot requests, can be found [here](https://console.groq.com/keys); and
   - **`USER_SLUG`**: the slug used to prepend to file names when adding an author to it, for example `Elon_Musk`.
 
+## Measurements
+
+One of the core features is that one can measure all sorts of parameters, like health, activities, notes, etc. These are stored in `assets/Measurements.json`, a JSON file that allows cascading measurements.
+
 ## Installation
 
 One can install this by downloading (or cloning) and put the files in the `~/.config/fish/functions/`
