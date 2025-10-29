@@ -12,7 +12,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n -a noair
     xinput -enable 11
     gh_status '' 'alarm_clock' '25 minutes' false
   end
-  if [ ! -n "$noair" ]
+  if [ -n "$noair" ]
     airplane &
   fi
   gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled &
