@@ -1,4 +1,4 @@
-function sleep_for --description 'Sleep a given number of hours' -a n
+function sleep_for --description 'Sleep a given number of hours' -a n -a noair
   test -n "$n" || set n '7'
   if test "$n" -gt 12 -o "$n" -lt -12
     echo "Too long"
@@ -12,7 +12,9 @@ function sleep_for --description 'Sleep a given number of hours' -a n
     xinput -enable 11
     gh_status '' 'alarm_clock' '25 minutes' false
   end
-  airplane &
+  if [ ! -n "$noair" ]
+    airplane &
+  fi
   gsettings set org.gnome.desktop.peripherals.touchpad send-events disabled &
   xinput -disable 11
   # kill noisy apps
