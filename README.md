@@ -133,6 +133,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`mkdircdgit`**: make a directory, if it does not yet exist, cd into that directory, and start a git repository;
   - **`mkvim`**: make the directories needed to edit a file;
   - **`mkvimgit`**: make the directories needed to edit a file and add the file to git;
+  - **`mynote`**: add a notebook entry to a specific topic;
 
 ### N
 
