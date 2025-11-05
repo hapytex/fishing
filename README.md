@@ -53,6 +53,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ### F
 
+  - **`facialmask`**: register the use of a facial mask;
   - **`fill`**: fill the entire screen with a certain color;
   - **`fish_home`**: get the directory where the fish functions are stored;
   - **`frmclip`**: copy from the clipboard to the stdout;

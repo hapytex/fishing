@@ -4,5 +4,6 @@
   "GIT_BRANCH": ["the default branch, used to automatically map the remote to the local default branch in `gitremote`", null],
   "GIT_REPO_PREFIX": ["the prefix of (most) git repositories, for example `github:hapytex`", null],
   "GROQ_API_TOKEN": ["the API token for *Groq* to make chatbot requests, can be found [here](https://console.groq.com/keys)", null],
-  "USER_SLUG": ["the slug used to prepend to file names when adding an author to it, for example `Elon_Musk`", null]
+  "USER_SLUG": ["the slug used to prepend to file names when adding an author to it, for example `Elon_Musk`", null],
+  "DEFAULT_CURRENCY": ["The default currency used in transactions", "EUR"]
 }
