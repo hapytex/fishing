@@ -43,6 +43,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`dockerprune`**: prune unused docker images;
   - **`dockersave`**: save a docker image as a compressed tarball;
   - **`dockersavescp`**: save a docker image as a compressed tarball and copy it with `scp`;
+  - **`dockerscpload`**: transfer docker images over ssh to a remote directly loading these in docker at the remote side;
 
 ### E
 
