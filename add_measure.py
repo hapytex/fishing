@@ -26,28 +26,6 @@ class Measurement(Model):
     class Meta:
         database = db
 
-
-def to_rows(kv, key=''):
-    if key:
-        keyt = f'{key}.'
-    else:
-        keyt = ''
-    if isinstance(kv, dict):
-        for k, v in kv.items():
-            if not isinstance(v, dict):
-                yield parse(k), key, v
-            else:
-                yield from to_rows(v, key=f'{keyt}{k}')
-
-with open('assets/measurements.json', 'rb') as f:
-    data = json.load(f)
-db.connect()
-db.create_tables([Measurement])
-
-for dt, ky, val in to_rows(data):
-  Measurement.create(created_date=dt, key=ky, value=json.dumps(val))
-exit(0)
-
 if __name__ == "__main__":
     n = len(sys.argv)
     assert (
