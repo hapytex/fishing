@@ -1,6 +1,12 @@
 measurements*.json
 *_measurements.json
 *_measurements.json.gz
+measurements*.sqlite3
+*_measurements.sqlite3
+*_measurements.slite3.gz
+measurements*.db
+*_measurements.db
+*_measurements.db.gz
 list.json
 *_list.json
 *.lock
