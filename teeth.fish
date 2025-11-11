@@ -1,6 +1,6 @@
 function teeth --description 'help cleaning teeth'
   function draw_teeth -a cc -a tt -a kin
-    set teeth_map 'o7▕u7█i7▏   T████    i0▕u0█o0▏\no7▕u7█i7▏   T████    i0▕u0█o0▏\no6▕u6█i6▏   T████    i1▕u1█o1▏\no6▕u6█i6▏   T▜██▛    i1▕u1█o1▏\no5▕u5█i5▏           i2 ▕u2█o2▏\n   i5▁ i4▁ i4▁ i3▁ i3▁ i2▁    \n   u5█ u4█ u4█ u3█ u3█ u2█    \n   o5▔ o4▔ o4▔ o3▔ o3▔ o2▔    ' '   o5▁ o4▁ o4▁ o3▁ o3▁ o2▁\n   u5█ u4█ u4█ u3█ u3█ u2█\n   i5▔ i4▔ i4▔ i3▔ i3▔ i2▔\no5▕u5█i5▏           i2▕u2█o2▏\no6▕u6█i6▏           i1▕u1█o1▏\no6▕u6█i6▏           i1▕u1█o1▏\no7▕u7█i7▏           i0▕u0█o0▏\no7▕u7█i7▏           i0▕u0█o0▏'
+    set teeth_map 'o7▕u7█i7▏   T████    i0▕u0█o0▏\no7▕u7█i7▏   T████    i0▕u0█o0▏\no6▕u6█i6▏   T████    i1▕u1█o1▏\no6▕u6█i6▏   T▜██▛    i1▕u1█o1▏\no5▕u5█i5▏            i2▕u2█o2▏\n   i5▁ i4▁ i4▁ i3▁ i3▁ i2▁    \n   u5█ u4█ u4█ u3█ u3█ u2█    \n   o5▔ o4▔ o4▔ o3▔ o3▔ o2▔    ' '   o5▁ o4▁ o4▁ o3▁ o3▁ o2▁\n   u5█ u4█ u4█ u3█ u3█ u2█\n   i5▔ i4▔ i4▔ i3▔ i3▔ i2▔\no5▕u5█i5▏           i2▕u2█o2▏\no6▕u6█i6▏           i1▕u1█o1▏\no6▕u6█i6▏           i1▕u1█o1▏\no7▕u7█i7▏           i0▕u0█o0▏\no7▕u7█i7▏           i0▕u0█o0▏'
     set tooth_map $teeth_map[$cc]
     set col (echo -e '\e[97m')
     set tongue (echo -e '\e[31m')
@@ -23,7 +23,7 @@ function teeth --description 'help cleaning teeth'
       for tooth in $teeth
         set kin (string sub -l 1 "$move")
         draw_teeth "$cc" "$tt" "$kin"
-        waitfor 3 "$cheek  - $move - $tooth" "clean teeth $cheek - $move - $tooth "
+        waitfor 3 '' "$cheek  - $move - $tooth" "clean teeth $cheek - $move - $tooth "
         echo -en '                 \e[100D\e[8A'
         set tt (math $tt+1)
       end
@@ -34,6 +34,6 @@ function teeth --description 'help cleaning teeth'
     echo '                                           '
   end
   echo -en '                 \e[100D\e[8A'
-  waitfor 5 'brush tongue' 'brush tongue '
+  waitfor 5 '' 'brush tongue' 'brush tongue '
   echo 'do NOT rinse with water        '
 end

@@ -20,6 +20,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`battery`**: print the percentage of the battery;
   - **`between`**: check if the given values are ordered, usually used for three items to check membership of a range;
   - **`biblespeak`**: speak the next verse of the *Bible*;
+  - **`blackcp`**: run the *Black* formatter, and if Black made changes, commit and push these;
   - **`blooddonation`**: register a blood donation together with blood metrics;
   - **`bloodresults`**: store blood result measurements;
   - **`bloodpressure`**: register a blood pressure measurement;
@@ -42,6 +43,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`dockerprune`**: prune unused docker images;
   - **`dockersave`**: save a docker image as a compressed tarball;
   - **`dockersavescp`**: save a docker image as a compressed tarball and copy it with `scp`;
+  - **`dockerscpload`**: transfer docker images over ssh to a remote directly loading these in docker at the remote side;
 
 ### E
 
@@ -52,6 +54,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ### F
 
+  - **`facialmask`**: register the use of a facial mask;
   - **`fill`**: fill the entire screen with a certain color;
   - **`fish_home`**: get the directory where the fish functions are stored;
   - **`frmclip`**: copy from the clipboard to the stdout;
@@ -69,7 +72,10 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitacp`**: add items to the repository, commit, and push;
   - **`gitb`**: make a new git branch;
   - **`gitc`**: make a git commit (short for `git commit -am`);
+  - **`gitci`**: list the last CI/CD runs on *GitHub*;
+  - **`gitclonec`**: clone a repository and chance the directory to that of the cloned repository;
   - **`gitcp`**: commit with the given parameters, and push the changes;
+  - **`gitcpr`**: commit with the given parameters, push the changes and open a pull request on *GitHub*;
   - **`gitd`**: calculate the git difference and work with a pager to read the full response;
   - **`gitf`**: alias for `git fetch`;
   - **`gith`**: checkout a given branch;
@@ -77,6 +83,8 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`gitmaster`**: checkout the master branch (and stash work in progress if any);
   - **`gitmastertag`**: checkout the master branch, pull from remote, tag the commit and push the tag to the repository;
   - **`gitp`**: pushes the changes to the remote repository (short for `git push`);
+  - **`gitpr`**: open a pull request on *GitHub*;
+  - **`gitprv`**: show comments of the active pull request;
   - **`gitremote`**: add the remote as origin with the given `GIT_PREFIX` and the name of the directory as git project;
   - **`gits`**: prints the status of the current Git repository (short for `git status`);
   - **`gitt`**: make a git tag and push the tag;
@@ -90,6 +98,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`here_is_the_news`**: beeps a few times to mark a certain event;
   - **`hlint`**: run Haskell lint and use a pager for the results;
   - **`homebattery`**: determine how long it will take to load the battery full;
+  - **`hourcolor`**: change the keyboard to the hour color, can be scheduled as cronjob;
   - **`household`**: wait until a household device has finished with info;
   - **`hydrate`**: keep track of the amount of water we drink;
 
@@ -97,6 +106,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
   - **`igrep`**: run grep in a case insensitive way;
   - **`import`**: initializes the python shell with `import …`, so `import datetime` for example can be written in the shell as first Python command;
+  - **`isortcp`**: run the isort formatter, and if isort made changes, commit and push these;
 
 ### J
 
@@ -122,14 +132,22 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`measureall`**: start asking for many measures in bulk, used as helper function;
   - **`measurelog`**: add a given measurement at a given time;
   - **`mkdircd`**: make a directory, if it does not yet exist, and move the cd to that directory;
+  - **`mkdircdgit`**: make a directory, if it does not yet exist, cd into that directory, and start a git repository;
   - **`mkvim`**: make the directories needed to edit a file;
   - **`mkvimgit`**: make the directories needed to edit a file and add the file to git;
+  - **`mynote`**: add a notebook entry to a specific topic;
 
 ### N
 
   - **`natrix`**: the Python interpreter of the fish environment;
   - **`natrix-env`**: run a Python program in the natrix environment;
+  - **`note`**: add a notebook entry;
+  - **`notes`**: notebook in a loop to log entries;
   - **`numpy`**: start a Python shell with `numpy` imported;
+
+### O
+
+ - **`otp`**: generate/configure One Time Passwords (OTPs) with pass-extension-otp;
 
 ### P
 
@@ -143,6 +161,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`proofreadedit`**: let vim open the file along with the proofread file;
   - **`proofreadmd`**: proofread Markdown files with Groq to find spelling and grammatical errors;
   - **`pwd`**: list the absolute path for the given files listed or the `pwd` if no arguments were provided;
+  - **`pydoc`**: add doc strings to all elements of a Python file;
   - **`python3`**: overrides normal Python prompt with an IPython shell without banner, no confirmations and matplotlib;
 
 ### Q
@@ -151,6 +170,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ### R
 
+  - **`rabbitdoc`**: ask [*CodeRabbit*](https://github.com/coderabbitai) to generate docstrings for the latest pull request;
   - **`redo`**: redo a command until the exit code is 0;
   - **`remake`**: a loop to remake certain products with a Makefile;
   - **`rmake`**: walk up the filetree until it finds a Makefile;
@@ -159,6 +179,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
 ### S
 
+  - **`season`**: determine the season for a given day;
   - **`semver`**: convert a given requirements file to its sem-ver equivalent;
   - **`sensors`**: show the temperature measured by sensors updated every second;
   - **`setvar`**: check if a variable with the name exists; if not, query for a value;
@@ -185,9 +206,11 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
   - **`taskd`**: set the task with the given id as done;
   - **`taskflush`**: set all expired tasks to done;
   - **`teeth`**: help cleaning teeth;
+  - **`timeprompt`**: wait for a given amount of time, or until the person hits a key exits with 1 if the user interrupted;
   - **`timestamp`**: get a string that specifies date and time, used for filenames mainly;
   - **`todo`**: add or inspect to a todo list;
   - **`truthful`**: check if at least one of the given Python literals or JSON values has truthiness `true`;
+  - **`typehintcheck`**: check if all defined functions have type hints;
 
 ### U
 
@@ -198,6 +221,7 @@ A set of functions for the **F**riendly **I**nteractive **Sh**ell (fish). This i
 
   - **`videos`**: see random videos;
   - **`vimc`**: create a directory if the directory does not yet exist before running `vim`;
+  - **`vimgit`**: edit the given files in the parameters, and add these to git;
   - **`vimo`**: open two or more files in vim next to each other;
   - **`vimp`**: use vim with different tabs, a shortcut for `vim -p`;
   - **`vimpsrc`**: open all the Haskell files in the `src` directory with `vim`;
@@ -250,6 +274,10 @@ The following emoji aliases can be used as commands:
   - **`GIT_REPO_PREFIX`**: the prefix of (most) git repositories, for example `github:hapytex`;
   - **`GROQ_API_TOKEN`**: the API token for *Groq* to make chatbot requests, can be found [here](https://console.groq.com/keys); and
   - **`USER_SLUG`**: the slug used to prepend to file names when adding an author to it, for example `Elon_Musk`.
+
+## Measurements
+
+One of the core features is that one can measure all sorts of parameters, like health, activities, notes, etc. These are stored in `assets/Measurements.json`, a JSON file that allows cascading measurements.
 
 ## Installation
 

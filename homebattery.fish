@@ -7,5 +7,5 @@ function homebattery --description 'determine how long it will take to load the 
   # 80% -> 100% @150Watts
   set s1 (math "max(80, $upto) - max(80, $cur)")
   set tot (math "round(73728*$s0/300 + 73728*$s1/150)")
-  waitfor "$tot" '⚡ battery' '⚡ '
+  waitfor "$tot" '' '⚡ battery' '⚡ '
 end
