@@ -8,7 +8,7 @@ function dockerscpload --description 'transfer docker images over ssh to a remot
     echo -en "\033]0;🐳 $i/$n dockersave $name\7"
     set sz (docker image inspect -f '{{ .Size }}' "$name")
     if [ -n "$host" ]
-      docker save "$name" | pv -s "$sz" | ssh "$host" "docker image load"
+      docker save "$name" | pv -s "$sz" | gzip | ssh "$host" "gzip -d | docker image load"
     else
       docker save "$name" | pv -s "$sz" > "$target.tar.gz"
     end
