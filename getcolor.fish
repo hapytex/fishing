@@ -1,7 +1,7 @@
 function getcolor --description 'get the color for a given name' -a name -a palette -a join
   function inner -a name -a palette
     test -n "$palette" || set palette 'colors'
-    set fl (assets)"$palette.json"
+    set fl (assets)"colors/$palette.json"
     if [ "$name" = 'random' ]
       set n (jq '.|length-1' "$fl")
       jq -r "to_entries["(random 0 $n)"].value.rgb|join(\"\n\")" "$fl"

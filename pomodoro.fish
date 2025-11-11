@@ -31,7 +31,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
         set end (date '+%Y-%m-%d %T%z' -d "+40 minutes")
         echo "$end" > "$HOME/block_sleep"
         measurelog pomodoro.work true &
-        waitfor 1500 '' '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus_colors ,) || set ending 1
+        waitfor 1500 '' '\e[100D                      \e[100D\e[31m[working]\e[0m' '▶️  ' (getcolor random focus ,) || set ending 1
         kill "$gamma"
         if [ "$ending" -eq 0 ]
           if [ "$i" -gt  3 ]
@@ -41,7 +41,7 @@ function pomodoro --description 'the pomodoro technique to stay focussed'
             set pausetitle '⏹️ '
             gh_status 'Long pause' 'stop_button' '15 minutes' false
           else
-            set waitcolor (getcolor random heal_colors ,)
+            set waitcolor (getcolor random heal ,)
             gh_status 'Short pause' 'pause_button' '5 minutes' false
           end
           xdotool key XF86AudioPlay &

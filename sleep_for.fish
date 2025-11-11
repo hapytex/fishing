@@ -21,8 +21,8 @@ function sleep_for --description 'Sleep a given number of hours' -a n -a noair
   killall element-desktop thunderbird-bin >/dev/null 2>/dev/null &
   set banners (gsettings get org.gnome.desktop.notifications show-banners)
   gsettings set org.gnome.desktop.notifications show-banners false
-  fill (getcolor 0 wakeup_colors)
-  keycolor (getcolor random sleep_colors) 64
+  fill (getcolor 0 wakeup)
+  keycolor (getcolor random sleep) 64
   if [ "$n" -lt 0 ]
     set n (math "-$n")
     set pth (/usr/bin/pwd)
@@ -50,7 +50,7 @@ function sleep_for --description 'Sleep a given number of hours' -a n -a noair
     set pct (math "round(100*($eps-$f)/$eps)")
     echo -en "\033]0;💤 $tf\007\033]9;4;1;$pct\033\0134$tf\e[0m\e["$ntf"D"
     sleep 600
-    keycolor (getcolor random sleep_colors) 32
+    keycolor (getcolor random sleep) 32
     xset dpms force off
   end
   sleep 300

@@ -18,6 +18,7 @@ for f in sys.argv[1:]:
         elif "hex" not in rec:
             r, g, b = rec["rgb"]
             rec["hex"] = f"#{hex((r << 16) | (g << 8) | b)[2:]}"
+        rec["hex"] = rec["hex"].casefold()
 
     with open(f, "w") as fh:
         json.dump(data, fh)

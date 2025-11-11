@@ -7,7 +7,7 @@ function presleep --description 'first gradually make a person sleepy before the
       play -q -n synth 1500 sine 409/370 sine 369 fade 0 0 750 vol 0.2 &
   end
   for i in (seq 4 -1 0)
-    set cols (getcolor $i wakeup_colors)
+    set cols (getcolor $i wakeup)
     keycolor $cols (math "50*$i+55")
     sleep 300
   end
